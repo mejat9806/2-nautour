@@ -1,0 +1,27 @@
+//! mainly for middleware declarations
+//! only express shit goes here
+import express from 'express';
+import morgan from 'morgan';
+import { router as tourRouter } from './routes/tourRoute.js';
+import { router as userRouter } from './routes/userRoute.js';
+
+export const app = express();
+///! middleware
+app.use(express.json()); //use middleware here //app.use is use to use middleware
+app.use(morgan('dev'));
+app.use(express.static(`./public`));
+app.use((req, res, next) => {
+  // every middleware get req,res,next
+  console.log('hello from middleware ');
+  next(); //this is important becasue if there is no next it will stop here
+}); //order is important if this middleware is place after the route it will not run because the request will stop the route
+
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString(); //;
+  next();
+});
+//!route
+app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route
+app.use('/api/v1/users', userRouter);
+
+//! app middleware here is available for all routes
