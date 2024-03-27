@@ -1,12 +1,12 @@
 //!start the server
 
 import { app } from './app.js';
-const port = 3000;
+
+const port = process.env.PORT;
 app.listen(port, () => {
-  console.log('listen app on port ' + port);
+  console.log(`listen app on port ${port}`);
 });
-console.log(app.get('env'));
-console.log(process.env);
+
 //!step of how request is processed
 //1 first it go to the server.js
 //2 second it go to the app where our main middleware is place
