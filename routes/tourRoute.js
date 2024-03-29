@@ -1,14 +1,15 @@
 //! for all of the router
 import express from 'express';
 import {
-  CheckBody,
-  checkId,
+  //CheckBody,
+  // checkId,
   deleteTour,
   getAllTours,
   getTour,
   patchTour,
   postTour,
 } from '../controller/tourController.js';
+
 export const router = express.Router(); //this uses to create router
 
 //!Param middleware
@@ -17,10 +18,11 @@ router.param('id', (req, res, next, val) => {
   next();
 }); //this means this middleware will only run when id is detected
 //this only run on this route  not in any other route with id
-router.param('id', checkId);
+//router.param('id', checkId);
 
 // !
-router.route('/').get(getAllTours).post(CheckBody, postTour);
+router.route('/').get(getAllTours).post(postTour);
+// router.route('/').get(getAllTours).post(CheckBody, postTour);
 router
   .route('/:id')
   // .route('/api/v1/tours/:id')
