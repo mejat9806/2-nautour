@@ -3,9 +3,8 @@ import mongoose from 'mongoose';
 
 const connection = {};
 
-const mongoURL = process.env.MONGODB_URL;
-
 export async function connectToDB() {
+  const mongoURL = process.env.MONGODB_URL;
   try {
     if (connection.isConnected) {
       console.log('connection is already exist');
