@@ -1,6 +1,7 @@
 //! for all of the router
 import express from 'express';
 import {
+  aliasTopTour,
   //CheckBody,
   // checkId,
   deleteTour,
@@ -11,12 +12,15 @@ import {
 } from '../controller/tourController.js';
 
 export const router = express.Router(); //this uses to create router
+//!Aliasing this for most popular routes
 
+router.route('/top-5-cheap').get(aliasTopTour, getAllTours);
+//!
 //!Param middleware
-//? middleware that only run for certain parameters
-router.param('id', (req, res, next, val) => {
-  next();
-}); //this means this middleware will only run when id is detected
+// //? middleware that only run for certain parameters
+// router.param('id', (req, res, next, val) => {
+//   next();
+// }); //this means this middleware will only run when id is detected
 //this only run on this route  not in any other route with id
 //router.param('id', checkId);
 
