@@ -55,7 +55,7 @@ function applySorting(query, sortQuery) {
   //sortQuery is the req.query.sort
   if (sortQuery) {
     const sortBy = sortQuery.split(',').join(' ');
-    return query.sort(sortBy);
+    return query.sort(sortBy); //to get accending or descending use 1 or -1
   }
 
   return query;
@@ -71,8 +71,8 @@ function applyFieldSelection(query, fieldsQuery) {
 
 function applyPagination(query, pageQuery, limitQuery) {
   const page = pageQuery * 1 || 1;
-  const limit = limitQuery * 1 || 100;
-  const skip = (page - 1) * limit;
+  const limit = limitQuery * 1 || 5;
+  const skip = (page - 1) * limit; //this used to get the previous page to skip
   return query.skip(skip).limit(limit);
 }
 
@@ -82,7 +82,6 @@ export async function APIfeature(query, req) {
 
   const excludedFields = ['page', 'sort', 'limit', 'fields'];
   excludedFields.forEach((el) => delete queryObject[el]);
-  console.log(excludedFields, 'excludedFields');
 
   let queryStr = JSON.stringify(queryObject);
   console.log(queryStr, 'queryStr');

@@ -13,6 +13,8 @@ import {
   postTour,
 } from '../controller/tourController.js';
 
+//?way to write route
+//? router.route("the route").httpmethod(this can have multiple middleware)
 export const router = express.Router(); //this uses to create router
 //!Aliasing this for most popular routes
 router.route('/tours-stats').get(getTourstats);

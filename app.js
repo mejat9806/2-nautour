@@ -13,7 +13,7 @@ export const app = express();
 if (process.env.NODE_ENV === 'Development') {
   app.use(morgan('dev'));
 }
-app.use(express.json()); //use middleware here //app.use is use to use middleware
+app.use(express.json()); //use middleware here //app.use is use to use middleware //this will make the req.body available
 app.use(express.static(`./public`));
 app.use((req, res, next) => {
   // every middleware get req,res,next
@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   next(); //this is important becasue if there is no next it will stop here
 }); //order is important if this middleware is place after the route it will not run because the request will stop the route
 app.use((req, res, next) => {
-  req.requestTime = new Date().toISOString(); //;
+  req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
   next();
 });
 //!route
