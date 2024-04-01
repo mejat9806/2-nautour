@@ -7,13 +7,16 @@ import {
   deleteTour,
   getAllTours,
   getTour,
+  getTourstats,
+  getmonthlyPlan,
   patchTour,
   postTour,
 } from '../controller/tourController.js';
 
 export const router = express.Router(); //this uses to create router
 //!Aliasing this for most popular routes
-
+router.route('/tours-stats').get(getTourstats);
+router.route('/monthly-plan/:year').get(getmonthlyPlan);
 router.route('/top-5-cheap').get(aliasTopTour, getAllTours);
 //!
 //!Param middleware

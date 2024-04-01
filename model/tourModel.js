@@ -16,7 +16,7 @@ const tourScheme = new mongoose.Schema({
   },
   difficulty: { type: String, required: [true, 'must have difficulty'] },
   ratingsAverage: { type: Number, default: 0 },
-  ratingsQuanity: { type: Number, default: 0 },
+  ratingsQuantity: { type: Number, default: 0 },
   summary: {
     type: String,
     trim: true,
@@ -30,7 +30,7 @@ const tourScheme = new mongoose.Schema({
     default: Date.now(),
     select: false, //this will excluded from the response maybe for secrurity reasons
   },
-  startDate: [Date],
+  startDates: [Date],
 });
 
 const Tour = mongoose.model('Tour', tourScheme);
