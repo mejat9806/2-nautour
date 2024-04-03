@@ -71,7 +71,7 @@ function applyFieldSelection(query, fieldsQuery) {
 
 function applyPagination(query, pageQuery, limitQuery) {
   const page = pageQuery * 1 || 1;
-  const limit = limitQuery * 1 || 5;
+  const limit = limitQuery * 1 || 100;
   const skip = (page - 1) * limit; //this used to get the previous page to skip
   return query.skip(skip).limit(limit);
 }
@@ -87,7 +87,7 @@ export async function APIfeature(query, req) {
   console.log(queryStr, 'queryStr');
   queryStr = queryStr.replace(/\b(gte|gte|lte|lt)\b/g, (match) => `$${match}`);
   console.log(queryStr, 'queryStrReplaced');
-  query = query.find(JSON.parse(queryStr));
+  query = query.find(JSON.parse(queryStr)); //! moongose query middleware triggered here because of find method
 
   query = applySorting(query, req.query.sort);
   query = applyFieldSelection(query, req.query.fields);

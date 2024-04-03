@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-object-spread */
 //! for all of the handlers
+//!this C part of MVC
 
 import Tour from '../model/tourModel.js';
 import { APIfeature } from '../utils/apiFeature.js';
@@ -139,7 +140,7 @@ export async function getTourstats(req, res) {
       {
         $group: {
           //group allows us to group data using acumulator like cal average
-          _id: { $toUpper: `$difficulty` }, //with this we will get the data grouped by the difficulty //toUpper is uppercase
+          _id: { $toLower: `$difficulty` }, //with this we will get the data grouped by the difficulty //toUpper is uppercase
           numsTour: { $sum: 1 },
           numRatings: { $sum: `$ratingsQuantity` },
           avgRating: { $avg: `$ratingsAverage` },
@@ -197,9 +198,9 @@ export async function getmonthlyPlan(req, res) {
       },
       {
         $group: {
-          _id: { $month: `$startDates` }, //this month will get the month num from the startDates in match
           numTourStarts: { $sum: 1 }, //this will add 1 each time it get the same months
-          tours: { $push: `$name` }, //this push operator will push the name from the tour into an array base on date
+          tours: { $push: { name: `$name`, image: `$imageCover` } }, //this push operator will push the name from the tour into an array base on date
+          _id: { $month: `$startDates` }, //this month will get the month num from the startDates in match
         },
       },
       {
@@ -211,7 +212,7 @@ export async function getmonthlyPlan(req, res) {
         },
       },
       {
-        $sort: { numTourStarts: -1 },
+        $sort: { numTourStarts: 1 },
       },
     ]);
     res.status(200).json({
