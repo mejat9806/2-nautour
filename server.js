@@ -9,7 +9,7 @@ mongoose.connect(DB).then((con) => {
   console.log('DB connection successfull');
 });
  */
-connectToDB();
+connectToDB(); //connet to mongodb
 // const testTour = new Tour({
 //   name: 'forest blue',
 //   price: 200,

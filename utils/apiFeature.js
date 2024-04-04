@@ -51,16 +51,6 @@
 //   }
 // }
 
-function applySorting(query, sortQuery) {
-  //sortQuery is the req.query.sort
-  if (sortQuery) {
-    const sortBy = sortQuery.split(',').join(' ');
-    return query.sort(sortBy); //to get accending or descending use 1 or -1
-  }
-
-  return query;
-}
-
 function applyFieldSelection(query, fieldsQuery) {
   if (fieldsQuery) {
     const fields = fieldsQuery.split(',').join(' ');
@@ -69,9 +59,17 @@ function applyFieldSelection(query, fieldsQuery) {
   return query.select('-__v');
 }
 
+function applySorting(query, sortQuery) {
+  //sortQuery is the req.query.sort
+  if (sortQuery) {
+    const sortBy = sortQuery.split(',').join(' ');
+    return query.sort(sortBy); //to get accending or descending use fieldname or -fieldname
+  }
+  return query.sort('-createAt');
+}
 function applyPagination(query, pageQuery, limitQuery) {
   const page = pageQuery * 1 || 1;
-  const limit = limitQuery * 1 || 100;
+  const limit = limitQuery * 1 || 10;
   const skip = (page - 1) * limit; //this used to get the previous page to skip
   return query.skip(skip).limit(limit);
 }
@@ -89,9 +87,9 @@ export async function APIfeature(query, req) {
   console.log(queryStr, 'queryStrReplaced');
   query = query.find(JSON.parse(queryStr)); //! moongose query middleware triggered here because of find method
 
-  query = applySorting(query, req.query.sort);
   query = applyFieldSelection(query, req.query.fields);
+  query = applySorting(query, req.query.sort);
   query = applyPagination(query, req.query.page, req.query.limit);
-
+  console.log(req.query.sort);
   return query;
 }

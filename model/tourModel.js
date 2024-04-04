@@ -78,11 +78,13 @@ const tourScheme = new mongoose.Schema(
     },
   },
 );
+//this keyword is allowed us to access the current document
 //!virtual properties are field that we can defined but it will be not persistent/save in our DB
 tourScheme.virtual('durationWeeks').get(function () {
   return this.duration / 7; //this here is the current process document
 });
-//!this document middleware :it runs before .save() and .create()
+
+//!this is  document middleware :it runs before .save() and .create()
 tourScheme.pre('save', function (next) {
   this.slug = slugify(`${this.name}-${this._id}`, { lower: true });
   next();
@@ -92,6 +94,8 @@ tourScheme.pre('save', function (next) {
 tourScheme.pre(/^find/, function (next) {
   this.find({ secretTour: { $ne: true } }); //this will hide the secret tour
   this.start = Date.now(); //this will add start time to every find querys
+  this.hello = 'hello';
+
   next();
 });
 // tourScheme.pre('find', function (next) {
@@ -108,7 +112,7 @@ tourScheme.post(/^find/, function (doc, next) {
 tourScheme.pre('aggregate', function (next) {
   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
   // this.pipeline().shift({ $sort: { avgPrice: 1 } });
-  console.log(this.pipeline());
+  // console.log(this.pipeline());
   next();
 });
 //!

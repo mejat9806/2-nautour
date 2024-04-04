@@ -16,6 +16,7 @@ import { APIfeature } from '../utils/apiFeature.js';
 //!
 //!Route handlers
 //! GET routes
+
 //!Aliasing this for most popular routes
 export function aliasTopTour(req, res, next) {
   //this middleware
@@ -44,8 +45,7 @@ export async function getAllTours(req, res) {
     res.status(200).json({
       status: 'success',
       amountOfDoc,
-      timeRequesteds: req.requestTime,
-
+      timeRequesteds: req.requestTimes,
       result: allTours.length,
       data: {
         allTours,
@@ -62,7 +62,6 @@ export async function getAllTours(req, res) {
 export async function getTour(req, res) {
   try {
     const tour = await Tour.findById(req.params.id);
-
     res.status(200).json({
       status: 'success',
 
@@ -73,6 +72,8 @@ export async function getTour(req, res) {
   } catch (error) {
     res.status(404).json({
       status: 'error',
+      timeRequesteds: req.requestTimes,
+
       message: error.message,
     });
   }
