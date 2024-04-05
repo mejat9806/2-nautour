@@ -24,17 +24,17 @@ import Tour from '../model/tourModel.js';
 //       message: 'Invalid id',
 //     });
 //   }
-//   next(); //val only for varams
+//   next(); //val only for params
 // };
-// export const CheckBody = (req, res, next) => {
-//   if (!req.body.price || !req.body.name) {
-//     return res.status(404).json({
-//       status: 'bad request',
-//       message: 'missing name or price',
-//     });
-//   }
-//   next();
-// };
+export const CheckBody = (req, res, next) => {
+  if (!req.body.price || !req.body.name) {
+    return res.status(404).json({
+      status: 'bad request',
+      message: 'missing name or price',
+    });
+  }
+  next();
+};
 //!
 //!Route handlers
 //! GET routes

@@ -1,7 +1,7 @@
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable no-console */
 //!this M part of MVC
-
+// this M part of MVC will handle data manupultion for tour only
 import mongoose from 'mongoose';
 import slugify from 'slugify';
 import validator from 'validator';
@@ -133,7 +133,7 @@ tourScheme.pre('aggregate', function (next) {
 //   next();
 // });
 const Tour = mongoose.model('Tour', tourScheme);
-export default Tour;
+export default Tour; //this TOUR allows us to use mongoose operator like find
 //MVC arc
 //! need to separete controller ,models and route to diferents file //virtual cant be use in query
 

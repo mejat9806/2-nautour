@@ -1,4 +1,7 @@
 //! for all of the router
+// this route will manage all the routes that user request for the tour only
+
+//?all middlewares here are for tour router
 import express from 'express';
 import {
   aliasTopTour,
@@ -23,9 +26,10 @@ router.route('/top-5-cheap').get(aliasTopTour, getAllTours);
 //!
 //!Param middleware
 // //? middleware that only run for certain parameters
-// router.param('id', (req, res, next, val) => {
-//   next();
-// }); //this means this middleware will only run when id is detected
+router.param('id', (req, res, next, val) => {
+  req.forID = 'this add id ';
+  next();
+}); //this means this middleware will only run when id is detected
 //this only run on this route  not in any other route with id
 //router.param('id', checkId);
 

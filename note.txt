@@ -1,0 +1,11 @@
+//!operational errors
+operational errors are the problem that we can predict happen at somepoint so we just need to handle them in advance
+this more likely to be user errors or application errors
+
+example like invalid paths accessed invalid user input (validator from mongoose) ,failed to connect to server ,request timeout and more 
+
+
+//!programing errors 
+bugs that we deleopers introduced in mongoose into our code .difficuilt to fins and handle 
+
+example like reading properties on undefied ,passing a number where an object is expected ,using await without async ,using req.query instead of req.body and more

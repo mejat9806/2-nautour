@@ -32,3 +32,6 @@ app.listen(port, () => {
 //2 second it go to the app where our main middleware is place
 //3 third it go to whichever route that it requests example here is tours and users
 //4 then it will do the whichever controller handlrer  that the user request
+
+//debuging node app
+// use ndb and breakepoint

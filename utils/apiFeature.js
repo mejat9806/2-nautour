@@ -54,6 +54,7 @@
 function applyFieldSelection(query, fieldsQuery) {
   if (fieldsQuery) {
     const fields = fieldsQuery.split(',').join(' ');
+    console.log(fields);
     return query.select(fields);
   }
   return query.select('-__v');
