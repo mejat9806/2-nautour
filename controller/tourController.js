@@ -50,13 +50,15 @@ export const getAllTours = catchAsync(async (req, res, next) => {
 });
 
 export const getTour = catchAsync(async (req, res, next) => {
-  console.log(req.forID);
   const tour = await Tour.findById(req.params.id);
+  if (!tour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
   res.status(200).json({
     status: 'success',
     data: {
       tour,
-      thisAddID: req.forID,
     },
   });
 });
@@ -67,7 +69,7 @@ export const postTour = catchAsync(async (req, res, next) => {
 
   const newTour = await Tour.create(req.body);
   res.status(201).json({
-    status: 'success full',
+    status: 'successful',
     data: {
       //tour: newTour,
       newTour,
@@ -79,7 +81,11 @@ export const patchTour = catchAsync(async (req, res, next) => {
     new: true,
     runValidators: true,
   });
-
+  console.log(editedTour);
+  if (!editedTour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
   res.status(200).json({
     status: 'success',
     data: {
@@ -88,7 +94,12 @@ export const patchTour = catchAsync(async (req, res, next) => {
   });
 });
 export const deleteTour = catchAsync(async (req, res, next) => {
-  await Tour.findByIdAndDelete(req.params.id);
+  const deletedTour = await Tour.findByIdAndDelete(req.params.id);
+  console.log(deletedTour);
+  if (!deletedTour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
   res.status(204).json({});
 });
 
@@ -137,7 +148,7 @@ export const getTourstats = catchAsync(async (req, res, next) => {
 });
 //!what in here is the handler
 
-export const getmonthlyPlan = catchAsync(async (req, res) => {
+export const getmonthlyPlan = catchAsync(async (req, res, next) => {
   const year = req.params.year * 1;
   const plan = await Tour.aggregate([
     {
@@ -171,7 +182,7 @@ export const getmonthlyPlan = catchAsync(async (req, res) => {
     },
   ]);
   res.status(200).json({
-    status: 'success link',
+    status: 'success aggregate',
     message: 'working',
     data: { plan },
   });

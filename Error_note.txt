@@ -9,3 +9,8 @@ example like invalid paths accessed invalid user input (validator from mongoose)
 bugs that we deleopers introduced in mongoose into our code .difficuilt to fins and handle 
 
 example like reading properties on undefied ,passing a number where an object is expected ,using await without async ,using req.query instead of req.body and more
+
+//!mongoose errors for operational errors
+//! 1) id not found 
+//! 2) duplicate data like name
+//! 3) validator error like max 4 but user put 6 
