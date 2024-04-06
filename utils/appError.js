@@ -22,6 +22,6 @@ export function AppError(message, statusCode) {
 }
 
 //!flow of error
-//!  return next(err) is called then it will go to the AppError and create the error data then to the error controller to send it to user as response
+//!  return next(err) is called then it will go to the globalErrorHandler then to AppError then  create the error data then to the error controller to send it to user as response
 
 //extra note in Error_note

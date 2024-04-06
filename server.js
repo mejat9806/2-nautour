@@ -1,15 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
 //!start the server
 
+import mongoose from 'mongoose';
 import { app } from './app.js';
-import { connectToDB } from './connection.js';
-/* 
-const DB = process.env.MONGODB_URL;
-mongoose.connect(DB).then((con) => {
-  console.log('DB connection successfull');
+
+process.on('uncaughtException', (err) => {
+  console.log(`uncaught Exception 😢 shutting down ...`);
+  console.log(err.name, 'hello');
+  process.exit(1); //this shutdown the server
 });
- */
-connectToDB(); //connet to mongodb
+// all error/bug that happened in syncronous but not handled anywhere
+const DB = process.env.MONGODB_URL.replace(
+  '<PASSWORD>',
+  process.env.MONGODB_PASSWORD,
+);
+async function main() {
+  await mongoose.connect(DB).then(() => console.log('Connected to database'));
+}
+main();
+
+//connectToDB(DB); //connet to mongodb
 // const testTour = new Tour({
 //   name: 'forest blue',
 //   price: 200,
@@ -23,7 +33,7 @@ connectToDB(); //connet to mongodb
 //     console.log('error', err);
 //   });
 const port = process.env.PORT;
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`listen app on port ${port}`);
 });
 
@@ -35,3 +45,25 @@ app.listen(port, () => {
 
 //debuging node app
 // use ndb and breakepoint
+
+//!for unhandled rejection errors(error outlike of express) example mongo DB connection like authentication wrong
+//! this is mostly for async function/request
+process.on('unhandledRejection', (err) => {
+  let errorMessage;
+  if (err.code === 'ECONNREFUSED') {
+    errorMessage = 'network problem';
+  }
+
+  if (err.code === 8000) {
+    errorMessage = 'bad auth : authentication failed';
+  }
+
+  console.log(err.name, err.message);
+  console.log(`unhandled rejection ${errorMessage} ⛔`);
+  server.close(() => {
+    process.exit(1); //this shutdown the server
+  });
+});
+//!uncaught exception
+
+//!

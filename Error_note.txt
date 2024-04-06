@@ -14,3 +14,8 @@ example like reading properties on undefied ,passing a number where an object is
 //! 1) id not found 
 //! 2) duplicate data like name
 //! 3) validator error like max 4 but user put 6 
+
+
+error flow 
+
+error happen ===> AppError ==>globalErrorHandler ==> go to sendErrorProd/sendErrorDev

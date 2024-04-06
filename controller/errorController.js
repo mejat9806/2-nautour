@@ -7,7 +7,13 @@ function handleCastErrorDB(error) {
 function handleDuplicateDate(error) {
   const value = Object.values(error.keyValue)[0]; //this will work with any duplicate value
   const message = `Duplicate field value: ${value}. Use another value.`;
-  return new AppError(message, 400);
+  return AppError(message, 400);
+}
+function handleValidationErrorDB(err) {
+  const error = Object.values(err.errors).map((val) => val.message); // This line retrieves an array of values from the err.errors object and then uses map to create a new array containing only the messages associated with each value.
+  const message = `invalid input data ${error.join(', ')}`;
+
+  return AppError(message, 400);
 }
 const sendErrorDev = (err, res) => {
   res.status(err.statusCode).json({
@@ -54,6 +60,9 @@ export function globalErrorHandler(err, req, res, next) {
     }
     if (error.code === 11000) {
       error = handleDuplicateDate(error);
+    }
+    if (error.name === 'ValidationError') {
+      error = handleValidationErrorDB(error);
     }
     sendErrorProd(error, res);
   }

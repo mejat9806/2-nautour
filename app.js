@@ -15,6 +15,7 @@ export const app = express();
 if (process.env.NODE_ENV === 'Development') {
   app.use(morgan('dev'));
 }
+
 app.use(express.json()); //use middleware here //app.use is use to use middleware //this will make the req.body available
 app.use(express.static(`./public`));
 // app.use((req, res, next) => {
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   req.hello = 'hello this test';
   console.log(req.hello);
+
   next();
 });
 
