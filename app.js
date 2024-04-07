@@ -36,18 +36,11 @@ app.use((req, res, next) => {
 });
 
 //!route
-app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route
-app.use('/api/v1/users', userRouter);
+app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
+app.use('/api/v1/users', userRouter); //all of the user like signUp logiN  stuff need to go through this middleware
 app.all('*', (req, res, next) => {
-  //this for handling routes that are not specified in the app,js
-  // res.status(404).json({
-  //   status: 'fail',
-  //   message: `cant find ${req.originalUrl} on this server`,
-  // });
+  //!this for handling routes that are not specified in the app.js
 
-  // const err = new Error(`cant find ${req.originalUrl} on this server`);
-  // err.status = 'fail';
-  // err.statusCode = 404;
   const err = AppError(`cant find ${req.originalUrl} on this server`, 404); //this is FP version
 
   next(err); //this make it will go straight to the error handler middleware (globalErrorHandler)

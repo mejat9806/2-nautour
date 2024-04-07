@@ -1,5 +1,5 @@
 export const catchAsync = (fn) => (req, res, next) => {
-  fn(req, res, next).catch((err) => next(err));
+  fn(req, res, next).catch((err) => next(err)); //!this next(err) will go directly to globaleErrorHandler
 };
 //! how this function works
 //! we wrap the function inside of catchAsync to remove the tryCatch block
