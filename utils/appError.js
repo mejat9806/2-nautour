@@ -16,8 +16,7 @@ export function AppError(message, statusCode) {
   err.status = status;
   err.isOperational = true; //this is used to mark operational errors
 
-  Error.captureStackTrace(err, AppError);
-
+  // Error.captureStackTrace(err, AppError);
   return err;
 }
 

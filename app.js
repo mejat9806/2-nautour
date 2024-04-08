@@ -8,11 +8,11 @@ import { router as userRouter } from './routes/userRoute.js';
 import { AppError } from './utils/appError.js';
 import { globalErrorHandler } from './controller/errorController.js';
 
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './.env' });
 
 export const app = express();
 ///! middleware
-if (process.env.NODE_ENV === 'Development') {
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 

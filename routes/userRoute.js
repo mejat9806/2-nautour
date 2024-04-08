@@ -6,11 +6,12 @@ import {
   getUser,
   patchUser,
 } from '../controller/userController.js';
-import { signUp } from '../controller/authController.js';
+import { login, signUp } from '../controller/authController.js';
 
 export const router = express.Router(); //this is called mounting the router
 //!auth route
 router.post('/signup', signUp);
+router.post('/login', login);
 //!
 //! this is the rest arch
 router.route('/').get(getAlluser).post(createUser);

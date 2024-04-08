@@ -1,0 +1,13 @@
+//! IMPORTANT NEVER save password in plain text need incription 
+use brypt 
+
+//!how JWT token work 
+is a stateless solution for authentication basically it did not work stored session state in server
+
+step by step of JWT (need HTTPS)
+
+1 user create a new login request with password and email 
+2 server will create a unique jwt token (a string) if it is correct
+3 server will send it to client and it will be saved in as a cookie or localstorage
+4 next when client get its JWT token it will use that token to access protected routes like profile page by sending it to the server like showing a password to the imigration officer
+5 next server will verify the jwt token and if the request is correct it will send the data back to the client
