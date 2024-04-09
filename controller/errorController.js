@@ -15,6 +15,13 @@ function handleValidationErrorDB(err) {
 
   return AppError(message, 400);
 }
+
+function handleJsonWebTokenError() {
+  return AppError('something goes wrong with token ,please login again ', 401);
+}
+function handleJsonWebTokenExpired() {
+  return AppError('token expired ,please login again ', 401);
+}
 const sendErrorDev = (err, res) => {
   res.status(err.statusCode).json({
     status: err.status,
@@ -64,6 +71,13 @@ export function globalErrorHandler(err, req, res, next) {
     if (error.name === 'ValidationError') {
       error = handleValidationErrorDB(error);
     }
+    if (error.name === 'JsonWebTokenError') {
+      error = handleJsonWebTokenError();
+    }
+    if (error.name === 'TokenExpiredError') {
+      error = handleJsonWebTokenExpired();
+    }
+
     sendErrorProd(error, res);
   }
 }

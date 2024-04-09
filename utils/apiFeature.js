@@ -54,7 +54,7 @@
 function applyFieldSelection(query, fieldsQuery) {
   if (fieldsQuery) {
     const fields = fieldsQuery.split(',').join(' ');
-    console.log(fields);
+    // console.log(fields);
     return query.select(fields);
   }
   return query.select('-__v');
@@ -77,20 +77,20 @@ function applyPagination(query, pageQuery, limitQuery) {
 
 export async function APIfeature(query, req) {
   const queryObject = { ...req.query };
-  console.log(queryObject, 'query object');
+  // console.log(queryObject, 'query object');
 
   const excludedFields = ['page', 'sort', 'limit', 'fields'];
   excludedFields.forEach((el) => delete queryObject[el]);
 
   let queryStr = JSON.stringify(queryObject);
-  console.log(queryStr, 'queryStr');
+  //  console.log(queryStr, 'queryStr');
   queryStr = queryStr.replace(/\b(gte|gte|lte|lt)\b/g, (match) => `$${match}`);
-  console.log(queryStr, 'queryStrReplaced');
+  //  console.log(queryStr, 'queryStrReplaced');
   query = query.find(JSON.parse(queryStr)); //! moongose query middleware triggered here because of find method
 
   query = applyFieldSelection(query, req.query.fields);
   query = applySorting(query, req.query.sort);
   query = applyPagination(query, req.query.page, req.query.limit);
-  console.log(req.query.sort);
+  // console.log(req.query.sort);
   return query;
 }

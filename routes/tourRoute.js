@@ -15,6 +15,7 @@ import {
   patchTour,
   postTour,
 } from '../controller/tourController.js';
+import { protect } from '../controller/authController.js';
 
 //?way to write route
 //? router.route("the route").httpmethod(this can have multiple middleware)
@@ -36,7 +37,7 @@ router.param('id', (req, res, next, val) => {
 //router.param('id', checkId);
 
 // !
-router.route('/').get(getAllTours).post(postTour);
+router.route('/').get(protect, getAllTours).post(postTour); //protect route will run first
 // router.route('/').get(getAllTours).post(CheckBody, postTour);
 router
   .route('/:id')

@@ -3,7 +3,7 @@
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 dotenv.config({ path: '../config.env' });
-
+import { promisify } from 'util';
 import { catchAsync } from '../utils/catchAsync.js';
 import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
@@ -21,6 +21,7 @@ export const signUp = catchAsync(async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     passwordConfirmed: req.body.passwordConfirmed,
+    passwordChangedAt: req.body.passwordChangedAt,
   });
 
   const token = signToken(newUser._id);
@@ -54,3 +55,41 @@ export const login = catchAsync(async (req, res, next) => {
     token,
   });
 });
+
+//!this is for protect route
+export const protect = catchAsync(async (req, res, next) => {
+  // console.log('hello this form the protect middleware');
+  let token;
+
+  //!step 1  Get the token from client and check if it there
+  if (
+    // if this fail it will go straight to global error handler
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    token = req.headers.authorization.split(' ')[1]; //this will get an array and we just use the [1]
+  }
+  if (!token) {
+    return next(AppError('token did not exit', 401));
+  }
+  //!
+  //! step 2 validate the token (check if the token is modified or expired)
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET); //use to translate the token to readable object of string
+  console.log(decoded);
+  //!
+  //! step 3 check if user is exist
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) {
+    return next(AppError('User no longer exist'), 401);
+  }
+  //!
+  //! step 4 check if user changed password after jwt token was issues token is issued on login
+  if (currentUser.changedPasswordAfter(decoded.iat)) {
+    return next(AppError('User changed password recently'), 401);
+  }
+  //!
+  //Grant access to protected route
+  req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
+  next();
+});
+//!

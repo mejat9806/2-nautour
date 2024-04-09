@@ -29,6 +29,7 @@ const userSchema = new mongoose.Schema({
       message: 'passwords do not match ',
     },
   },
+  passwordChangedAt: Date,
 });
 
 // eslint-disable-next-line prefer-arrow-callback
@@ -38,7 +39,7 @@ userSchema.pre('save', async function (next) {
   this.passwordConfirmed = undefined; //use undefined because we want to delete the password confirmation because it only use for input validation
 });
 
-//instead method //is a method that avaliable for certain collection
+//!instead method //is a method that avaliable for certain collection
 userSchema.methods.correctPassword = async function (
   //methd bassically allow us to add methods(method is like function) to certain model
   candidatePassword,
@@ -46,5 +47,18 @@ userSchema.methods.correctPassword = async function (
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
-//
+//!
+
+userSchema.methods.changedPasswordAfter = function (JWTtimestamp) {
+  //JWTtimestamp is when the JWT is created
+  if (this.passwordChangedAt) {
+    const changedTimeStamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10,
+    );
+    return JWTtimestamp < changedTimeStamp;
+  }
+  return false; //if the password was not changed
+};
+
 export const User = mongoose.model('User', userSchema);

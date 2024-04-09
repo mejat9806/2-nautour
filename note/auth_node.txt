@@ -11,3 +11,7 @@ step by step of JWT (need HTTPS)
 3 server will send it to client and it will be saved in as a cookie or localstorage
 4 next when client get its JWT token it will use that token to access protected routes like profile page by sending it to the server like showing a password to the imigration officer
 5 next server will verify the jwt token and if the request is correct it will send the data back to the client
+
+//!protector route
+lock our route behind a JWT token and only let verify the jwt token to enter the route
+JWT token usually send by the header with key autorization and value :"Bearer JWT token"

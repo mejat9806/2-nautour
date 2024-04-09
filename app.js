@@ -26,14 +26,13 @@ app.use(express.static(`./public`));
 
 app.use((req, res, next) => {
   req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
+  //console.log(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',
   next();
 });
-app.use((req, res, next) => {
-  req.hello = 'hello this test';
-  console.log(req.hello);
+// app.use((req, res, next) => {
 
-  next();
-});
+//   next();
+// });
 
 //!route
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
