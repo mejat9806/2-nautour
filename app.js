@@ -1,4 +1,5 @@
 //! mainly for middleware declarations
+//!all middleware declarations here will be always available on all sucessful requests
 //! only express shit goes here
 import dotenv from 'dotenv';
 import express from 'express';
@@ -54,7 +55,7 @@ app.use(globalErrorHandler);
 //!
 
 //?order of the error handling in express
-//1 error is trigger hy route or something
+//1 error is trigger by route or something
 //2 then we send the error message and the statusCode to the AppError function/class
 //3 the AppError will create the error message and the statusCode and return the error back for the next(err)
 //4 then the next(err) will go straight to the error handler middleware and make a response to user for us

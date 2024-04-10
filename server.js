@@ -14,10 +14,10 @@ const DB = process.env.MONGODB_URL.replace(
   '<PASSWORD>',
   process.env.MONGODB_PASSWORD,
 );
-async function main() {
+async function conDB() {
   await mongoose.connect(DB).then(() => console.log('Connected to database'));
 }
-main();
+conDB();
 
 //connectToDB(DB); //connet to mongodb
 // const testTour = new Tour({
@@ -46,8 +46,9 @@ const server = app.listen(port, () => {
 //debuging node app
 // use ndb and breakepoint
 
-//!for unhandled rejection errors(error outlike of express) example mongo DB connection like authentication wrong
+//!for unhandled rejection errors(error out like of express) example mongo DB connection like authentication wrong
 //! this is mostly for async function/request
+//?this is like event listener
 process.on('unhandledRejection', (err) => {
   let errorMessage;
   if (err.code === 'ECONNREFUSED') {
