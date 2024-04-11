@@ -4,6 +4,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
+import cors from 'cors';
 import { router as tourRouter } from './routes/tourRoute.js';
 import { router as userRouter } from './routes/userRoute.js';
 import { AppError } from './utils/appError.js';
@@ -16,7 +17,7 @@ export const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
-
+app.use(cors());
 app.use(express.json()); //use middleware here //app.use is use to use middleware //this will make the req.body available
 app.use(express.static(`./public`));
 // app.use((req, res, next) => {

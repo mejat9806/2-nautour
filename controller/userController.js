@@ -16,9 +16,12 @@ export function createUser(req, res) {
     message: 'this route is not define',
   });
 }
-export function getUser(req, res) {
+export async function getUser(req, res) {
+  const user = await User.findById(req.params.id);
+  console.log(user);
   res.status(500).json({
     status: 'hello from user',
+
     message: 'this route is not define',
   });
 }

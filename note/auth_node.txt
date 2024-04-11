@@ -15,3 +15,5 @@ step by step of JWT (need HTTPS)
 //!protector route
 lock our route behind a JWT token and only let verify the jwt token to enter the route
 JWT token usually send by the header with key autorization and value :"Bearer JWT token"
+//!role base authentication 
+the way to set certain role to certain resources

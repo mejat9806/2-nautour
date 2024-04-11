@@ -15,7 +15,7 @@ import {
   patchTour,
   postTour,
 } from '../controller/tourController.js';
-import { protect } from '../controller/authController.js';
+import { protect, restrictTo } from '../controller/authController.js';
 
 //?way to write route
 //? router.route("the route").httpmethod(this can have multiple middleware)
@@ -44,7 +44,10 @@ router
   // .route('/api/v1/tours/:id')
   .get(getTour)
   .patch(patchTour)
-  .delete(deleteTour); //use this method is it has the same url
+  .delete(protect, restrictTo('admin', 'lead-guide'), deleteTour); //use this method is it has the same url
 
 //!
 // .post(CheckBody, postTour); this part is like chainings 2 middleware together
+
+//restrictTo('admin'),
+//

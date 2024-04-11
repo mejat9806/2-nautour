@@ -101,7 +101,10 @@ export const deleteTour = catchAsync(async (req, res, next) => {
     const err = AppError('Tour not found', 404);
     return next(err);
   }
-  res.status(204).json({});
+  res.status(204).json({
+    status: 'success',
+    message: 'Tour deleted successfully',
+  });
 });
 
 //!aggregation pipeline

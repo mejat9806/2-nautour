@@ -22,6 +22,7 @@ export const signUp = catchAsync(async (req, res, next) => {
     password: req.body.password,
     passwordConfirmed: req.body.passwordConfirmed,
     passwordChangedAt: req.body.passwordChangedAt,
+    role: req.body.role,
   });
 
   const token = signToken(newUser._id);
@@ -34,7 +35,6 @@ export const signUp = catchAsync(async (req, res, next) => {
 
 export const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
-
   //!step for check login credential
   //!1) check email and password if it exists
   if (!email || !password) {
@@ -75,7 +75,6 @@ export const protect = catchAsync(async (req, res, next) => {
   //!
   //! step 2 validate the token (check if the token is modified or expired)
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET); //use to translate the token to readable object of string
-  console.log(decoded);
   //!
   //! step 3 check if user is exist
   const currentUser = await User.findById(decoded.id);
@@ -92,4 +91,20 @@ export const protect = catchAsync(async (req, res, next) => {
   req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
   next();
 });
+//!
+
+//!role based authentication
+export function restrictTo(...roles) {
+  //roles is an array of agurment
+  //you cant pass argument to middleware but we can bypass this by wrap it in function and spread the agurment
+  return (req, res, next) => {
+    console.log(req.user.role);
+    if (!roles.includes(req.user.role)) {
+      //we can use this because it was set up by the previous middleware (protect) .
+      return next(AppError('you did not have permission to access this', 403));
+    }
+
+    next();
+  };
+}
 //!
