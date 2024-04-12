@@ -102,6 +102,8 @@ tourScheme.pre(/^find/, function (next) {
 //   this.find({ secretTour: { $ne: true } });
 //   next();
 // });
+
+//the post middleware runs after the specified operation is completed
 tourScheme.post(/^find/, function (doc, next) {
   console.log(`query took ${Date.now() - this.start} milliseconds`);
 

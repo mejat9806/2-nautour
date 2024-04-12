@@ -17,3 +17,15 @@ lock our route behind a JWT token and only let verify the jwt token to enter the
 JWT token usually send by the header with key autorization and value :"Bearer JWT token"
 //!role base authentication 
 the way to set certain role to certain resources
+
+
+this is the way to do catchAsync on normal function export async function forgotPassword(req, res, next) {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+  } catch (err) {
+    next(err);
+  }
+}
+
+// Wrap the function with catchAsync if you want to handle errors in a consistent manner
+export const forgotPasswordAsync = catchAsync(forgotPassword)
