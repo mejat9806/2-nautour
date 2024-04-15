@@ -61,6 +61,7 @@ function applyFieldSelection(query, fieldsQuery) {
 }
 
 function applySorting(query, sortQuery) {
+  console.log(sortQuery);
   //sortQuery is the req.query.sort
   if (sortQuery) {
     const sortBy = sortQuery.split(',').join(' ');

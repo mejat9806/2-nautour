@@ -1,0 +1,47 @@
+best security best practice and sugestions
+
+! compromise database
+enrypt password using bcrypt 
+encrypt token password reset token with sha256
+!!
+
+!brute force attacks (by trying millons of time)
+use bcrypt to make login request slow
+using rate limit 
+implemement  maximum login attempts
+!!
+
+!cross-site scripting (xss ) attacks
+
+store jwt in httponly cookies 
+sanitization of user input 
+set special http header (helmet package )
+!!
+
+!DOS attack
+implemement rate limit 
+limit body payload (in body-parser)
+avoid evil regualr expressions
+
+!! nosql query injection 
+use mongoose for MongoDb becuase schema type
+sanitization of user input
+!!
+
+other best security best practice and sugestions
+
+use HTTPS
+create random password reset token with expiring date 
+deny access to jwt after password change
+dont commit sensitive config data to git 
+dont send error details to clients
+prevent cross-site  request forgery (csurf pakage)
+require re-authentication before a hifh-value action 
+implememnt a blacklist of untrusted JWT 
+confirm user email address after creating account 
+keep user logged in with refresh token 
+implement 2fa 
+prevent parameter polution causeing uncaught exceptions 
+
+!cookies 
+cookies is a data that will be stored in browser and it will automatically send it back to the server when required in the future

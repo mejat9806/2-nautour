@@ -16,7 +16,30 @@ function signToken(userID) {
   });
   return token;
 }
+
+function createSendToken(user, statusCode, res) {
+  const token = signToken(user._id);
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIES_EXPIRES_IN * 24 * 60 * 60 * 1000,
+    ),
+    secure: false,
+    httpOnly: true,
+  };
+  if (process.env.NODE_ENV === 'production') {
+    cookieOptions.secure = true;
+  }
+  res.cookie('jwt', token, cookieOptions);
+  user.password = undefined;
+  res.status(statusCode).json({
+    status: 'success',
+    token,
+    user,
+  });
+}
+
 export const signUp = catchAsync(async (req, res, next) => {
+  //! create new data for new user
   const newUser = await User.create({
     //! like this because this will only allow data that we want user to input to prevent users to manually add is admin
     name: req.body.name,
@@ -25,16 +48,51 @@ export const signUp = catchAsync(async (req, res, next) => {
     passwordConfirmed: req.body.passwordConfirmed,
     passwordChangedAt: req.body.passwordChangedAt,
     role: req.body.role,
+    isValidated: req.body.isValidated,
   });
 
-  const token = signToken(newUser._id);
-  res.status(201).json({
-    status: 'User succeffully created',
-    token,
-    data: { user: newUser },
-  });
+  const token = signToken(newUser); //generate token that will be send to the client by email
+  const URL = `${req.protocol}://${req.get('host')}/api/v1/users/signup/${token}`; //this is the url the client to click to update the validation status
+  const message = `You must complete the registration process by following the link below: \n ${URL}.\nIf you didn't forget your password, please forget this message.`; //this the message to send
+  try {
+    sendEmail({
+      //this nodemail
+      email: newUser.email,
+      subject: 'follow the intruction',
+      message,
+    });
+    newUser.password = undefined;
+
+    res.status(200).json({
+      status: 'success',
+      data: { user: newUser },
+      message: 'Token sent by email',
+    });
+  } catch (err) {
+    console.log(err);
+    return next(
+      AppError('There was an error sending an email, try sending later', 500),
+    );
+  }
 });
 
+export const confirmSignUp = catchAsync(async (req, res, next) => {
+  const { token } = req.params; //this will get the token form the params
+
+  const decode = await promisify(jwt.verify)(token, process.env.JWT_SECRET); //this will check our token if it correct or not
+  const user = await User.findById(decode.id).select('+isValidated'); //if the token correct we find the user and add the isValidated to the result
+  if (!user) {
+    return next(
+      AppError('the user belonging to this token does not exist', 401),
+    );
+  }
+  if (user.isValidated) {
+    return next(AppError('This account has already been validated', 400));
+  }
+  user.isValidated = true; //this will update the isvalidated
+  await user.save({ validateBeforeSave: false }); //this will save it
+  createSendToken(user, 200, res);
+});
 export const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
   //!step for check login credential
@@ -51,18 +109,14 @@ export const login = catchAsync(async (req, res, next) => {
     return next(err);
   }
   //!3) if everything ok ,send the token to client
-  const token = signToken(user._id);
-  res.status(200).json({
-    status: 'success',
-    token,
-  });
+
+  createSendToken(user, 200, res);
 });
 
-//!this is for protect route
+//?this is for protect route like make sure the user is logged in before continuing
 export const protect = catchAsync(async (req, res, next) => {
   // console.log('hello this form the protect middleware');
   let token;
-
   //!step 1  Get the token from client and check if it there
   if (
     // if this fail it will go straight to global error handler
@@ -72,7 +126,9 @@ export const protect = catchAsync(async (req, res, next) => {
     token = req.headers.authorization.split(' ')[1]; //this will get an array and we just use the [1]
   }
   if (!token) {
-    return next(AppError('token did not exit', 401));
+    return next(
+      new AppError('You are not logged in! Please log in to get access.', 401),
+    );
   }
   //!
   //! step 2 validate the token (check if the token is modified or expired)
@@ -93,7 +149,7 @@ export const protect = catchAsync(async (req, res, next) => {
   req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
   next();
 });
-//!
+//?
 
 //!role based authentication
 export function restrictTo(...roles) {
@@ -111,7 +167,7 @@ export function restrictTo(...roles) {
 }
 //!
 
-//!password reset
+//!forget password (this use to send email about password reset)
 
 export const forgotPassword = catchAsync(async (req, res, next) => {
   // Step 1: Get user based on POSTed email
@@ -125,19 +181,19 @@ export const forgotPassword = catchAsync(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
   // Step 3: Send the reset token back as an email
   const resetURL = `${req.protocol}://${req.get('host')}/api/v1/resetPassword/${resetToken}`; //this way to get the url from the request
-  const message = `forgot your password? Submit a PATCH request with your new password and passwordConfirm to ${resetURL}.\n if you did not forget your password ,pls ignore this message`;
+  const message = `forgot your password? Submit a PATCH request with your new password and password Confirm to ${resetURL}.\n if you did not forget your password ,pls ignore this message`;
   try {
     await sendEmail({
       email: user.email,
       subject: 'your password reset token valid for 10 min',
       message,
     });
+
     res.status(200).json({
       status: 'success',
       message: 'your reset token  password email have been send',
     });
   } catch (error) {
-    console.log(error);
     user.passwordResetToken = undefined;
     user.passwordResetExpired = undefined; //this is hjust modified the data it did not save it we need to run save()
     await user.save({ validateBeforeSave: false });
@@ -177,3 +233,23 @@ export const resetPassword = catchAsync(async (req, res, next) => {
 });
 
 //! in user and password related we need to use Save() instead of findOneAndUpdate() because we need the validator
+
+// //! update the password
+
+export const passwordUpdate = catchAsync(async (req, res, next) => {
+  //! 1)get the user form the collection
+  const user = await User.findById(req.user.id).select('+password');
+
+  //! 2) check if POSTed current password is correct
+
+  if (!(await user.correctPassword(req.body.passwordCurrent, user.password))) {
+    return next(AppError('Password  is not the same', 404));
+  }
+
+  //! 3) if correct update the password
+  user.password = req.body.password;
+  user.passwordConfirmed = req.body.passwordConfirmed;
+  await user.save(); //findByAndUpdate will not run the premiddleware and the valicator
+  //! 4) log user in send jwt
+  createSendToken(user, 200, res);
+});

@@ -5,6 +5,11 @@ import dotenv from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import helmet from 'helmet';
+import xss from 'xss-clean';
+import ExpressMongoSanitize from 'express-mongo-sanitize';
+import rateLimit from 'express-rate-limit';
+import hpp from 'hpp';
 import { router as tourRouter } from './routes/tourRoute.js';
 import { router as userRouter } from './routes/userRoute.js';
 import { AppError } from './utils/appError.js';
@@ -13,19 +18,65 @@ import { globalErrorHandler } from './controller/errorController.js';
 dotenv.config({ path: './.env' });
 
 export const app = express();
-///! middleware
+///! Global middleware
+
+//! development logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+//! header secrurity
+//!
+app.use(helmet());
+//!
+//! cors
 app.use(cors());
-app.use(express.json()); //use middleware here //app.use is use to use middleware //this will make the req.body available
+//!
+//!rate limit (this will limit how many request an ip can attemp)
+const limiter = rateLimit({
+  max: 1000,
+  windowMs: 60 * 60 * 1000, //this allow 100 request in 1 hours
+  message: 'To Many request from  this IP ,pls try again in an hours ',
+});
+
+app.use('/api', limiter);
+//!
+//!Body Parser ,reading data from body into req.body
+app.use(express.json({ limit: '10kb' })); //use middleware here //app.use is use to use middleware //this will make the req.body available //limit is to make sure it only give meaning ful data
+
+//!data sanatization against NoSQL query injection
+app.use(ExpressMongoSanitize());
+//!
+//!data sanatization against XSS
+app.use(xss());
+//!
+
+//! parameter polution
+app.use(
+  hpp({
+    //prevent duplicate parameters like 2 of the same parameter like 2 sort
+    whitelist: [
+      //whitelist will allow duplicates
+      'duration',
+      'ratingsAverage',
+      'ratingsQuantity',
+      'difficulty',
+      'maxGroupSize',
+      'difficulty',
+      'price',
+    ],
+  }),
+);
+//!
+//! serving static files
 app.use(express.static(`./public`));
 // app.use((req, res, next) => {
 //   // every middleware get req,res,next
 //   console.log('hello from middleware ');
 //   next(); //this is important becasue if there is no next it will stop here
 // }); //order is important if this middleware is place after the route it will not run because the request will stop the route
+//!
 
+//Test middleWare
 app.use((req, res, next) => {
   req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
   //console.log(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',

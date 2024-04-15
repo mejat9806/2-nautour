@@ -35,8 +35,10 @@ const userSchema = new mongoose.Schema({
       message: 'passwords do not match ',
     },
   },
+  active: { type: Boolean, default: true, select: false },
   passwordChangedAt: Date,
   passwordResetToken: String,
+  isValidated: { type: Boolean, default: false, select: false },
   passwordResetExpired: Date,
 });
 
@@ -55,13 +57,23 @@ userSchema.pre('save', function (next) {
   next();
 });
 
+//! filter out inactive user
+userSchema.pre(/^find/, function (next) {
+  //this point to current query
+  this.find({ active: { $ne: false } }); //this will get all the active users with true
+  next();
+});
+//!
+
 //!instead method //is a method that avaliable for certain collection
 userSchema.methods.correctPassword = async function (
   //methd bassically allow us to add methods(method is like function) to certain model
   candidatePassword,
   userPassword,
 ) {
-  return await bcrypt.compare(candidatePassword, userPassword);
+  const result = await bcrypt.compare(candidatePassword, userPassword);
+  console.log(result);
+  return result;
 };
 
 userSchema.methods.changedPasswordAfter = function (JWTtimestamp) {
@@ -85,5 +97,7 @@ userSchema.methods.createPasswordResetToken = function () {
   console.log({ randRestToken }, this.passwordResetToken);
   return randRestToken;
 };
+
 //!
+
 export const User = mongoose.model('User', userSchema);
