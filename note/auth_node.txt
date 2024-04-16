@@ -27,5 +27,5 @@ this is the way to do catchAsync on normal function export async function forgot
   }
 }
 
-// Wrap the function with catchAsync if you want to handle errors in a consistent manner
+Wrap the function with catchAsync if you want to handle errors in a consistent manner
 export const forgotPasswordAsync = catchAsync(forgotPassword)

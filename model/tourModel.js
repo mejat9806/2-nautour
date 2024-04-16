@@ -5,6 +5,7 @@
 import mongoose from 'mongoose';
 import slugify from 'slugify';
 import validator from 'validator';
+//import { User } from './userModel.js';
 
 const tourScheme = new mongoose.Schema(
   {
@@ -67,6 +68,29 @@ const tourScheme = new mongoose.Schema(
     },
     startDates: [Date],
     secretTour: { type: Boolean, default: false },
+    locations: [
+      //GEOJSON location emmbeded document
+      {
+        type: { type: String, default: 'Point', enum: ['Point'] },
+        coordinates: [Number],
+        address: String,
+        description: String,
+        day: Number,
+      },
+    ],
+    startLocation: {
+      //GEOJSON
+      type: {
+        type: String,
+        default: 'Point',
+        enum: ['Point'],
+      },
+      coordinates: [Number],
+      address: String,
+      description: String,
+    },
+    // guides: Array, //! this is for embeded .we will request the guide info using pre middleware and the id the function is at  @embeded
+    guides: [{ type: mongoose.Schema.ObjectId, ref: 'User' }], //this is for referencing the guide .the User is the User Model/schema //using this we will only see the guid id not the full object
     slug: String,
   },
   {
@@ -84,12 +108,30 @@ tourScheme.virtual('durationWeeks').get(function () {
   return this.duration / 7; //this here is the current process document
 });
 
-//!this is  document middleware :it runs before .save() and .create()
+//!this is  document middleware :it runs before .save() ,.create(),find or any other function
 tourScheme.pre('save', function (next) {
   this.slug = slugify(`${this.name}-${this._id}`, { lower: true });
   next();
 }); //this pre middleware will run before a event like save
 
+//? this is for embeded document  @embeded
+// tourScheme.pre('save', async function (next) {
+//   //this will get all of the user data based on the id this mostly for embeded data
+//   const guidesPromise = this.guides.map(async (id) => await User.findById(id));
+//   this.guides = await Promise.all(guidesPromise);
+//   next();
+// });
+//?
+tourScheme.pre(/^find/, function (next) {
+  //this always refer to current document .by doing this.populate it will fill the guides each time we run query.it work in all tours query methods
+  this.populate({
+    path: 'guides',
+    select: '-__v -passwordChangedAt',
+  });
+  next();
+});
+//?
+//!
 //!query middleware :it runs before find() query //this will point at the current query
 tourScheme.pre(/^find/, function (next) {
   this.find({ secretTour: { $ne: true } }); //this will hide the secret tour

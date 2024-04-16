@@ -14,6 +14,7 @@ import { router as tourRouter } from './routes/tourRoute.js';
 import { router as userRouter } from './routes/userRoute.js';
 import { AppError } from './utils/appError.js';
 import { globalErrorHandler } from './controller/errorController.js';
+import { router as reviewRouter } from './routes/reviewRoute.js';
 
 dotenv.config({ path: './.env' });
 
@@ -90,6 +91,7 @@ app.use((req, res, next) => {
 //!route
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
 app.use('/api/v1/users', userRouter); //all of the user like signUp logiN  stuff need to go through this middleware
+app.use('/api/v1/review', reviewRouter);
 app.all('*', (req, res, next) => {
   //!this for handling routes that are not specified in the app.js
 
