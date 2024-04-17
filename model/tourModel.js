@@ -109,7 +109,8 @@ tourScheme.virtual('durationWeeks').get(function () {
   return this.duration / 7; //this here is the current process document
 });
 
-//!virtual populate we can poplutate the tour data with review without keeping the array of id on the tour model (it wont persistance)
+//!virtual populate we can poplutate the tour data with review without keeping the array of id on the tour model (it wont persistance) //this only show up on fetch
+
 tourScheme.virtual('reviews', {
   ref: 'Review',
   foreignField: 'tour', //this is the name from the Review model where the current refrences is store //yhis refere to the tour in the review

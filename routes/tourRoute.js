@@ -15,8 +15,10 @@ import {
   patchTour,
   postTour,
 } from '../controller/tourController.js';
+import { router as reviewRouter } from './reviewRoute.js';
+
 import { protect, restrictTo } from '../controller/authController.js';
-import { creteaReview } from '../controller/reviewController.js';
+// import { creteaReview } from '../controller/reviewController.js';
 
 //?way to write route
 //? router.route("the route").httpmethod(this can have multiple middleware)
@@ -54,9 +56,12 @@ router
 // GET  /tour/id/review this is nested route
 // GET  /tour/id/review/reviewID this is nested route
 
-router
-  .route('/:tourId/reviews')
-  .post(protect, restrictTo('user'), creteaReview);
+// router
+//   .route('/:tourId/reviews')
+//   .post(protect, restrictTo('user'), creteaReview);
+router.use('/:tourId/reviews', reviewRouter);
+//this just mean if it tours/:tourId/reviews use reviewRouter
+
 //!
 // .post(CheckBody, postTour); this part is like chainings 2 middleware together
 
