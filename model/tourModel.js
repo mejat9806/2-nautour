@@ -102,12 +102,20 @@ const tourScheme = new mongoose.Schema(
     },
   },
 );
+
 //this keyword is allowed us to access the current document
 //!virtual properties are field that we can defined but it will be not persistent/save in our DB
 tourScheme.virtual('durationWeeks').get(function () {
   return this.duration / 7; //this here is the current process document
 });
 
+//!virtual populate we can poplutate the tour data with review without keeping the array of id on the tour model (it wont persistance)
+tourScheme.virtual('reviews', {
+  ref: 'Review',
+  foreignField: 'tour', //this is the name from the Review model where the current refrences is store //yhis refere to the tour in the review
+  localField: '_id', //this is what hold the refrence value
+});
+//!
 //!this is  document middleware :it runs before .save() ,.create(),find or any other function
 tourScheme.pre('save', function (next) {
   this.slug = slugify(`${this.name}-${this._id}`, { lower: true });

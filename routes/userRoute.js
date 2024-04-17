@@ -34,4 +34,5 @@ router.delete('/deleteMe', protect, deleteMe); //thsi dont really delete it beca
 router.route('/').get(getAlluser).post(createUser);
 router.route('/:id').get(getUser).patch(patchUser).delete(deleteUser);
 //!
+
 //!what in here is the handler

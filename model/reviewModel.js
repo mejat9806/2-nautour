@@ -38,13 +38,22 @@ const reviewScheme = new mongoose.Schema(
 
 reviewScheme.pre(/^find/, function (next) {
   this.populate({
-    path: 'tour',
-    select: 'name',
-  }).populate({
     path: 'user',
     select: 'name photo',
   });
+  // this.populate({//! remove tour because it will give us the tour again // it is unecessary here
+  //   path: 'tour',
+  //   select: 'name',
+  // }).populate({
+  //   path: 'user',
+  //   select: 'name photo',
+  // });
   next();
 });
 
+//!virtual populate we can poplutate the tour data with review without keeping the array of id on the tour model (it wont persistance)
 export const Review = mongoose.model('Review', reviewScheme);
+
+// POST /tour/id/review this is nested route
+// GET  /tour/id/review this is nested route
+// GET  /tour/id/review/reviewID this is nested route
