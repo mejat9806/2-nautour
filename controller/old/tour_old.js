@@ -10,13 +10,6 @@ import Tour from '../model/tourModel.js';
 import { APIfeature } from '../utils/apiFeature.js';
 import { AppError } from '../utils/appError.js';
 import { catchAsync } from '../utils/catchAsync.js';
-import {
-  createOne,
-  deleteOne,
-  getAll,
-  getOne,
-  updateOne,
-} from './handlerFactory.js';
 
 ///!this is module way to use __dirname
 
@@ -39,89 +32,84 @@ export function aliasTopTour(req, res, next) {
 }
 
 //!
-// export const getAllTours = catchAsync(async (req, res, next) => {
-//   const amountOfDoc = await Tour.countDocuments();
+export const getAllTours = catchAsync(async (req, res, next) => {
+  const amountOfDoc = await Tour.countDocuments();
 
-//   const feature = await APIfeature(Tour, req);
-//   const allTours = await feature;
-//   //!send response
-//   res.status(200).json({
-//     status: 'success',
-//     amountOfDoc,
-//     timeRequesteds: req.requestTimes,
-//     result: allTours.length,
-//     data: {
-//       allTours,
-//     },
-//   });
-// });
+  const feature = await APIfeature(Tour, req);
+  const allTours = await feature;
+  //!send response
+  res.status(200).json({
+    status: 'success',
+    amountOfDoc,
+    timeRequesteds: req.requestTimes,
+    result: allTours.length,
+    data: {
+      allTours,
+    },
+  });
+});
 
-// export const getTour = catchAsync(async (req, res, next) => {
-//   const tour = await Tour.findById(req.params.id).populate('reviews');
-//    .populate({
-//      path: 'guides',
-//      select: '-__v -passwordChangedAt',
-//    }); //this is for referencing data for the tour in a query(find)
-//   if (!tour) {
-//     const err = AppError('Tour not found', 404);
-//     return next(err);
-//   }
-//   res.status(200).json({
-//     status: 'success',
-//     timeRequesteds: req.requestTimes,
-//     data: {
-//       tour,
-//     },
-//   });
-// });
-export const getAllTours = getAll(Tour);
-export const getTour = getOne(Tour, { path: 'reviews' }); //or like this (Tour,"reviews") //use object mainly if we want to add select option
-export const postTour = createOne(Tour);
-export const patchTour = updateOne(Tour);
-export const deleteTour = deleteOne(Tour);
+export const getTour = catchAsync(async (req, res, next) => {
+  const tour = await Tour.findById(req.params.id).populate('reviews');
+  // .populate({
+  //   path: 'guides',
+  //   select: '-__v -passwordChangedAt',
+  // }); //this is for referencing data for the tour in a query(find)
+  if (!tour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
+  res.status(200).json({
+    status: 'success',
+    timeRequesteds: req.requestTimes,
+    data: {
+      tour,
+    },
+  });
+});
 
-// export const postTour = catchAsync(async (req, res, next) => {
-//   // const newTour = new Tour({});
-//   // newTour.save();
+export const postTour = catchAsync(async (req, res, next) => {
+  // const newTour = new Tour({});
+  // newTour.save();
 
-//   const newTour = await Tour.create(req.body);
-//   res.status(201).json({
-//     status: 'successful',
-//     data: {
-//       //tour: newTour,
-//       newTour,
-//     },
-//   });
-// });
-// export const patchTour = catchAsync(async (req, res, next) => {
-//   const editedTour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
-//     new: true,
-//     runValidators: true,
-//   });
-//   console.log(editedTour);
-//   if (!editedTour) {
-//     const err = AppError('Tour not found', 404);
-//     return next(err);
-//   }
-//   res.status(200).json({
-//     status: 'success',
-//     data: {
-//       editedTour,
-//     },
-//   });
-// });
-// export const deleteTour = catchAsync(async (req, res, next) => {
-//   const deletedTour = await Tour.findByIdAndDelete(req.params.id);
-//   console.log(deletedTour);
-//   if (!deletedTour) {
-//     const err = AppError('Tour not found', 404);
-//     return next(err);
-//   }
-//   res.status(204).json({
-//     status: 'success',
-//     message: 'Tour deleted successfully',
-//   });
-// });
+  const newTour = await Tour.create(req.body);
+  res.status(201).json({
+    status: 'successful',
+    data: {
+      //tour: newTour,
+      newTour,
+    },
+  });
+});
+export const patchTour = catchAsync(async (req, res, next) => {
+  const editedTour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+  console.log(editedTour);
+  if (!editedTour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
+  res.status(200).json({
+    status: 'success',
+    data: {
+      editedTour,
+    },
+  });
+});
+export const deleteTour = catchAsync(async (req, res, next) => {
+  const deletedTour = await Tour.findByIdAndDelete(req.params.id);
+  console.log(deletedTour);
+  if (!deletedTour) {
+    const err = AppError('Tour not found', 404);
+    return next(err);
+  }
+  res.status(204).json({
+    status: 'success',
+    message: 'Tour deleted successfully',
+  });
+});
 
 //!aggregation pipeline
 //!use to create aggregated data like calculated average ,minmax

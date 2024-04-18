@@ -15,7 +15,10 @@ const DB = process.env.MONGODB_URL.replace(
   process.env.MONGODB_PASSWORD,
 );
 async function conDB() {
-  await mongoose.connect(DB).then(() => console.log('Connected to database'));
+  await mongoose
+    .connect(DB)
+    .then(() => console.log('Connected to database'))
+    .catch((err) => console.log(err.message));
 }
 conDB();
 
@@ -50,17 +53,8 @@ const server = app.listen(port, () => {
 //! this is mostly for async function/request
 //?this is like event listener
 process.on('unhandledRejection', (err) => {
-  let errorMessage;
-  if (err.code === 'ECONNREFUSED') {
-    errorMessage = 'network problem';
-  }
-
-  if (err.code === 8000) {
-    errorMessage = 'bad auth : authentication failed';
-  }
-
   console.log(err.name, err.message);
-  console.log(`unhandled rejection ${errorMessage} ⛔`);
+  console.log(`unhandled rejection ${err.message} ⛔`);
   server.close(() => {
     process.exit(1); //this shutdown the server
   });

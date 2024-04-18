@@ -103,13 +103,7 @@ export const login = catchAsync(async (req, res, next) => {
   }
   //!
   //!2) check is the user exist password is correct
-  const user = await User.findOne({ email: email }).select(
-    '+password +isValidated',
-  ); //select use to get the password from DB eventhough they are on selected by default refer to password in userModel
-  console.log(user.isValidated);
-  if (user.isValidated === false) {
-    return next(AppError('Please check your email for validation', 401));
-  }
+  const user = await User.findOne({ email: email }).select('+password'); //select use to get the password from DB eventhough they are on selected by default refer to password in userModel
   if (!user || !(await user.correctPassword(password, user.password))) {
     const err = AppError('please provide correct Email or password  ', 401);
     return next(err);

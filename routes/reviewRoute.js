@@ -1,5 +1,12 @@
 import express from 'express';
-import { creteaReview, getAllReviews } from '../controller/reviewController.js';
+import {
+  createReview,
+  deleteReview,
+  getAllReviews,
+  getReview,
+  patchReview,
+  setTourUserId,
+} from '../controller/reviewController.js';
 import { protect, restrictTo } from '../controller/authController.js';
 
 export const router = express.Router({
@@ -9,4 +16,10 @@ export const router = express.Router({
 router
   .route('/')
   .get(protect, restrictTo('user'), getAllReviews)
-  .post(protect, restrictTo('user'), creteaReview);
+  .post(protect, restrictTo('user'), setTourUserId, createReview);
+
+router
+  .route('/:id')
+  .get(getReview)
+  .delete(protect, restrictTo('user'), deleteReview)
+  .patch(protect, restrictTo('user'), patchReview);

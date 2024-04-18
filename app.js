@@ -63,6 +63,7 @@ app.use(
       'difficulty',
       'maxGroupSize',
       'difficulty',
+      'fields',
       'price',
     ],
   }),

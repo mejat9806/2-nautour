@@ -52,16 +52,18 @@
 // }
 
 function applyFieldSelection(query, fieldsQuery) {
+  console.log(fieldsQuery);
+  //this will take a string an remove the (,) by split and join back up to create a string because select only take strings
   if (fieldsQuery) {
     const fields = fieldsQuery.split(',').join(' ');
-    // console.log(fields);
+    console.log(fields, 'fields');
     return query.select(fields);
   }
   return query.select('-__v');
 }
 
 function applySorting(query, sortQuery) {
-  console.log(sortQuery);
+  console.log(sortQuery, 'sort');
   //sortQuery is the req.query.sort
   if (sortQuery) {
     const sortBy = sortQuery.split(',').join(' ');
@@ -77,11 +79,12 @@ function applyPagination(query, pageQuery, limitQuery) {
 }
 
 export async function APIfeature(query, req) {
+  //query is the model object
+  console.log(query);
   const queryObject = { ...req.query };
-  // console.log(queryObject, 'query object');
 
   const excludedFields = ['page', 'sort', 'limit', 'fields'];
-  excludedFields.forEach((el) => delete queryObject[el]);
+  excludedFields.forEach((el) => delete queryObject[el]); //this will remove excludedFields from the query object
 
   let queryStr = JSON.stringify(queryObject);
   //  console.log(queryStr, 'queryStr');

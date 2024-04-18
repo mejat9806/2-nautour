@@ -1,7 +1,6 @@
 import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
 import { catchAsync } from '../utils/catchAsync.js';
-import { deleteOne, getAll, getOne, updateOne } from './handlerFactory.js';
 
 function filterObject(object, ...allowedFields) {
   const newObject = {};
@@ -54,41 +53,42 @@ export const deleteMe = catchAsync(async (req, res, next) => {
   });
 });
 //!
-// export const getAlluser = async (req, res, next) => {
-//   const users = await User.find();
-//   const documentAmmount = await User.countDocuments();
-//   res.status(500).json({
-//     status: 'hello from user',
-//     documentAmmount: documentAmmount,
-//     users: { users },
-//   });
-// };
+export const getAlluser = async (req, res, next) => {
+  const users = await User.find();
+  const documentAmmount = await User.countDocuments();
+  res.status(500).json({
+    status: 'hello from user',
+    documentAmmount: documentAmmount,
+    users: { users },
+  });
+};
 export function createUser(req, res) {
   res.status(500).json({
-    status: 'error',
-    message: 'this route  not define !please use sign up',
+    status: 'hello from user',
+    message: 'this route is not define',
   });
 }
-// export async function getUser(req, res) {
-//   const user = await User.findById(req.params.id);
-//   console.log(user);
-//   res.status(500).json({
-//     status: 'hello from user',
+export async function getUser(req, res) {
+  const user = await User.findById(req.params.id);
+  console.log(user);
+  res.status(500).json({
+    status: 'hello from user',
 
-//     message: 'this route is not define',
-//   });
-// }
+    message: 'this route is not define',
+  });
+}
 
-// export function patchUser(req, res) {
-//   res.status(500).json({
-//     status: 'hello from user',
-//     message: 'this route is not define',
-//   });
-// }
-
-export const getAlluser = getAll(User);
-export const getUser = getOne(User);
-export const patchUser = updateOne(User); //Donot update password with this
-export const deleteUser = deleteOne(User);
+export function patchUser(req, res) {
+  res.status(500).json({
+    status: 'hello from user',
+    message: 'this route is not define',
+  });
+}
+export function deleteUser(req, res) {
+  res.status(500).json({
+    status: 'hello from user',
+    message: 'this route is not define',
+  });
+}
 
 //! user update his own data
