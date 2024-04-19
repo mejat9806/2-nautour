@@ -30,7 +30,7 @@ export const getAll = (Model) =>
 export const deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
-    console.log(doc);
+    // console.log(doc);
     if (!doc) {
       const err = AppError('No document found with that id', 404);
       return next(err);
@@ -43,7 +43,7 @@ export const deleteOne = (Model) =>
 
 export const createOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    console.log(req.body);
+    // console.log(req.body);
     const newDoc = await Model.create(req.body);
     res.status(200).json({
       status: 'success',
@@ -56,7 +56,6 @@ export const createOne = (Model) =>
 
 export const updateOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    console.log(req.body.role);
     if (req.body.password) {
       return next(
         AppError('Password cant be update here please go to /updateMyPassword'),
@@ -79,6 +78,7 @@ export const updateOne = (Model) =>
 
 export const getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
+    console.log(req.params.id);
     let query = Model.findById(req.params.id);
     if (popOptions) {
       query = query.populate(popOptions);

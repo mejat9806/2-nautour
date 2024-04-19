@@ -1,5 +1,6 @@
 //! mainly for middleware declarations
 //!all middleware declarations here will be always available on all sucessful requests
+//! middleware is in sequential  order
 //! only express shit goes here
 import dotenv from 'dotenv';
 import express from 'express';

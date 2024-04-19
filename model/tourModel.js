@@ -103,6 +103,15 @@ const tourScheme = new mongoose.Schema(
   },
 );
 
+//!this is called singlefield index
+//tourScheme.index({ price: 1 }); //-1 for decending //! index is use for to prevent mongoDB from scanning the whole collection for the data that matches the params becuase if we have many documents like millions it may harm the performance so we put the index on the most popular query/params
+//!
+//!compound index
+// just need the compount because it will work with 1 field
+tourScheme.index({ price: 1, ratingsAverage: -1 });
+tourScheme.index({ slug: 1 });
+//?which field to index? just indexed the most used field like price and rating
+//!
 //this keyword is allowed us to access the current document
 //!virtual properties are field that we can defined but it will be not persistent/save in our DB
 tourScheme.virtual('durationWeeks').get(function () {

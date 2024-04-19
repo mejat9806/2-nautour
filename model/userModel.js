@@ -42,8 +42,8 @@ const userSchema = new mongoose.Schema({
   passwordResetExpired: Date,
 });
 
-// eslint-disable-next-line prefer-arrow-callback
 userSchema.pre('save', async function (next) {
+  //!turn this back on for deployment
   //this is for encrything the password
   if (!this.isModified('password')) return next(); //this isModified('fields') will check if certain fields are modified or not
   this.password = await bcrypt.hash(this.password, 12);
@@ -51,6 +51,8 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.pre('save', function (next) {
+  // This middleware will run when the password is modified, except when a new user is created.
+  // It updates the passwordChangedAt field to the current date and time minus 1000 milliseconds.
   if (!this.isModified('password') || this.isNew) return next();
 
   this.passwordChangedAt = Date.now() - 1000;
@@ -94,7 +96,7 @@ userSchema.methods.createPasswordResetToken = function () {
     .update(randRestToken)
     .digest('hex'); //this is for security reasons we dont want to save plain passwords reset token
   this.passwordResetExpired = Date.now() + 10 * 60 * 1000; //this is for security reasons we dont want to keep the password reset token forever
-  console.log({ randRestToken }, this.passwordResetToken);
+  console.log({ randRestToken });
   return randRestToken;
 };
 

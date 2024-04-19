@@ -16,7 +16,6 @@ import {
   postTour,
 } from '../controller/tourController.js';
 import { router as reviewRouter } from './reviewRoute.js';
-
 import { protect, restrictTo } from '../controller/authController.js';
 // import { creteaReview } from '../controller/reviewController.js';
 
@@ -26,7 +25,9 @@ import { protect, restrictTo } from '../controller/authController.js';
 export const router = express.Router(); //this uses to create router
 //!Aliasing this for most popular routes
 router.route('/tours-stats').get(getTourstats);
-router.route('/monthly-plan/:year').get(getmonthlyPlan);
+router
+  .route('/monthly-plan/:year')
+  .get(protect, restrictTo('admin', 'lead-guide', 'guide'), getmonthlyPlan);
 router.route('/top-5-cheap').get(aliasTopTour, getAllTours);
 //!
 
@@ -40,13 +41,16 @@ router.param('id', (req, res, next, val) => {
 //router.param('id', checkId);
 
 // !
-router.route('/').get(protect, getAllTours).post(postTour); //protect route will run first
+router
+  .route('/')
+  .get(getAllTours)
+  .post(protect, restrictTo('admin', 'lead-guide'), postTour); //protect route will run first
 // router.route('/').get(getAllTours).post(CheckBody, postTour);
 router
   .route('/:id')
   // .route('/api/v1/tours/:id')
   .get(getTour)
-  .patch(patchTour)
+  .patch(protect, restrictTo('admin', 'lead-guide'), patchTour)
   .delete(protect, restrictTo('admin', 'lead-guide'), deleteTour); //use this method is it has the same url
 
 //!

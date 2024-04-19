@@ -13,13 +13,15 @@ export const router = express.Router({
   mergeParams: true, //this will allow review to access other routes params like to access tourId /:tourId/reviews
 });
 
+router.use(protect);
 router
   .route('/')
-  .get(protect, restrictTo('user'), getAllReviews)
+  .get(restrictTo('user'), getAllReviews)
   .post(protect, restrictTo('user'), setTourUserId, createReview);
 
+router.use(protect); //proctect all routes after this
 router
   .route('/:id')
   .get(getReview)
-  .delete(protect, restrictTo('user'), deleteReview)
-  .patch(protect, restrictTo('user'), patchReview);
+  .patch(restrictTo('user', 'admin'), patchReview)
+  .delete(restrictTo('user', 'admin'), deleteReview);

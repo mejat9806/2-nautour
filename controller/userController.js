@@ -3,12 +3,18 @@ import { AppError } from '../utils/appError.js';
 import { catchAsync } from '../utils/catchAsync.js';
 import { deleteOne, getAll, getOne, updateOne } from './handlerFactory.js';
 
+export const getMe = (req, res, next) => {
+  req.params.id = req.user.id; //this will update the req.params.id to re.user.id then use it on getUSer
+  next();
+};
+
 function filterObject(object, ...allowedFields) {
   const newObject = {};
   Object.keys(object).forEach((el) => {
+    //this part keys to get like name
     if (allowedFields.includes(el)) newObject[el] = object[el];
   });
-
+  console.log(newObject);
   //this will loop through the req.user object and check if it has name and email fields
   //if so add the input from the req.user object  like (name, email) to a new object and return it
   return newObject;
@@ -33,7 +39,8 @@ export const updateME = async function (req, res, next) {
     new: true,
     runValidators: true,
   });
-
+  //  const updatedUser = await User.findById(req.user.id);
+  console.log(updatedUser);
   res.status(200).json({
     status: 'success',
     data: {

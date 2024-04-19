@@ -106,10 +106,10 @@ export const login = catchAsync(async (req, res, next) => {
   const user = await User.findOne({ email: email }).select(
     '+password +isValidated',
   ); //select use to get the password from DB eventhough they are on selected by default refer to password in userModel
-  console.log(user.isValidated);
-  if (user.isValidated === false) {
-    return next(AppError('Please check your email for validation', 401));
-  }
+  // console.log(user.isValidated); //! this is for validation turn back on later
+  // if (user.isValidated === false) {
+  //   return next(AppError('Please check your email for validation', 401));
+  // }
   if (!user || !(await user.correctPassword(password, user.password))) {
     const err = AppError('please provide correct Email or password  ', 401);
     return next(err);
@@ -200,7 +200,7 @@ export const forgotPassword = catchAsync(async (req, res, next) => {
       message: 'your reset token  password email have been send',
     });
   } catch (error) {
-    user.passwordResetToken = undefined;
+    user.passwordResetToken = undefined; //this will reset the reset token if error
     user.passwordResetExpired = undefined; //this is hjust modified the data it did not save it we need to run save()
     await user.save({ validateBeforeSave: false });
     return next(AppError('There wass a error while sending a email ', 500));
