@@ -67,7 +67,7 @@ userSchema.pre(/^find/, function (next) {
 });
 //!
 
-//!instead method //is a method that avaliable for certain collection
+//!instance method //is a method that avaliable for certain collection
 userSchema.methods.correctPassword = async function (
   //methd bassically allow us to add methods(method is like function) to certain model
   candidatePassword,

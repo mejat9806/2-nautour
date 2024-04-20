@@ -47,7 +47,7 @@ export const createOne = (Model) =>
     const newDoc = await Model.create(req.body);
     res.status(200).json({
       status: 'success',
-      message: 'Document deleted successfully',
+      message: 'Document created successfully',
       data: {
         data: newDoc,
       },

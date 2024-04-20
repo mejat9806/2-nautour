@@ -1,0 +1,48 @@
+!instance methods vs static methods
+Instance Methods:
+Instance methods in Mongoose are methods that you define on the schema's methods property. These methods are available on instances of the model.
+They are useful for operations that are specific to individual documents (instances) of a model.
+Instance methods have access to the document's properties using this.
+They can perform document-specific tasks like validation, manipulation, or any other operations involving the document's data.
+
+
+example usage: 
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+! Define a schema
+const userSchema = new Schema({
+    name: String,
+    email: String
+});
+
+ !Define an instance method
+userSchema.methods.sayHello = function() {
+    return `Hello, my name is ${this.name}.`;
+};
+
+ !Create a model
+const User = mongoose.model('User', userSchema);
+
+ !Usage
+const newUser = new User({ name: 'John', email: 'john@example.com' });
+console.log(newUser.sayHello()); // Output: Hello, my name is John.
+
+!Static Methods:
+Static methods in Mongoose are defined on the schema's statics property. These methods are called on the model itself, not on individual documents.
+They are useful for operations that are not specific to any particular document but involve the model as a whole.
+Static methods do not have access to document properties (this refers to the model itself).
+They can perform tasks like querying the database, performing aggregations, or any other operations that involve multiple documents or the model itself.
+
+
+example usage :
+
+! Define a static method
+userSchema.statics.findByEmail = function(email) {
+    return this.findOne({ email });
+};
+
+! Usage
+User.findByEmail('john@example.com')
+    .then(user => console.log(user))
+    .catch(err => console.error(err));
