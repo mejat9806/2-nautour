@@ -80,6 +80,17 @@ export const postTour = createOne(Tour);
 export const patchTour = updateOne(Tour);
 export const deleteTour = deleteOne(Tour);
 
+//!GEO location
+///tours-withib/:distance/center/:latlng/unit/:unit
+export const getToursWithin = (req, res, next) => {
+  const { distance, unit, latlng } = req.params;
+  const { lat, lang } = latlng.split(','); // 123,-234
+  if (!lat || !lang) {
+    next(AppError('Invalid location latitude or longitude', 404));
+  }
+};
+//!
+
 // export const postTour = catchAsync(async (req, res, next) => {
 //   // const newTour = new Tour({});
 //   // newTour.save();

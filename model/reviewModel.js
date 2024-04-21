@@ -15,9 +15,10 @@ const reviewScheme = new mongoose.Schema(
       select: false, //this will excluded from the response maybe for secrurity reasons
     },
     user: {
+      //this is parrent referencing
       type: mongoose.Schema.ObjectId,
       ref: 'User',
-      required: [true, 'Review must belong to a tour'],
+      required: [true, 'Review must belong to a user'],
     },
 
     tour: {
@@ -36,9 +37,10 @@ const reviewScheme = new mongoose.Schema(
     },
   },
 );
-
+reviewScheme.index({ tour: 1, user: 1 }, { unique: true }); //this will make sure the combination of tour and user is unique to prevent user to submit multiple review for a tour//if this index not working delete the all dupilcated data and try again
 reviewScheme.pre(/^find/, function (next) {
   this.populate({
+    //this will find the name and photo and put it in the user area
     path: 'user',
     select: 'name photo',
   });
@@ -62,7 +64,7 @@ reviewScheme.pre(/^find/, function (next) {
 
 //! calculate average rating and show it on the tour model
 reviewScheme.statics.calcAverageRating = async function (tourId) {
-  //Statics are pretty much the same as methods but allow for defining functions that exist directly on your Model.use static here because we want the access to the model and access the aggregate dunction
+  //Statics are pretty much the same as methods but allow for defining functions that exist directly on  Model.use static here because we want the access to the model and access the aggregate dunction
   const stats = await this.aggregate([
     //this keyword will refer to the current model
     {

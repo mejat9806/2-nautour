@@ -10,6 +10,7 @@ import {
   deleteTour,
   getAllTours,
   getTour,
+  getToursWithin,
   getTourstats,
   getmonthlyPlan,
   patchTour,
@@ -40,11 +41,17 @@ router.param('id', (req, res, next, val) => {
 //this only run on this route  not in any other route with id
 //router.param('id', checkId);
 
+router.route(
+  '/tours-withib/:distance/center/:latlng/unit/:unit',
+  getToursWithin,
+);
+//example in url like this tours-distance/223/center/40,45/unit/km
+//or like this tours-distance?distance=223&center=-40,45&unit=km
 // !
 router
   .route('/')
   .get(getAllTours)
-  .post(protect, restrictTo('admin', 'lead-guide', 'user'), postTour); //protect route will run first
+  .post(protect, restrictTo('admin', 'lead-guide'), postTour); //protect route will run first
 // router.route('/').get(getAllTours).post(CheckBody, postTour);
 router
   .route('/:id')
