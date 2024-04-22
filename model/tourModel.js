@@ -111,6 +111,7 @@ const tourScheme = new mongoose.Schema(
 // just need the compount because it will work with 1 field
 tourScheme.index({ price: 1, ratingsAverage: -1 });
 tourScheme.index({ slug: 1 });
+tourScheme.index({ startLocation: '2dsphere' }); //this for geospatial
 //?which field to index? just indexed the most used field like price and rating
 //!
 //this keyword is allowed us to access the current document
@@ -172,12 +173,12 @@ tourScheme.post(/^find/, function (doc, next) {
 });
 //!
 //!aggregation middleware
-tourScheme.pre('aggregate', function (next) {
-  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
-  // this.pipeline().shift({ $sort: { avgPrice: 1 } });
-  // console.log(this.pipeline());
-  next();
-});
+// tourScheme.pre('aggregate', function (next) {
+//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
+//   // this.pipeline().shift({ $sort: { avgPrice: 1 } });
+//   console.log(this.pipeline());
+//   next();
+// });
 //!
 //!mogoose data validation
 //?sanitization of data and validation

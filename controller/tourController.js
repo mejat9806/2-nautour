@@ -81,14 +81,66 @@ export const patchTour = updateOne(Tour);
 export const deleteTour = deleteOne(Tour);
 
 //!GEO location
+//! this is used to get the tours within certain ranges
 ///tours-withib/:distance/center/:latlng/unit/:unit
-export const getToursWithin = (req, res, next) => {
+export const getToursWithin = catchAsync(async (req, res, next) => {
   const { distance, unit, latlng } = req.params;
-  const { lat, lang } = latlng.split(','); // 123,-234
-  if (!lat || !lang) {
-    next(AppError('Invalid location latitude or longitude', 404));
+  const [lat, lng] = latlng.split(','); // 123,-234
+  const radius = unit === `mi` ? distance / 3963.2 : distance / 6378.1; //this the radius of earth in mile and KM
+  if (!lat || !lng) {
+    next(AppError('Invalid location latitude or longitude', 400));
   }
-};
+  console.log(distance, unit, latlng);
+  const tours = await Tour.find({
+    startLocation: { $geoWithin: { $centerSphere: [[lng, lat], radius] } },
+  });
+  res.status(200).json({
+    status: 'OK',
+    result: tours.length,
+    data: {
+      data: tours,
+    },
+  });
+});
+
+//! this used to get the distance from the latlng to all locations in the documet
+export const getDistance = catchAsync(async (req, res, next) => {
+  const { unit, latlng } = req.params;
+  const [lat, lng] = latlng.split(','); // 123,-234
+  const unitMulti = unit === 'mi' ? 0.000621371 : 0.001;
+  if (!lat || !lng) {
+    next(AppError('Invalid location latitude or longitude', 400));
+  }
+  console.log(unit, latlng);
+  // const tours = await Tour.find({
+  //   startLocation: { $geoWithin: { $centerSphere: [[lng, lat]] } },
+  // });
+
+  const distance = await Tour.aggregate([
+    {
+      $geoNear: {
+        near: {
+          type: 'Point',
+          coordinates: [lng * 1, lat * 1],
+        },
+        distanceField: 'distance',
+        distanceMultiplier: unitMulti,
+      },
+    },
+    {
+      $project: {
+        distance: 1,
+        name: 1,
+      },
+    },
+  ]);
+  res.status(200).json({
+    status: 'OK',
+    data: {
+      data: distance,
+    },
+  });
+});
 //!
 
 // export const postTour = catchAsync(async (req, res, next) => {
