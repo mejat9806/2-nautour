@@ -57,7 +57,7 @@ const tourScheme = new mongoose.Schema(
     summary: {
       type: String,
       trim: true,
-      required: [true, 'must have difficulty'],
+      required: [true, 'must have summary'],
     }, //trime will remove whitespace from the beginning and end
     description: { type: String, trim: true },
     imageCover: { type: String, required: [true, 'must have cover image'] },
@@ -91,7 +91,7 @@ const tourScheme = new mongoose.Schema(
       description: String,
     },
     // guides: Array, //! this is for embeded .we will request the guide info using pre middleware and the id the function is at  @embeded
-    guides: [{ type: mongoose.Schema.ObjectId, ref: 'User' }], //this is for referencing the guide .the User is the User Model/schema //using this we will only see the guid id not the full object
+    guides: [{ type: mongoose.Schema.ObjectId, ref: 'User' }], //this is for referencing the guide  .the User is the User Model/schema //using this we will only see the guid id not the full object.this is child refrence
     slug: String,
   },
   {
@@ -173,12 +173,12 @@ tourScheme.post(/^find/, function (doc, next) {
 });
 //!
 //!aggregation middleware
-// tourScheme.pre('aggregate', function (next) {
-//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
-//   // this.pipeline().shift({ $sort: { avgPrice: 1 } });
-//   console.log(this.pipeline());
-//   next();
-// });
+tourScheme.pre('aggregate', function (next) {
+  this.pipeline().push({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
+  // this.pipeline().shift({ $sort: { avgPrice: 1 } });
+  console.log(this.pipeline());
+  next();
+});
 //!
 //!mogoose data validation
 //?sanitization of data and validation

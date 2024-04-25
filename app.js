@@ -16,12 +16,23 @@ import { router as userRouter } from './routes/userRoute.js';
 import { AppError } from './utils/appError.js';
 import { globalErrorHandler } from './controller/errorController.js';
 import { router as reviewRouter } from './routes/reviewRoute.js';
+import { router as viewRouter } from './routes/viewRoute.js';
 
 dotenv.config({ path: './.env' });
 
 export const app = express();
 ///! Global middleware
-
+//! pug
+app.set('view engine', 'pug');
+app.set('views', './views');
+//! serving static files
+app.use(express.static(`./public`));
+// app.use((req, res, next) => {
+//   // every middleware get req,res,next
+//   console.log('hello from middleware ');
+//   next(); //this is important becasue if there is no next it will stop here
+// }); //order is important if this middleware is place after the route it will not run because the request will stop the route
+//!
 //! development logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -32,6 +43,8 @@ app.use(helmet());
 //!
 //! cors
 app.use(cors());
+app.options('*', cors());
+
 //!
 //!rate limit (this will limit how many request an ip can attemp)
 const limiter = rateLimit({
@@ -70,14 +83,6 @@ app.use(
   }),
 );
 //!
-//! serving static files
-app.use(express.static(`./public`));
-// app.use((req, res, next) => {
-//   // every middleware get req,res,next
-//   console.log('hello from middleware ');
-//   next(); //this is important becasue if there is no next it will stop here
-// }); //order is important if this middleware is place after the route it will not run because the request will stop the route
-//!
 
 //Test middleWare
 app.use((req, res, next) => {
@@ -91,6 +96,7 @@ app.use((req, res, next) => {
 // });
 
 //!route
+app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
 app.use('/api/v1/users', userRouter); //all of the user like signUp logiN  stuff need to go through this middleware
 app.use('/api/v1/review', reviewRouter);

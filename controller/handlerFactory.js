@@ -43,8 +43,9 @@ export const deleteOne = (Model) =>
 
 export const createOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    // console.log(req.body);
+    console.log('this req.body', req.body);
     const newDoc = await Model.create(req.body);
+    console.log('this is newDOC', newDoc);
     res.status(200).json({
       status: 'success',
       message: 'Document created successfully',

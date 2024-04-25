@@ -55,7 +55,7 @@ router.route('/distances/:latlng/unit/:unit').get(getDistance);
 router
   .route('/')
   .get(getAllTours)
-  .post(protect, restrictTo('admin', 'lead-guide'), postTour); //protect route will run first
+  .post(protect, restrictTo('admin', 'lead-guide', 'user'), postTour); //protect route will run first
 // router.route('/').get(getAllTours).post(CheckBody, postTour);
 router
   .route('/:id')

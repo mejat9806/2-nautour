@@ -16,8 +16,8 @@ export const router = express.Router({
 router.use(protect);
 router
   .route('/')
-  .get(restrictTo('user'), getAllReviews)
-  .post(protect, restrictTo('user'), setTourUserId, createReview);
+  .get(restrictTo('user', 'admin'), getAllReviews)
+  .post(protect, restrictTo('user', 'admin'), setTourUserId, createReview);
 
 router.use(protect); //proctect all routes after this
 router

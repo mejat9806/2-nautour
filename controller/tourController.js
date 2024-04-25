@@ -235,7 +235,7 @@ export const getmonthlyPlan = catchAsync(async (req, res, next) => {
   const year = req.params.year * 1;
   const plan = await Tour.aggregate([
     {
-      $unwind: `$startDates`, //!Deconstructs an array field from the input documents to output a document for each element. Each output document is the input document with the value of the array field replaced by the element.//example here will create new document with eacth of start dates
+      $unwind: `$startDates`, //!used to deconstruct an array field into multiple documents//example here will create new document with eacth of start dates
     },
     {
       $match: {
@@ -249,17 +249,17 @@ export const getmonthlyPlan = catchAsync(async (req, res, next) => {
       $group: {
         numTourStarts: { $sum: 1 }, //this will add 1 each time it get the same months
         tours: { $push: { name: `$name`, image: `$imageCover` } }, //this push operator will push the name from the tour into an array base on date
-        _id: { $month: `$startDates` }, //this month will get the month num from the startDates in match
+        _id: { $month: `$startDates` }, //this month will get the month num from the startDates and use it as id
       },
     },
     {
       $addFields: { month: `$_id` }, //this will add a field with month as a key an the id as a value
     },
-    {
-      $project: {
-        _id: 0, //this use to remove the field
-      },
-    },
+    // {
+    //   $project: {
+    //     _id: 0, //this use to remove the field
+    //   },
+    // },
     {
       $sort: { numTourStarts: 1 },
     },

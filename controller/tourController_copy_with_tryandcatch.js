@@ -187,7 +187,7 @@ export async function getTourstats(req, res) {
 
 export async function getmonthlyPlan(req, res) {
   try {
-    const year = req.params.year * 1;
+    const year = req.params.year * 1; //this to convert string to number
     const plan = await Tour.aggregate([
       {
         $unwind: `$startDates`, //!Deconstructs an array field from the input documents to output a document for each element. Each output document is the input document with the value of the array field replaced by the element.//example here will create new document with eacth of start dates
