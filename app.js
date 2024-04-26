@@ -8,6 +8,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
 import xss from 'xss-clean';
+
+import cookieParser from 'cookie-parser';
 import ExpressMongoSanitize from 'express-mongo-sanitize';
 import rateLimit from 'express-rate-limit';
 import hpp from 'hpp';
@@ -40,7 +42,34 @@ if (process.env.NODE_ENV === 'development') {
 //! header secrurity
 //!
 app.use(helmet());
+
+// Further HELMET configuration for Security Policy (CSP)
+const scriptSrcUrls = ['https://unpkg.com/', 'https://tile.openstreetmap.org'];
+const styleSrcUrls = [
+  'https://unpkg.com/',
+  'https://tile.openstreetmap.org',
+  'https://fonts.googleapis.com/',
+];
+const connectSrcUrls = ['https://unpkg.com', 'https://tile.openstreetmap.org'];
+const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+
+//set security http headers
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: [],
+      connectSrc: ["'self'", ...connectSrcUrls],
+      scriptSrc: ["'self'", ...scriptSrcUrls],
+      styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+      workerSrc: ["'self'", 'blob:'],
+      objectSrc: [],
+      imgSrc: ["'self'", 'blob:', 'data:', 'https:'],
+      fontSrc: ["'self'", ...fontSrcUrls],
+    },
+  }),
+);
 //!
+
 //! cors
 app.use(cors());
 app.options('*', cors());
@@ -57,7 +86,10 @@ app.use('/api', limiter);
 //!
 //!Body Parser ,reading data from body into req.body
 app.use(express.json({ limit: '10kb' })); //use middleware here //app.use is use to use middleware //this will make the req.body available //limit is to make sure it only give meaning ful data
-
+//?cookie-parser
+//this let express to read the cookies data
+app.use(cookieParser());
+//?
 //!data sanatization against NoSQL query injection
 app.use(ExpressMongoSanitize());
 //!
@@ -65,7 +97,7 @@ app.use(ExpressMongoSanitize());
 app.use(xss());
 //!
 
-//! parameter polution
+//! HTTP Parameter Pollution
 app.use(
   hpp({
     //prevent duplicate parameters like 2 of the same parameter like 2 sort
@@ -85,11 +117,12 @@ app.use(
 //!
 
 //Test middleWare
-app.use((req, res, next) => {
-  req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
-  //console.log(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',
-  next();
-});
+// app.use((req, res, next) => {
+//   req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
+//   //console.log(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',
+//   console.log(req.cookies);
+//   next();
+// });
 // app.use((req, res, next) => {
 
 //   next();

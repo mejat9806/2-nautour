@@ -1,9 +1,10 @@
 doctype html 
 html 
     head  
+    block head
         meta(charset="UTF-8" )
         meta(name="viewport" content="width=device-width, initial-scale=1.0" )
-        title Natours |
+        title Natours | #{title}
         link(rel ="stylesheet" href="/css/style.css")
         link(rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
         link(rel="shortcut icon" type="image/png" href="./../public/img/favicon.png")
@@ -12,7 +13,6 @@ html
 
         //header
         include _header
-
         // content
         block content 
             h1 this is a place holder heading
@@ -20,4 +20,9 @@ html
         //footer
 
         include _footer
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    script(src="/js/mapBox.js")
+    script(src="/js/login.js")
 

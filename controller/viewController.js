@@ -7,7 +7,7 @@ export const getOverView = catchAsync(async (req, res, next) => {
   // 2) build template
   // 3) render the template
   res.status(200).render('overview', {
-    title: 'ALl tours',
+    title: 'ALL tours',
     tours,
   });
 });
@@ -18,13 +18,11 @@ export const getTourView = catchAsync(async (req, res) => {
     fields: 'reviw rating user',
   });
   res.status(200).render('tour', {
+    title: tour.name,
     tour,
   });
 });
 
-// export const getOverView = (req, res) => {
-//   res.status(200).render('base', {
-//     tour: 'Forest hiker',
-//     user: 'amer',
-//   });
-// };
+export const getLoginView = (req, res) => {
+  res.status(200).render('login', { title: 'Login' });
+};

@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 /* eslint-disable import/newline-after-import */
 /* eslint-disable import/first */
 import dotenv from 'dotenv';
@@ -126,11 +127,15 @@ export const protect = catchAsync(async (req, res, next) => {
   //!step 1  Get the token from client and check if it there
   if (
     // if this fail it will go straight to global error handler
+    //? this header only for API the page use cookies
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
     token = req.headers.authorization.split(' ')[1]; //this will get an array and we just use the [1]
+  } else if (req.cookies.jwt) {
+    token = req.cookies.jwt;
   }
+
   if (!token) {
     return next(
       new AppError('You are not logged in! Please log in to get access.', 401),
@@ -153,6 +158,39 @@ export const protect = catchAsync(async (req, res, next) => {
   //!
   //Grant access to protected route
   req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
+  next();
+});
+//?
+
+//!this is to check if the user is logged to conditional render
+//only for render pages
+export const isLogin = catchAsync(async (req, res, next) => {
+  // console.log('hello this form the protect middleware');
+  //!step 1  Get the token from client and check if it there
+  if (req.cookies.jwt) {
+    //!
+    //! step 2 validate the token (check if the token is modified or expired)
+    const decoded = await promisify(jwt.verify)(
+      req.cookies.jwt,
+      process.env.JWT_SECRET,
+    ).catch(() => false); //use to translate the token to readable object of string
+    //!
+    //! step 3 check if user is exist
+    const currentUser = await User.findById(decoded.id).catch(() => false);
+    if (!currentUser) {
+      return next();
+    }
+    //!
+    //! step 4 check if user changed password after jwt token was issues token is issued on login
+    if (currentUser.changedPasswordAfter(decoded.iat)) {
+      return next();
+    }
+    //!
+    //there is log in user
+    // req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
+    res.locals.user = currentUser;
+    return next();
+  }
   next();
 });
 //?
