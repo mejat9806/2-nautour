@@ -12,7 +12,6 @@ export const getOverView = catchAsync(async (req, res, next) => {
   });
 });
 export const getTourView = catchAsync(async (req, res) => {
-  console.log(req.params.slug);
   const tour = await Tour.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
     fields: 'reviw rating user',

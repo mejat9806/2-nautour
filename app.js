@@ -23,6 +23,22 @@ import { router as viewRouter } from './routes/viewRoute.js';
 dotenv.config({ path: './.env' });
 
 export const app = express();
+//! cors
+const corsOptions = {
+  origin: 'http://localhost:5173', // Allow requests from this origin
+  methods: ['GET', 'POST'], // Allow GET and POST requests
+  allowedHeaders: [
+    'set-cookie',
+    'Content-Type',
+    'Access-Control-Allow-Origin',
+    'Access-Control-Allow-Credentials',
+  ],
+  exposedHeaders: ['Content-Length'], // Expose this custom header
+  credentials: true, // Allow credentials (cookies, HTTP authentication)
+  preflightContinue: false, // Do not continue if preflight request fails
+};
+app.use(cors(corsOptions));
+//!
 ///! Global middleware
 //! pug
 app.set('view engine', 'pug');
@@ -31,7 +47,7 @@ app.set('views', './views');
 app.use(express.static(`./public`));
 // app.use((req, res, next) => {
 //   // every middleware get req,res,next
-//   console.log('hello from middleware ');
+//   ('hello from middleware ');
 //   next(); //this is important becasue if there is no next it will stop here
 // }); //order is important if this middleware is place after the route it will not run because the request will stop the route
 //!
@@ -44,37 +60,54 @@ if (process.env.NODE_ENV === 'development') {
 app.use(helmet());
 
 // Further HELMET configuration for Security Policy (CSP)
-const scriptSrcUrls = ['https://unpkg.com/', 'https://tile.openstreetmap.org'];
+const scriptSrcUrls = [
+  'https://unpkg.com/',
+  'https://tile.openstreetmap.org',
+  'https://js.stripe.com',
+  'https://m.stripe.network',
+  'https://*.cloudflare.com',
+];
 const styleSrcUrls = [
   'https://unpkg.com/',
   'https://tile.openstreetmap.org',
   'https://fonts.googleapis.com/',
 ];
-const connectSrcUrls = ['https://unpkg.com', 'https://tile.openstreetmap.org'];
+const connectSrcUrls = [
+  'https://unpkg.com',
+  'https://tile.openstreetmap.org',
+  'https://*.stripe.com',
+  'https://bundle.js:*',
+  'ws://127.0.0.1:*/',
+];
 const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
-//set security http headers
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: [],
-      connectSrc: ["'self'", ...connectSrcUrls],
-      scriptSrc: ["'self'", ...scriptSrcUrls],
-      styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-      workerSrc: ["'self'", 'blob:'],
-      objectSrc: [],
-      imgSrc: ["'self'", 'blob:', 'data:', 'https:'],
+      defaultSrc: ["'self'", 'data:', 'blob:', 'https:', 'ws:'],
+      baseUri: ["'self'"],
       fontSrc: ["'self'", ...fontSrcUrls],
+      scriptSrc: ["'self'", 'https:', 'http:', 'blob:', ...scriptSrcUrls],
+      frameSrc: ["'self'", 'https://js.stripe.com'],
+      objectSrc: ["'none'"],
+      styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+      workerSrc: ["'self'", 'blob:', 'https://m.stripe.network'],
+      childSrc: ["'self'", 'blob:'],
+      imgSrc: ["'self'", 'blob:', 'data:', 'https:'],
+      formAction: ["'self'"],
+      connectSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        'data:',
+        'blob:',
+        ...connectSrcUrls,
+      ],
+      upgradeInsecureRequests: [],
     },
   }),
 );
 //!
 
-//! cors
-app.use(cors());
-app.options('*', cors());
-
-//!
 //!rate limit (this will limit how many request an ip can attemp)
 const limiter = rateLimit({
   max: 1000,
@@ -116,19 +149,15 @@ app.use(
 );
 //!
 
-//Test middleWare
-// app.use((req, res, next) => {
-//   req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
-//   //console.log(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',
-//   console.log(req.cookies);
-//   next();
-// });
-// app.use((req, res, next) => {
-
-//   next();
-// });
+//!Test middleWare
+app.use((req, res, next) => {
+  req.requestTimes = new Date().toISOString(); //this will give use the request time and to use it put in the response like other middleware
+  //(req.headers); //this use to send JWT token it should be in this format   authorization: 'Bearer dfasfasfafa',
+  next();
+});
 
 //!route
+
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
 app.use('/api/v1/users', userRouter); //all of the user like signUp logiN  stuff need to go through this middleware

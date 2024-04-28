@@ -9,7 +9,7 @@ import Tour from '../model/tourModel.js';
 ///!this is module way to use __dirname
 // const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 // export const __dirname = path.dirname(__filename); // get the name of the directory
-// console.log(__dirname);
+// (__dirname);
 // //! get data
 // const tours = JSON.parse(
 //   fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`),
@@ -17,7 +17,7 @@ import Tour from '../model/tourModel.js';
 
 //!middleware
 // export const checkId = (req, res, next, val) => {
-//   console.log(`tour id is ${val}`);
+//   (`tour id is ${val}`);
 //   if (req.params.id * 1 > tours.length) {
 //     return res.status(404).json({
 //       status: 'fail',
@@ -82,7 +82,7 @@ class APIfeature {
   limitFields() {
     if (this.queryStr.fields) {
       const fields = this.queryStr.fields.split(',').join(' ');
-      console.log(fields);
+      fields;
       this.query = this.query.select(fields);
     } else {
       this.query = this.query.select('-__v'); //this is used to remove something from response to user
@@ -103,7 +103,7 @@ class APIfeature {
 export async function getAllTours(req, res) {
   try {
     //!1a filtering
-    console.log(req.query); //this how to show query string
+    req.query; //this how to show query string
     // const queryObject = { ...req.query }; //this will make hard copy of queryObject
     // const excludedFields = ['page', 'sort', 'limit', 'fields']; //item when to remove from queryObject because we use this for filtering
 
@@ -124,7 +124,7 @@ export async function getAllTours(req, res) {
     //!2)sorting
     // if (req.query.sort) {
     //   const sortBy = req.query.sort.split(',').join(' '); //this is if we want to add more arguments for sorting if the the first one is the same //!it must in shape like this { sort: '-price,ratingsAverage' }//this because moongose require string with spaces
-    //   console.log(sortBy);
+    //   (sortBy);
     //   query = query.sort(sortBy); //if we want to sort in descending order we use - on the query like this http://127.0.0.1:3000/api/v1/tours?sort=-price
     //   // query = query.sort(req.query.sort); //if we want to sort in descending order we use - on the query like this http://127.0.0.1:3000/api/v1/tours?sort=-price
     // } else {
@@ -134,7 +134,7 @@ export async function getAllTours(req, res) {
     //this allows user to limit what they want
     // if (req.query.fields) {
     //   const fields = req.query.fields.split(',').join(' ');
-    //   console.log(fields);
+    //   (fields);
     //   query = query.select(fields);
     // } else {
     //   query = query.select('-__v'); //this is used to remove something from response to user

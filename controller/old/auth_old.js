@@ -24,7 +24,7 @@ function createSendToken(user, statusCode, res) {
       Date.now() + process.env.JWT_COOKIES_EXPIRES_IN * 24 * 60 * 60 * 1000,
     ),
     secure: false,
-    httpOnly: true,
+    // httpOnly: true,
   };
   if (process.env.NODE_ENV === 'production') {
     cookieOptions.secure = true;
@@ -69,7 +69,7 @@ export const signUp = catchAsync(async (req, res, next) => {
       message: 'Token sent by email',
     });
   } catch (err) {
-    console.log(err);
+    err;
     return next(
       AppError('There was an error sending an email, try sending later', 500),
     );
@@ -115,7 +115,7 @@ export const login = catchAsync(async (req, res, next) => {
 
 //?this is for protect route like make sure the user is logged in before continuing
 export const protect = catchAsync(async (req, res, next) => {
-  // console.log('hello this form the protect middleware');
+  // ('hello this form the protect middleware');
   let token;
   //!step 1  Get the token from client and check if it there
   if (
@@ -156,7 +156,7 @@ export function restrictTo(...roles) {
   //roles is an array of agurment
   //you cant pass argument to middleware but we can bypass this by wrap it in function and spread the agurment
   return (req, res, next) => {
-    console.log(req.user.role);
+    req.user.role;
     if (!roles.includes(req.user.role)) {
       //we can use this because it was set up by the previous middleware (protect) .
       return next(AppError('you did not have permission to access this', 403));

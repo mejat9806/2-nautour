@@ -5,8 +5,8 @@ import mongoose from 'mongoose';
 import { app } from './app.js';
 
 process.on('uncaughtException', (err) => {
-  console.log(`uncaught Exception 😢 shutting down ...`);
-  console.log(err.name, 'hello');
+  `uncaught Exception 😢 shutting down ...`;
+  err.name, 'hello';
   process.exit(1); //this shutdown the server
 });
 // all error/bug that happened in syncronous but not handled anywhere
@@ -17,8 +17,8 @@ const DB = process.env.MONGODB_URL.replace(
 async function conDB() {
   await mongoose
     .connect(DB)
-    .then(() => console.log('Connected to database'))
-    .catch((err) => console.log(err.message));
+    .then(() => 'Connected to database')
+    .catch((err) => err.message);
 }
 conDB();
 
@@ -30,14 +30,14 @@ conDB();
 // testTour
 //   .save()
 //   .then((doc) => {
-//     console.log(doc);
+//     (doc);
 //   })
 //   .catch((err) => {
-//     console.log('error', err);
+//     ('error', err);
 //   });
 const port = process.env.PORT;
 const server = app.listen(port, () => {
-  console.log(`listen app on port ${port}`);
+  `listen app on port ${port}`;
 });
 
 //!step of how request is processed
@@ -53,8 +53,8 @@ const server = app.listen(port, () => {
 //! this is mostly for async function/request
 //?this is like event listener
 process.on('unhandledRejection', (err) => {
-  console.log(err.name, err.message);
-  console.log(`unhandled rejection ${err.message} ⛔`);
+  err.name, err.message;
+  `unhandled rejection ${err.message} ⛔`;
   server.close(() => {
     process.exit(1); //this shutdown the server
   });

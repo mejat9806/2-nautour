@@ -86,7 +86,7 @@ export const patchTour = catchAsync(async (req, res, next) => {
     new: true,
     runValidators: true,
   });
-  console.log(editedTour);
+  editedTour;
   if (!editedTour) {
     const err = AppError('Tour not found', 404);
     return next(err);
@@ -100,7 +100,7 @@ export const patchTour = catchAsync(async (req, res, next) => {
 });
 export const deleteTour = catchAsync(async (req, res, next) => {
   const deletedTour = await Tour.findByIdAndDelete(req.params.id);
-  console.log(deletedTour);
+  deletedTour;
   if (!deletedTour) {
     const err = AppError('Tour not found', 404);
     return next(err);

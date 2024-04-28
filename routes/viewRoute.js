@@ -9,10 +9,9 @@ import { isLogin } from '../controller/authController.js';
 export const router = express.Router();
 
 //!pug routes//
-router.use(isLogin);
-router.get('/', getOverView);
+router.get('/', isLogin, getOverView);
 
-router.get('/tours/:slug', getTourView);
+router.get('/tour/:slug', isLogin, getTourView);
 
 router.get('/login', getLoginView);
 

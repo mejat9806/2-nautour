@@ -11,30 +11,63 @@ import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
 import { sendEmail } from '../utils/email.js';
 
-function signToken(userID) {
-  const token = jwt.sign({ id: userID._id }, process.env.JWT_SECRET, {
+const signToken = (id) => {
+  id, 'here';
+  const token = jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN,
   });
   return token;
+};
+function signRefreshToken(userID) {
+  const refreshToken = jwt.sign(
+    { id: userID._id },
+    process.env.REFRESH_JWT_SECRET,
+    {
+      expiresIn: process.env.REFRESH_JWT_EXPIRES_IN,
+    },
+  );
+  return refreshToken;
 }
-
 function createSendToken(user, statusCode, res) {
   const token = signToken(user._id);
-  const cookieOptions = {
+  ({
+    token,
+    jwtexpires: process.env.REFRESH_JWT_EXPIRES_IN,
+    jwtSecret: process.env.JWT_SECRET,
+  });
+  const refreshToken = signRefreshToken(user._id);
+  const AccessCookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIES_EXPIRES_IN * 24 * 60 * 60 * 1000,
     ),
-    secure: false,
+    secure: true,
     httpOnly: true,
+    sameSite: 'none',
   };
   if (process.env.NODE_ENV === 'production') {
-    cookieOptions.secure = true;
+    AccessCookieOptions.secure = true;
   }
-  res.cookie('jwt', token, cookieOptions);
+  const RefreshTokenOptions = {
+    expires: new Date(
+      Date.now() +
+        process.env.REFRESH_JWT_COOKIES_EXPIRES_IN * 24 * 60 * 60 * 1000,
+    ),
+    secure: true,
+    httpOnly: true,
+    sameSite: 'none',
+  };
+  ({ AccessCookieOptions });
+  //? refrersh token
+  // (`refresh :${refreshToken}`);
+  // (`access token:${token}`);
+  //?access token
+  res.cookie('jwt', token, AccessCookieOptions);
+  res.cookie('refreshToken', refreshToken, RefreshTokenOptions);
   user.password = undefined;
   res.status(statusCode).json({
     status: 'success',
     token,
+    //refreshToken,
     user,
   });
 }
@@ -70,7 +103,7 @@ export const signUp = catchAsync(async (req, res, next) => {
       message: 'Token sent by email',
     });
   } catch (err) {
-    console.log(err);
+    err;
     return next(
       AppError('There was an error sending an email, try sending later', 500),
     );
@@ -95,19 +128,22 @@ export const confirmSignUp = catchAsync(async (req, res, next) => {
   createSendToken(user, 200, res);
 });
 export const login = catchAsync(async (req, res, next) => {
+  req.cookies, 'cookies at login';
   const { email, password } = req.body;
+
   //!step for check login credential
   //!1) check email and password if it exists
   if (!email || !password) {
     const err = AppError('please provide email and password', 400);
     return next(err); //finish because we want to stop the function here
   }
+
   //!
   //!2) check is the user exist password is correct
   const user = await User.findOne({ email: email }).select(
     '+password +isValidated',
   ); //select use to get the password from DB eventhough they are on selected by default refer to password in userModel
-  // console.log(user.isValidated); //! this is for validation turn back on later
+  // (user.isValidated); //! this is for validation turn back on later
   // if (user.isValidated === false) {
   //   return next(AppError('Please check your email for validation', 401));
   // }
@@ -119,15 +155,27 @@ export const login = catchAsync(async (req, res, next) => {
 
   createSendToken(user, 200, res);
 });
+//!LogOut
+export const logOut = (req, res) => {
+  res.cookie('jwt', 'logout', {
+    //this will erase the token from the cookie
+    expires: new Date(Date.now() + 10 * 1000),
+    httpOnly: false,
+  });
+  res.status(200).json({ status: 'success' });
+};
 
+//!
 //?this is for protect route like make sure the user is logged in before continuing
 export const protect = catchAsync(async (req, res, next) => {
-  // console.log('hello this form the protect middleware');
+  // ('hello this form the protect middleware');
+
   let token;
+
   //!step 1  Get the token from client and check if it there
   if (
     // if this fail it will go straight to global error handler
-    //? this header only for API the page use cookies
+    //? this header only for API the page use cookies // for first time login
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
@@ -164,35 +212,40 @@ export const protect = catchAsync(async (req, res, next) => {
 
 //!this is to check if the user is logged to conditional render
 //only for render pages
-export const isLogin = catchAsync(async (req, res, next) => {
-  // console.log('hello this form the protect middleware');
+export const isLogin = async (req, res, next) => {
+  //('hello this form the protect middleware');
   //!step 1  Get the token from client and check if it there
   if (req.cookies.jwt) {
-    //!
-    //! step 2 validate the token (check if the token is modified or expired)
-    const decoded = await promisify(jwt.verify)(
-      req.cookies.jwt,
-      process.env.JWT_SECRET,
-    ).catch(() => false); //use to translate the token to readable object of string
-    //!
-    //! step 3 check if user is exist
-    const currentUser = await User.findById(decoded.id).catch(() => false);
-    if (!currentUser) {
+    try {
+      //!
+      //! step 2 validate the token (check if the token is modified or expired)
+      const decoded = await promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET,
+      ).catch(() => false); //use to translate the token to readable object of string
+      //!
+      //! step 3 check if user is exist
+      const currentUser = await User.findById(decoded.id).catch(() => false);
+      if (!currentUser) {
+        return next();
+      }
+      //!
+      //! step 4 check if user changed password after jwt token was issues token is issued on login
+      if (currentUser.changedPasswordAfter(decoded.iat)) {
+        return next();
+      }
+      //!
+      //there is log in user
+      req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
+      res.locals.user = currentUser;
+      currentUser;
+      return next();
+    } catch (error) {
       return next();
     }
-    //!
-    //! step 4 check if user changed password after jwt token was issues token is issued on login
-    if (currentUser.changedPasswordAfter(decoded.iat)) {
-      return next();
-    }
-    //!
-    //there is log in user
-    // req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
-    res.locals.user = currentUser;
-    return next();
   }
   next();
-});
+};
 //?
 
 //!role based authentication
@@ -200,7 +253,7 @@ export function restrictTo(...roles) {
   //roles is an array of agurment
   //you cant pass argument to middleware but we can bypass this by wrap it in function and spread the agurment
   return (req, res, next) => {
-    console.log(req.user.role);
+    req.user.role;
     if (!roles.includes(req.user.role)) {
       //we can use this because it was set up by the previous middleware (protect) .
       return next(AppError('you did not have permission to access this', 403));
@@ -297,3 +350,24 @@ export const passwordUpdate = catchAsync(async (req, res, next) => {
   //! 4) log user in send jwt
   createSendToken(user, 200, res);
 });
+
+export const refreshToken = async (req, res, next) => {
+  const reToken = req.cookies.refreshToken;
+  reToken, 'refresh token';
+
+  // if (reToken) {
+  //   try {
+  //     const verified = jwt.verify(reToken, process.env.REFRESH_JWT_SECRET);
+
+  //     res.status(200).json({ status: 'ok' });
+  //   } catch (error) {
+  //     console.error('Token verification error:', error);
+  //     res
+  //       .status(401)
+  //       .json({ status: 'error', message: 'Token verification failed' });
+  //   }
+  // } else {
+  res
+    .status(401)
+    .json({ status: 'error', message: 'No refresh token provided' });
+};

@@ -14,7 +14,7 @@ function filterObject(object, ...allowedFields) {
     //this part keys to get like name
     if (allowedFields.includes(el)) newObject[el] = object[el];
   });
-  console.log(newObject);
+  newObject;
   //this will loop through the req.user object and check if it has name and email fields
   //if so add the input from the req.user object  like (name, email) to a new object and return it
   return newObject;
@@ -40,7 +40,7 @@ export const updateME = async function (req, res, next) {
     runValidators: true,
   });
   //  const updatedUser = await User.findById(req.user.id);
-  console.log(updatedUser);
+  updatedUser;
   res.status(200).json({
     status: 'success',
     data: {
@@ -78,7 +78,7 @@ export function createUser(req, res) {
 }
 // export async function getUser(req, res) {
 //   const user = await User.findById(req.params.id);
-//   console.log(user);
+//   (user);
 //   res.status(500).json({
 //     status: 'hello from user',
 

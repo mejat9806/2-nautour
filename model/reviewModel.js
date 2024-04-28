@@ -94,7 +94,7 @@ reviewScheme.statics.calcAverageRating = async function (tourId) {
 
 reviewScheme.post('save', function () {
   //this point current review
-  console.log(this, 'hello');
+  this, 'hello';
   this.constructor.calcAverageRating(this.tour); //this.constructor will point to the current review model without before moongose.model //this use to run the function
 }); //this.tour refer to the tour in the Review output look at postMan
 
@@ -109,7 +109,7 @@ reviewScheme.post('save', function () {
 // });
 //!this is used to calculate the rating after updating the review/object above is the old way
 reviewScheme.post(/^findOneAnd/, async function (doc) {
-  console.log(doc, 'doc here');
+  doc, 'doc here';
   await this.model.calcAverageRating(doc.tour);
 });
 

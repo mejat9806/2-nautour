@@ -10,7 +10,7 @@ app.use(express.json()); //use middleware here //app.use is use to use middlewar
 app.use(morgan('dev'));
 app.use((req, res, next) => {
   // every middleware get req,res,next
-  console.log('hello from middleware ');
+  ('hello from middleware ');
   next(); //this is important becasue if there is no next it will stop here
 }); //order is important if this middleware is place after the route it will not run because the request will stop the route
 
@@ -33,10 +33,10 @@ app.post('/', (req, res) => {
 ///!this is module way to use __dirname
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
-console.log(__dirname);
+__dirname;
 //! get data
 const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
+  fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`),
 );
 //!Route handlers
 //! GET routes
@@ -119,7 +119,7 @@ function postTour(req, res) {
           tour: newTour,
         },
       });
-    }
+    },
   );
 }
 // app.post('/api/v1/tours', (req, res) => {
@@ -143,7 +143,7 @@ function postTour(req, res) {
 /* //!PATCH
  */
 function patchTour(req, res) {
-  console.log(req.body);
+  req.body;
   if (Number(req.params.id) > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -159,7 +159,7 @@ function patchTour(req, res) {
 }
 
 /*   app.patch('/api/v1/tours/:id', (req, res) => {
-  console.log(req.body);
+  (req.body);
   if (Number(req.params.id) > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -176,7 +176,7 @@ function patchTour(req, res) {
 /* //!Delete
  */
 function deleteTour(req, res) {
-  console.log(req.body);
+  req.body;
   if (Number(req.params.id) > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -189,7 +189,7 @@ function deleteTour(req, res) {
   });
 }
 /* app.delete('/api/v1/tours/:id', (req, res) => {
-  console.log(req.body);
+  (req.body);
   if (Number(req.params.id) > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -262,5 +262,5 @@ app.use('/api/v1/users', userRouter);
 
 const port = 3000;
 app.listen(port, () => {
-  console.log('listen app on port ' + port);
+  'listen app on port ' + port;
 });

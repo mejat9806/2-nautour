@@ -30,7 +30,7 @@ export const getAll = (Model) =>
 export const deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
-    // console.log(doc);
+    // (doc);
     if (!doc) {
       const err = AppError('No document found with that id', 404);
       return next(err);
@@ -43,9 +43,9 @@ export const deleteOne = (Model) =>
 
 export const createOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    console.log('this req.body', req.body);
+    'this req.body', req.body;
     const newDoc = await Model.create(req.body);
-    console.log('this is newDOC', newDoc);
+    'this is newDOC', newDoc;
     res.status(200).json({
       status: 'success',
       message: 'Document created successfully',
@@ -79,7 +79,7 @@ export const updateOne = (Model) =>
 
 export const getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
-    console.log(req.params.id);
+    req.params.id;
     let query = Model.findById(req.params.id);
     if (popOptions) {
       query = query.populate(popOptions);

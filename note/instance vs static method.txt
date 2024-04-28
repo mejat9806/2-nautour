@@ -26,7 +26,7 @@ const User = mongoose.model('User', userSchema);
 
  !Usage
 const newUser = new User({ name: 'John', email: 'john@example.com' });
-console.log(newUser.sayHello()); // Output: Hello, my name is John.
+(newUser.sayHello()); // Output: Hello, my name is John.
 
 !Static Methods:
 Static methods in Mongoose are defined on the schema's statics property. These methods are called on the model itself, not on individual documents.
@@ -44,5 +44,5 @@ userSchema.statics.findByEmail = function(email) {
 
 ! Usage
 User.findByEmail('john@example.com')
-    .then(user => console.log(user))
+    .then(user => (user))
     .catch(err => console.error(err));

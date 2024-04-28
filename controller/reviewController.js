@@ -40,7 +40,7 @@ export const deleteReview = deleteOne(Review);
 export const patchReview = updateOne(Review);
 
 // export const createReview = catchAsync(async (req, res, next) => {
-//   console.log(req.body, 'ok');
+//   (req.body, 'ok');
 //   const reviews = await Review.create(req.body);
 
 //   res.status(200).json({
@@ -55,7 +55,7 @@ export const patchReview = updateOne(Review);
 //   //this two below will add object (tour:tourId) and this two below will add object (user:userId) if it doesn't exist yet
 //   if (!req.body.tour) req.body.tour = req.params.tourId;
 //   if (!req.body.user) req.body.user = req.user.id; //this come from protect middleware
-//   console.log(req.body, 'ok');
+//   (req.body, 'ok');
 //   const reviews = await Review.create(req.body);
 
 //   res.status(200).json({

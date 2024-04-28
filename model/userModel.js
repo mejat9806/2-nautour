@@ -74,7 +74,7 @@ userSchema.methods.correctPassword = async function (
   userPassword,
 ) {
   const result = await bcrypt.compare(candidatePassword, userPassword);
-  console.log(result);
+  result;
   return result;
 };
 
@@ -96,7 +96,7 @@ userSchema.methods.createPasswordResetToken = function () {
     .update(randRestToken)
     .digest('hex'); //this is for security reasons we dont want to save plain passwords reset token
   this.passwordResetExpired = Date.now() + 10 * 60 * 1000; //this is for security reasons we dont want to keep the password reset token forever
-  console.log({ randRestToken });
+  ({ randRestToken });
   return randRestToken;
 };
 

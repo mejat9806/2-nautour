@@ -53,7 +53,7 @@ const sendErrorProd = (err, res) => {
   }
 };
 export function globalErrorHandler(err, req, res, next) {
-  //console.log(err.stack); //this will give the origi of the error
+  //(err.stack); //this will give the origi of the error
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';
 

@@ -11,7 +11,7 @@
 //     excludedFields.forEach((el) => delete queryObject[el]);
 
 //     let queryStr = JSON.stringify(queryObject);
-//     console.log(queryStr);
+//     (queryStr);
 //     queryStr = queryStr.replace(
 //       /\b(gte|gte|lte|lt)\b/g,
 //       (match) => `$${match}`,
@@ -33,7 +33,7 @@
 //   limitFields() {
 //     if (this.queryStr.fields) {
 //       const fields = this.queryStr.fields.split(',').join(' ');
-//       console.log(fields);
+//       (fields);
 //       this.query = this.query.select(fields);
 //     } else {
 //       this.query = this.query.select('-__v'); //this is used to remove something from response to user
@@ -52,18 +52,18 @@
 // }
 
 function applyFieldSelection(query, fieldsQuery) {
-  // console.log(fieldsQuery);
+  // (fieldsQuery);
   //this will take a string an remove the (,) by split and join back up to create a string because select only take strings
   if (fieldsQuery) {
     const fields = fieldsQuery.split(',').join(' ');
-    // console.log(fields, 'fields');
+    // (fields, 'fields');
     return query.select(fields);
   }
   return query.select('-__v');
 }
 
 function applySorting(query, sortQuery) {
-  // console.log(sortQuery, 'sort');
+  // (sortQuery, 'sort');
   //sortQuery is the req.query.sort
   if (sortQuery) {
     const sortBy = sortQuery.split(',').join(' ');
@@ -80,22 +80,22 @@ function applyPagination(query, pageQuery, limitQuery) {
 
 export async function APIfeature(query, req) {
   //query is the model object
-  // console.log(query);
+  // (query);
   const queryObject = { ...req.query };
 
   const excludedFields = ['page', 'sort', 'limit', 'fields'];
   excludedFields.forEach((el) => delete queryObject[el]); //this will remove excludedFields from the query object
 
   let queryStr = JSON.stringify(queryObject);
-  //  console.log(queryStr, 'queryStr');
+  //  (queryStr, 'queryStr');
   queryStr = queryStr.replace(/\b(gte|gte|lte|lt)\b/g, (match) => `$${match}`);
-  //  console.log(queryStr, 'queryStrReplaced');
+  //  (queryStr, 'queryStrReplaced');
   query = query.find(JSON.parse(queryStr)); //! moongose query middleware triggered here because of find method
 
   query = applyFieldSelection(query, req.query.fields);
   query = applySorting(query, req.query.sort);
   query = applyPagination(query, req.query.page, req.query.limit);
-  console.log(req.query.sort);
+  req.query.sort;
   //return query.setOptions({ explain: 'executionStats' }); //remove this setOptions it just for statistics
   // const explainedQuery = await query.explain('executionStats');
 

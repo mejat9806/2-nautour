@@ -70,7 +70,7 @@ export function createUser(req, res) {
 }
 export async function getUser(req, res) {
   const user = await User.findById(req.params.id);
-  console.log(user);
+  user;
   res.status(500).json({
     status: 'hello from user',
 

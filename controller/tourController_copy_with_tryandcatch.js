@@ -63,7 +63,7 @@ export async function getAllTours(req, res) {
 }
 
 export async function getTour(req, res) {
-  console.log(req.forID);
+  req.forID;
   try {
     const tour = await Tour.findById(req.params.id);
     res.status(200).json({

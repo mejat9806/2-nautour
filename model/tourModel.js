@@ -167,7 +167,7 @@ tourScheme.pre(/^find/, function (next) {
 
 //the post middleware runs after the specified operation is completed
 tourScheme.post(/^find/, function (doc, next) {
-  console.log(`query took ${Date.now() - this.start} milliseconds`);
+  `query took ${Date.now() - this.start} milliseconds`;
 
   next();
 });
@@ -176,7 +176,7 @@ tourScheme.post(/^find/, function (doc, next) {
 tourScheme.pre('aggregate', function (next) {
   this.pipeline().push({ $match: { secretTour: { $ne: true } } }); //this will add another match to filterout secret tour item
   // this.pipeline().shift({ $sort: { avgPrice: 1 } });
-  console.log(this.pipeline());
+  this.pipeline();
   next();
 });
 //!
@@ -189,11 +189,11 @@ tourScheme.pre('aggregate', function (next) {
 //!the required in the schema is some kind of validation
 //!
 // tourScheme.pre('save', function (next) {
-//   console.log('will save document');
+//   ('will save document');
 //   next();
 // });
 // tourScheme.post('save', (doc, next) => {
-//   console.log(doc);
+//   (doc);
 //   next();
 // });
 const Tour = mongoose.model('Tour', tourScheme);
