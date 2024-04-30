@@ -121,6 +121,7 @@ app.use('/api', limiter);
 app.use(express.json({ limit: '10kb' })); //use middleware here //app.use is use to use middleware //this will make the req.body available //limit is to make sure it only give meaning ful data
 //?cookie-parser
 //this let express to read the cookies data
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 //?
 //!data sanatization against NoSQL query injection

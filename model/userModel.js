@@ -4,13 +4,16 @@ import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 
 const userSchema = new mongoose.Schema({
-  name: { type: String, required: [true, 'name is required'] },
+  name: {
+    type: String,
+    required: [true, 'name is required'],
+  },
   email: {
     type: String,
     required: [true, 'email is required'],
     unique: true,
     lowercase: true,
-    validate: [validator.isEmail, 'email is already exist'],
+    validate: [validator.isEmail, 'must be a valid email'],
   },
   photo: { type: String },
   role: {
@@ -74,7 +77,6 @@ userSchema.methods.correctPassword = async function (
   userPassword,
 ) {
   const result = await bcrypt.compare(candidatePassword, userPassword);
-  result;
   return result;
 };
 

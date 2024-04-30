@@ -11,7 +11,7 @@
 export function AppError(message, statusCode) {
   const status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
 
-  const err = new Error(message);
+  const err = new Error(message); //this used to create new error object
   err.statusCode = statusCode;
   err.status = status;
   err.isOperational = true; //this is used to mark operational errors

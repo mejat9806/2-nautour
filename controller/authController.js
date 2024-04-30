@@ -12,8 +12,8 @@ import { AppError } from '../utils/appError.js';
 import { sendEmail } from '../utils/email.js';
 
 const signToken = (id) => {
-  id, 'here';
   const token = jwt.sign({ id }, process.env.JWT_SECRET, {
+    // expiresIn: process.env.JWT_EXPIRES_IN,
     expiresIn: process.env.JWT_EXPIRES_IN,
   });
   return token;
@@ -30,11 +30,7 @@ function signRefreshToken(userID) {
 }
 function createSendToken(user, statusCode, res) {
   const token = signToken(user._id);
-  ({
-    token,
-    jwtexpires: process.env.REFRESH_JWT_EXPIRES_IN,
-    jwtSecret: process.env.JWT_SECRET,
-  });
+
   const refreshToken = signRefreshToken(user._id);
   const AccessCookieOptions = {
     expires: new Date(
@@ -56,7 +52,6 @@ function createSendToken(user, statusCode, res) {
     httpOnly: true,
     sameSite: 'none',
   };
-  ({ AccessCookieOptions });
   //? refrersh token
   // (`refresh :${refreshToken}`);
   // (`access token:${token}`);
@@ -65,9 +60,9 @@ function createSendToken(user, statusCode, res) {
   res.cookie('refreshToken', refreshToken, RefreshTokenOptions);
   user.password = undefined;
   res.status(statusCode).json({
-    status: 'success',
+    status: 'dddsadas',
     token,
-    //refreshToken,
+    refreshToken,
     user,
   });
 }
@@ -103,7 +98,6 @@ export const signUp = catchAsync(async (req, res, next) => {
       message: 'Token sent by email',
     });
   } catch (err) {
-    err;
     return next(
       AppError('There was an error sending an email, try sending later', 500),
     );
@@ -128,7 +122,6 @@ export const confirmSignUp = catchAsync(async (req, res, next) => {
   createSendToken(user, 200, res);
 });
 export const login = catchAsync(async (req, res, next) => {
-  req.cookies, 'cookies at login';
   const { email, password } = req.body;
 
   //!step for check login credential
@@ -157,11 +150,18 @@ export const login = catchAsync(async (req, res, next) => {
 });
 //!LogOut
 export const logOut = (req, res) => {
-  res.cookie('jwt', 'logout', {
-    //this will erase the token from the cookie
-    expires: new Date(Date.now() + 10 * 1000),
-    httpOnly: false,
-  });
+  // res.cookie('jwt', 'logout', {
+  //   //this will erase the token from the cookie
+  //   expires: new Date(Date.now() + 10 * 1000),
+  //   httpOnly: false,
+  // });
+  // res.cookie('refreshToken', 'logout', {
+  //   //this will erase the token from the cookie
+  //   expires: new Date(Date.now() + 10 * 1000),
+  //   httpOnly: false,
+  // });
+  res.clearCookie('jwt');
+  res.clearCookie('refreshToken');
   res.status(200).json({ status: 'success' });
 };
 
@@ -206,6 +206,8 @@ export const protect = catchAsync(async (req, res, next) => {
   //!
   //Grant access to protected route
   req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
+  res.locals.user = currentUser;
+
   next();
 });
 //?
@@ -238,7 +240,6 @@ export const isLogin = async (req, res, next) => {
       //there is log in user
       req.user = currentUser; // we update the req.user to use in next middleware ,we can update req
       res.locals.user = currentUser;
-      currentUser;
       return next();
     } catch (error) {
       return next();
@@ -253,7 +254,6 @@ export function restrictTo(...roles) {
   //roles is an array of agurment
   //you cant pass argument to middleware but we can bypass this by wrap it in function and spread the agurment
   return (req, res, next) => {
-    req.user.role;
     if (!roles.includes(req.user.role)) {
       //we can use this because it was set up by the previous middleware (protect) .
       return next(AppError('you did not have permission to access this', 403));
@@ -351,23 +351,26 @@ export const passwordUpdate = catchAsync(async (req, res, next) => {
   createSendToken(user, 200, res);
 });
 
-export const refreshToken = async (req, res, next) => {
-  const reToken = req.cookies.refreshToken;
-  reToken, 'refresh token';
+// export const refreshToken = async (req, res, next) => {
+//   const reToken = req.cookies.refreshToken;
+//   console.log(reToken);
 
-  // if (reToken) {
-  //   try {
-  //     const verified = jwt.verify(reToken, process.env.REFRESH_JWT_SECRET);
-
-  //     res.status(200).json({ status: 'ok' });
-  //   } catch (error) {
-  //     console.error('Token verification error:', error);
-  //     res
-  //       .status(401)
-  //       .json({ status: 'error', message: 'Token verification failed' });
-  //   }
-  // } else {
-  res
-    .status(401)
-    .json({ status: 'error', message: 'No refresh token provided' });
-};
+//   if (reToken) {
+//     try {
+//       const verified = jwt.verify(reToken, process.env.REFRESH_JWT_SECRET);
+//       const user = await User.findById(verified.id);
+//       //console.log(user);
+//       res.status(200).json({ user });
+//     } catch (error) {
+//       console.error('Token verification error:', error);
+//       res
+//         .status(401)
+//         .json({ status: 'error', message: 'Token verification failed' });
+//     }
+//   } else {
+//     res.status(401).json({
+//       status: 'error',
+//       message: 'No refresh token provided ,Please login again',
+//     });
+//   }
+// };

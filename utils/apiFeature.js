@@ -95,7 +95,6 @@ export async function APIfeature(query, req) {
   query = applyFieldSelection(query, req.query.fields);
   query = applySorting(query, req.query.sort);
   query = applyPagination(query, req.query.page, req.query.limit);
-  req.query.sort;
   //return query.setOptions({ explain: 'executionStats' }); //remove this setOptions it just for statistics
   // const explainedQuery = await query.explain('executionStats');
 

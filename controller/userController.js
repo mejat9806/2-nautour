@@ -14,13 +14,12 @@ function filterObject(object, ...allowedFields) {
     //this part keys to get like name
     if (allowedFields.includes(el)) newObject[el] = object[el];
   });
-  newObject;
   //this will loop through the req.user object and check if it has name and email fields
   //if so add the input from the req.user object  like (name, email) to a new object and return it
   return newObject;
 }
 
-export const updateME = async function (req, res, next) {
+export const updateME = catchAsync(async (req, res, next) => {
   //! 1) show error message if user try to update(POST) his own password data
   if (req.body.password || req.body.passwordConfirm) {
     return next(
@@ -40,14 +39,13 @@ export const updateME = async function (req, res, next) {
     runValidators: true,
   });
   //  const updatedUser = await User.findById(req.user.id);
-  updatedUser;
   res.status(200).json({
     status: 'success',
     data: {
       user: updatedUser,
     },
   });
-};
+});
 
 //!
 
