@@ -15,8 +15,9 @@ function handleDuplicateDate(error) {
 
 // Function to handle validation errors from MongoDB
 function handleValidationErrorDB(err) {
-  const error = Object.values(err.errors).map((val) => val.message);
+  const error = Object.values(err.errors).map((val) => val.message); // This line retrieves an array of values from the err.errors object and then uses map to create a new array containing only the messages associated with each value.
   const message = `invalid input data ${error.join(', ')}`;
+
   return AppError(message, 400);
 }
 
