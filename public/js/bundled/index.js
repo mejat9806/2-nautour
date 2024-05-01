@@ -147,11 +147,13 @@ var _runtime = require("regenerator-runtime/runtime");
 var _login = require("./login");
 var _mapBox = require("./mapBox");
 var _updateSetting = require("./updateSetting");
+var _regeneratorRuntime = require("regenerator-runtime");
 /* eslint-disable no-undef */ // DOM elements
 const mapbox = document.getElementById("map");
 const logOutButton = document.querySelector(".nav__el--logout");
 const loginForm = document.querySelector(".form--login");
 const updateUserForm = document.querySelector(".form-user-data");
+const updatePassForm = document.querySelector(".form-user-password");
 //values
 //delegation
 if (mapbox) {
@@ -167,16 +169,39 @@ if (loginForm) loginForm.addEventListener("submit", (e)=>{
 if (logOutButton) logOutButton.addEventListener("click", (0, _login.logout));
 if (updateUserForm) updateUserForm.addEventListener("submit", (e)=>{
     e.preventDefault();
+    const form = new FormData();
+    form.append("name", document.getElementById("name").value);
+    form.append("email", document.getElementById("email").value);
+    form.append("photo", document.getElementById("photo").files[0]);
+    // const email = document.getElementById('email').value;
+    // const name = document.getElementById('name').value;
+    // const photo = document.getElementById('photo').value;
+    console.log(form);
+    (0, _updateSetting.updateSettingData)(form, "user");
+});
+if (updatePassForm) updatePassForm.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    document.querySelector(".btn--save-password").textContent = "updating";
     // const form = new FormData();
     // form.append('email', document.getElementById('email').value);
     // form.append('name', document.getElementById('name').value);
     // console.log(form);
-    const email = document.getElementById("email").value;
-    const name = document.getElementById("name").value;
-    (0, _updateSetting.updateUserData)(name, email);
+    const passwordCurrent = document.getElementById("password-current").value;
+    const password = document.getElementById("password").value;
+    const passwordConfirmed = document.getElementById("password-confirm").value;
+    const data = {
+        passwordCurrent,
+        password,
+        passwordConfirmed
+    };
+    await (0, _updateSetting.updateSettingData)(data, "password");
+    document.getElementById("password-current").textContent = "";
+    document.getElementById("password").textContent = "";
+    document.getElementById("password-confirm").textContent = "";
+    document.querySelector(".btn--save-password").textContent = "save password";
 });
 
-},{"regenerator-runtime/runtime":"cDAES","./login":"aUJqG","./mapBox":"jAWzH","./updateSetting":"hGmxG"}],"cDAES":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"cDAES","./login":"aUJqG","./mapBox":"jAWzH","./updateSetting":"hGmxG","regenerator-runtime":"cDAES"}],"cDAES":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -5305,21 +5330,25 @@ const displayMap = (locations)=>{
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"fofuL"}],"hGmxG":[function(require,module,exports) {
 /*eslint-disable*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "updateUserData", ()=>updateUserData);
+parcelHelpers.export(exports, "updateSettingData", ()=>updateSettingData);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _alert = require("./alert");
-const updateUserData = async (name, email)=>{
+const updateSettingData = async (data, type)=>{
+    console.log(data, type);
     try {
         const result = await (0, _axiosDefault.default)({
             method: "PATCH",
-            url: "http://127.0.0.1:3000/api/v1/users/updateYourData",
-            data: {
-                email,
-                name
-            }
+            url: `http://127.0.0.1:3000/api/v1/users/${type === "user" ? "updateYourData" : "updateMyPassword"}`,
+            data
         });
-        if (result.data.status === "success") (0, _alert.showAlert)("success", "update successfully ");
+        if (result.data.status === "success") {
+            console.log(result.data.status);
+            (0, _alert.showAlert)("success", "update successfully ");
+            window.setTimeout(()=>{
+                location.reload(true);
+            }, 100);
+        }
     } catch (err) {
         console.log(err);
         (0, _alert.showAlert)("error", err.response.data.message);

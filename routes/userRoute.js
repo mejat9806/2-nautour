@@ -7,7 +7,9 @@ import {
   getMe,
   getUser,
   patchUser,
+  resizeUserPhoto,
   updateME,
+  uploadUserPhoto,
 } from '../controller/userController.js';
 import {
   resetPassword,
@@ -35,7 +37,7 @@ router.patch('/resetPassword/:token', resetPassword); //use patch because we onl
 router.post('/forgotPassword', forgotPassword); //the forgot password will genereate the reset token for reset password
 
 router.use(protect); //this middleware will make sure that all middlewares after this get protected
-router.patch('/updateYourData', updateME);
+router.patch('/updateYourData', uploadUserPhoto, resizeUserPhoto, updateME);
 router.get('/me', getMe, getUser);
 router.patch('/updateMyPassword', passwordUpdate);
 router.delete('/deleteMe', deleteMe); //thsi dont really delete it because we only disable the account

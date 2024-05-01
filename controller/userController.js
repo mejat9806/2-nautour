@@ -1,7 +1,50 @@
+import sharp from 'sharp';
+import multer from 'multer';
 import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
 import { catchAsync } from '../utils/catchAsync.js';
 import { deleteOne, getAll, getOne, updateOne } from './handlerFactory.js';
+
+// const multerStorage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     //cb is similar next
+//     cb(null, 'public/img/users');
+//   },
+//   filename: (req, file, cb) => {
+//     //user-1231312(userID)-2131231(timeStamp).jpg
+//     const extension = file.mimetype.split('/')[1]; //this file comes from req.file
+//     cb(null, `user-${req.user.id}-${Date.now()}.${extension}`);
+//   },
+// });
+
+const multerStorage = multer.memoryStorage(); // memory storage will save to buffer
+const multerFilter = (req, file, cb) => {
+  console.log(file);
+  //this to filter only certain files can pass through
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    cb(AppError('please upload a image file only ', 400), false);
+  }
+};
+const upload = multer({ storage: multerStorage, fileFilter: multerFilter });
+
+export const uploadUserPhoto = upload.single('photo');
+
+export const resizeUserPhoto = (req, res, next) => {
+  //this will run after the upload image
+  if (!req.file) {
+    return next();
+  }
+
+  req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`; //why we do this because the filename is not set up if we use memoryStorage so we set up it here and make it available in the next middleware in updateMe
+  sharp(req.file.buffer) //here we read the data from the buffer and edit it
+    .resize(500, 500, { fit: 'cover' })
+    .toFormat('jpeg')
+    .jpeg({ quality: 80 })
+    .toFile(`public/img/users/${req.file.filename}`); //this will create a jpeg
+  next();
+};
 
 export const getMe = (req, res, next) => {
   req.params.id = req.user.id; //this will update the req.params.id to re.user.id then use it on getUSer
@@ -20,6 +63,8 @@ function filterObject(object, ...allowedFields) {
 }
 
 export const updateME = catchAsync(async (req, res, next) => {
+  // console.log(req.file); this is where we can see the file
+  // console.log(req.body);
   //! 1) show error message if user try to update(POST) his own password data
   if (req.body.password || req.body.passwordConfirm) {
     return next(
@@ -31,6 +76,10 @@ export const updateME = catchAsync(async (req, res, next) => {
   }
   //!filter out unwanted fields
   const filterBody = filterObject(req.body, 'name', 'email');
+  if (req.file) {
+    //this will add the new image to the filter object
+    filterBody.photo = req.file.filename;
+  }
   //!
   //! 3) if not update user document
 
