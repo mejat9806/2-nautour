@@ -6,6 +6,9 @@
 //!this C part of MVC
 //?this controller will handle requests and responds only to or from user
 
+import multer from 'multer';
+import sharp from 'sharp';
+
 import Tour from '../model/tourModel.js';
 import { APIfeature } from '../utils/apiFeature.js';
 import { AppError } from '../utils/appError.js';
@@ -17,6 +20,59 @@ import {
   getOne,
   updateOne,
 } from './handlerFactory.js';
+
+//! muelter
+
+const multerStorage = multer.memoryStorage(); // memory storage will save to buffer
+const multerFilter = (req, file, cb) => {
+  //this to filter only certain files can pass through
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    cb(AppError('please upload a image file only ', 400), false);
+  }
+};
+
+const upload = multer({ storage: multerStorage, fileFilter: multerFilter });
+//  upload.single('fieldName'); //this is for 1 photo
+//  upload.array(["fieldName",maxCount]); //this is for multiple photo with 1 field
+
+export const uploadTourImage = upload.fields([
+  //this is for multiple photo with multiple  field
+  { name: 'imageCover', maxCount: 1 },
+  { name: 'images', maxCount: 3 },
+]);
+
+export const resizeTourPhoto = catchAsync(async (req, res, next) => {
+  if (!req.files.imageCover || !req.files.images) {
+    return next();
+  }
+  //! 1) proccess cover image
+  req.body.imageCover = `tour-${req.params.id}-${Date.now()}-cover.jpeg`; //this will create req.body.imageCover in our req.body
+  await sharp(req.files.imageCover[0].buffer) //here we read the data from the buffer and edit it
+    .resize(2000, 1300, { fit: 'cover' })
+    .toFormat('jpeg')
+    .jpeg({ quality: 90 })
+    .toFile(`public/img/tours/${req.body.imageCover}`); //this will create a jpeg in the imageCoverFileName after the await
+
+  //! images
+  req.body.images = []; //this will create req.body.images which is an array in our req.body
+  await Promise.all(
+    //this promise all will wait for all the images to complete then move to next middleware
+    req.files.images.map(async (file, i) => {
+      //map  save all of the promises in a array so we can use Promise.all .this will make sure that all the promises is done before processing
+      const fileName = `tour-${req.params.id}-${Date.now()}-${i + 1}cover.jpeg`;
+      await sharp(req.files.images[i].buffer)
+        .resize(2000, 1300, { fit: 'cover' })
+        .toFormat('jpeg')
+        .jpeg({ quality: 90 })
+        .toFile(`public/img/tours/${fileName}`);
+      req.body.images.push(fileName); //this will add the filename to the req.body.images
+    }),
+  );
+  next(); //this will go to next middleware(aka update tour data)
+  // req.file.filename = `tour-${}-${Date.now().jpeg}`
+});
 
 ///!this is module way to use __dirname
 
@@ -90,7 +146,6 @@ export const getToursWithin = catchAsync(async (req, res, next) => {
   if (!lat || !lng) {
     next(AppError('Invalid location latitude or longitude', 400));
   }
-  distance, unit, latlng;
   const tours = await Tour.find({
     startLocation: { $geoWithin: { $centerSphere: [[lng, lat], radius] } },
   });
@@ -111,7 +166,6 @@ export const getDistance = catchAsync(async (req, res, next) => {
   if (!lat || !lng) {
     next(AppError('Invalid location latitude or longitude', 400));
   }
-  unit, latlng;
   // const tours = await Tour.find({
   //   startLocation: { $geoWithin: { $centerSphere: [[lng, lat]] } },
   // });

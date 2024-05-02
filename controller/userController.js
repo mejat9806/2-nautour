@@ -29,22 +29,22 @@ const multerFilter = (req, file, cb) => {
 };
 const upload = multer({ storage: multerStorage, fileFilter: multerFilter });
 
-export const uploadUserPhoto = upload.single('photo');
+export const uploadUserPhoto = upload.single('photo'); //this is for 1 photo
 
-export const resizeUserPhoto = (req, res, next) => {
+export const resizeUserPhoto = catchAsync(async (req, res, next) => {
   //this will run after the upload image
   if (!req.file) {
     return next();
   }
 
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`; //why we do this because the filename is not set up if we use memoryStorage so we set up it here and make it available in the next middleware in updateMe
-  sharp(req.file.buffer) //here we read the data from the buffer and edit it
+  await sharp(req.file.buffer) //here we read the data from the buffer and edit it
     .resize(500, 500, { fit: 'cover' })
     .toFormat('jpeg')
     .jpeg({ quality: 80 })
     .toFile(`public/img/users/${req.file.filename}`); //this will create a jpeg
   next();
-};
+});
 
 export const getMe = (req, res, next) => {
   req.params.id = req.user.id; //this will update the req.params.id to re.user.id then use it on getUSer

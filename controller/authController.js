@@ -9,7 +9,7 @@ import { promisify } from 'util';
 import { catchAsync } from '../utils/catchAsync.js';
 import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
-import { sendEmail } from '../utils/email.js';
+import { Email } from '../utils/email.js';
 
 const signToken = (id) => {
   const token = jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -77,31 +77,34 @@ export const signUp = catchAsync(async (req, res, next) => {
     passwordConfirmed: req.body.passwordConfirmed,
     passwordChangedAt: req.body.passwordChangedAt,
     role: req.body.role,
-    isValidated: req.body.isValidated,
+    //isValidated: req.body.isValidated(),
   });
+  const url = `${req.protocol}://${req.get('host')}/me`;
+  // eslint-disable-next-line no-unused-expressions
+  await new Email(newUser, url).sendWelcome();
+  createSendToken(newUser, 201, res);
+  //const token = signToken(newUser); //generate token that will be send to the client by email
+  // const URL = `${req.protocol}://${req.get('host')}/api/v1/users/signup/${token}`; //this is the url the client to click to update the validation status
+  // const message = `You must complete the registration process by following the link below: \n ${URL}.\nIf you didn't forget your password, please forget this message.`; //this the message to send
 
-  const token = signToken(newUser); //generate token that will be send to the client by email
-  const URL = `${req.protocol}://${req.get('host')}/api/v1/users/signup/${token}`; //this is the url the client to click to update the validation status
-  const message = `You must complete the registration process by following the link below: \n ${URL}.\nIf you didn't forget your password, please forget this message.`; //this the message to send
-  try {
-    sendEmail({
-      //this nodemail
-      email: newUser.email,
-      subject: 'follow the intruction',
-      message,
-    });
-    newUser.password = undefined;
+  // try {
+  // sendEmail({
+  //   //this nodemail
+  //   email: newUser.email,
+  //   subject: 'follow the intruction',
+  //   message,
+  // });
+  //   newUser.password = undefined;
 
-    res.status(200).json({
-      status: 'success',
-      data: { user: newUser },
-      message: 'Token sent by email',
-    });
-  } catch (err) {
-    return next(
-      AppError('There was an error sending an email, try sending later', 500),
-    );
-  }
+  //   res.status(200).json({
+  //     status: 'success',
+  //     data: { user: newUser },
+  //     message: 'Token sent by email',
+  //   });
+  // } catch (err) {
+  //   return next(
+  //     AppError('There was an error sending an email, try sending later', 500),
+  //   );
 });
 
 export const confirmSignUp = catchAsync(async (req, res, next) => {

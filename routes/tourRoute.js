@@ -16,6 +16,8 @@ import {
   getmonthlyPlan,
   patchTour,
   postTour,
+  resizeTourPhoto,
+  uploadTourImage,
 } from '../controller/tourController.js';
 import { router as reviewRouter } from './reviewRoute.js';
 import { protect, restrictTo } from '../controller/authController.js';
@@ -61,7 +63,13 @@ router
   .route('/:id')
   // .route('/api/v1/tours/:id')
   .get(getTour)
-  .patch(protect, restrictTo('admin', 'lead-guide'), patchTour)
+  .patch(
+    protect,
+    restrictTo('admin', 'lead-guide'),
+    uploadTourImage,
+    resizeTourPhoto,
+    patchTour,
+  )
   .delete(protect, restrictTo('admin', 'lead-guide'), deleteTour); //use this method is it has the same url
 
 //!

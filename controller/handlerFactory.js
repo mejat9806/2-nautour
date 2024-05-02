@@ -43,9 +43,7 @@ export const deleteOne = (Model) =>
 
 export const createOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    'this req.body', req.body;
     const newDoc = await Model.create(req.body);
-    'this is newDOC', newDoc;
     res.status(200).json({
       status: 'success',
       message: 'Document created successfully',
@@ -79,7 +77,6 @@ export const updateOne = (Model) =>
 
 export const getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
-    req.params.id;
     let query = Model.findById(req.params.id);
     if (popOptions) {
       query = query.populate(popOptions);
