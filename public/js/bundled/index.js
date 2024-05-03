@@ -147,13 +147,14 @@ var _runtime = require("regenerator-runtime/runtime");
 var _login = require("./login");
 var _mapBox = require("./mapBox");
 var _updateSetting = require("./updateSetting");
-var _regeneratorRuntime = require("regenerator-runtime");
+var _stripe = require("./stripe");
 /* eslint-disable no-undef */ // DOM elements
 const mapbox = document.getElementById("map");
 const logOutButton = document.querySelector(".nav__el--logout");
 const loginForm = document.querySelector(".form--login");
 const updateUserForm = document.querySelector(".form-user-data");
 const updatePassForm = document.querySelector(".form-user-password");
+const checkoutButton = document.querySelector("#book-tour");
 //values
 //delegation
 if (mapbox) {
@@ -200,8 +201,17 @@ if (updatePassForm) updatePassForm.addEventListener("submit", async (e)=>{
     document.getElementById("password-confirm").textContent = "";
     document.querySelector(".btn--save-password").textContent = "save password";
 });
+if (checkoutButton) checkoutButton.addEventListener("click", (e)=>{
+    e.target.textContent = "Processing...";
+    const tourId = e.target.dataset.tourid;
+    try {
+        (0, _stripe.bookTour)(tourId);
+    } catch (error) {
+        console.log("error add book tour");
+    }
+});
 
-},{"regenerator-runtime/runtime":"cDAES","./login":"aUJqG","./mapBox":"jAWzH","./updateSetting":"hGmxG","regenerator-runtime":"cDAES"}],"cDAES":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"cDAES","./login":"aUJqG","./mapBox":"jAWzH","./updateSetting":"hGmxG","./stripe":"boZ94"}],"cDAES":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -5355,6 +5365,31 @@ const updateSettingData = async (data, type)=>{
     }
 };
 
-},{"axios":"5vw73","./alert":"8F2M5","@parcel/transformer-js/src/esmodule-helpers.js":"fofuL"}]},["fSlqf"], "fSlqf", "parcelRequire9b2e")
+},{"axios":"5vw73","./alert":"8F2M5","@parcel/transformer-js/src/esmodule-helpers.js":"fofuL"}],"boZ94":[function(require,module,exports) {
+/*eslint-disable*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "bookTour", ()=>bookTour);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _alert = require("./alert");
+const bookTour = async (tourId)=>{
+    // 1) get checkout session from API
+    try {
+        const session = await (0, _axiosDefault.default)(`http://127.0.0.1:3000/api/v1/booking/checkout-session/${tourId}`, {
+            params: {
+                tourId: tourId
+            }
+        });
+        console.log(session);
+        // 2) create checkout form + change credit card
+        window.location.assign(session.data.session.url);
+    // Add your code here for creating the checkout form and handling credit card changes
+    } catch (error) {
+        console.log(error);
+        (0, _alert.showAlert)("error", error);
+    }
+};
+
+},{"axios":"5vw73","@parcel/transformer-js/src/esmodule-helpers.js":"fofuL","./alert":"8F2M5"}]},["fSlqf"], "fSlqf", "parcelRequire9b2e")
 
 //# sourceMappingURL=index.js.map

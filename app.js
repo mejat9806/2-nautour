@@ -19,6 +19,7 @@ import { AppError } from './utils/appError.js';
 import { globalErrorHandler } from './controller/errorController.js';
 import { router as reviewRouter } from './routes/reviewRoute.js';
 import { router as viewRouter } from './routes/viewRoute.js';
+import { router as bookingRouter } from './routes/bookingRoute.js';
 
 dotenv.config({ path: './.env' });
 
@@ -158,11 +159,11 @@ app.use((req, res, next) => {
 });
 
 //!route
-
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware
 app.use('/api/v1/users', userRouter); //all of the user like signUp logiN  stuff need to go through this middleware
 app.use('/api/v1/review', reviewRouter);
+app.use('/api/v1/booking', bookingRouter);
 app.all('*', (req, res, next) => {
   //!this for handling routes that are not specified in the app.js
 

@@ -1,3 +1,4 @@
+import { Booking } from '../model/bookingModel.js';
 import Tour from '../model/tourModel.js';
 import { User } from '../model/userModel.js';
 import { AppError } from '../utils/appError.js';
@@ -32,6 +33,18 @@ export const getLoginView = (req, res) => {
 export const getAccount = (req, res) => {
   res.status(200).render('account', { title: 'your account' });
 };
+
+export const getMyTours = catchAsync(async (req, res, next) => {
+  //1 find all bookings (can use virtual populates) this is manual populate
+  const bookings = await Booking.find({ user: req.user.id });
+  // 2) find tours wiiith the return ids
+  const tourIds = bookings.map((el) => el.tour);
+  const tours = await Tour.find({ _id: { $in: tourIds } }); //in is use to search through and array
+  res.render('overview', {
+    title: ' My Tours',
+    tours,
+  });
+});
 
 export const upadateUserdata = catchAsync(async (req, res, next) => {
   const UpdateUser = await User.findByIdAndUpdate(

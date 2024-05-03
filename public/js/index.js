@@ -4,7 +4,7 @@ import { login, logout } from './login';
 
 import { displayMap } from './mapBox';
 import { updateSettingData } from './updateSetting';
-import { async } from 'regenerator-runtime';
+import { bookTour } from './stripe';
 
 /* eslint-disable no-undef */
 
@@ -14,6 +14,7 @@ const logOutButton = document.querySelector('.nav__el--logout');
 const loginForm = document.querySelector('.form--login');
 const updateUserForm = document.querySelector('.form-user-data');
 const updatePassForm = document.querySelector('.form-user-password');
+const checkoutButton = document.querySelector('#book-tour');
 //values
 //delegation
 if (mapbox) {
@@ -69,5 +70,18 @@ if (updatePassForm) {
     document.getElementById('password').textContent = '';
     document.getElementById('password-confirm').textContent = '';
     document.querySelector('.btn--save-password').textContent = 'save password';
+  });
+}
+
+if (checkoutButton) {
+  checkoutButton.addEventListener('click', (e) => {
+    e.target.textContent = 'Processing...';
+    const tourId = e.target.dataset.tourid;
+
+    try {
+      bookTour(tourId);
+    } catch (error) {
+      console.log('error add book tour');
+    }
   });
 }

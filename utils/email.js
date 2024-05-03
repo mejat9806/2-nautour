@@ -14,8 +14,15 @@ export class Email {
 
   createNewTransport() {
     if (process.env.NODE_ENV === 'production') {
-      //this use sendgrid
-      return 1;
+      return nodemailer.createTransport({
+        host: process.env.BREVO_HOST,
+        port: process.env.BREVO_PORT,
+        secure: false,
+        auth: {
+          user: process.env.BREVO_LOGIN,
+          pass: process.env.BREVO_KEY,
+        },
+      });
     }
     if (process.env.NODE_ENV === 'development') {
       return nodemailer.createTransport({
@@ -43,7 +50,6 @@ export class Email {
       'emails',
       `${template}.pug`,
     );
-    console.log(templatePath);
     const html = pug.renderFile(templatePath, {
       firstName: this.firstName,
       url: this.url,
@@ -65,6 +71,13 @@ export class Email {
 
   async sendWelcome() {
     await this.send(`welcome`, `Welcome to my app`);
+  }
+
+  async sendPasswordReset() {
+    await this.send(
+      `passwordReset`,
+      'Your Password reset valid for 10 minutes',
+    );
   }
 }
 //const sendEmail = async (options) => {

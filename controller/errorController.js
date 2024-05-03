@@ -38,7 +38,8 @@ const sendErrorDev = (req, res, err) => {
   });
 };
 
-const sendErrorProd = (req, err, res) => {
+const sendErrorProd = (req, res, err) => {
+  console.log(req);
   //this for api
   if (req.originalUrl.startsWith('/api')) {
     //operational error ,trusted error :send message to client
@@ -97,7 +98,7 @@ export function globalErrorHandler(err, req, res, next) {
     if (error.name === 'TokenExpiredError') {
       error = handleJsonWebTokenExpired();
     }
-    sendErrorProd(error, req, res);
+    sendErrorProd(req, res, err);
   }
 }
 
