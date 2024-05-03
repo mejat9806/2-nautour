@@ -17,9 +17,7 @@ dotenv.config({ path: './.env' });
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 export const getCheckoutSession = catchAsync(async (req, res, next) => {
   //! get currently book tour
-  console.log();
   const tour = await Tour.findById(req.params.tourId);
-  console.log(tour.slug);
   //!2 create checkout session
   const session = await stripe.checkout.sessions.create({
     mode: `payment`,
