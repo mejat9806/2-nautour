@@ -8,6 +8,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
 import xss from 'xss-clean';
+import compression from 'compression';
 
 import cookieParser from 'cookie-parser';
 import ExpressMongoSanitize from 'express-mongo-sanitize';
@@ -158,6 +159,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(compression());
 //!route
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter); //this will use tourRouter as middleware to that route //all of the tours stuff need to go through this middleware

@@ -13,7 +13,6 @@ export const bookTour = async (tourId) => {
         },
       },
     );
-    console.log(session);
     // 2) create checkout form + change credit card
     window.location.assign(session.data.session.url);
 

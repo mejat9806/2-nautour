@@ -5353,7 +5353,6 @@ const updateSettingData = async (data, type)=>{
             data
         });
         if (result.data.status === "success") {
-            console.log(result.data.status);
             (0, _alert.showAlert)("success", "update successfully ");
             window.setTimeout(()=>{
                 location.reload(true);
@@ -5380,7 +5379,6 @@ const bookTour = async (tourId)=>{
                 tourId: tourId
             }
         });
-        console.log(session);
         // 2) create checkout form + change credit card
         window.location.assign(session.data.session.url);
     // Add your code here for creating the checkout form and handling credit card changes

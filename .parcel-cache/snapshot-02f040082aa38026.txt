@@ -1,16 +1,10 @@
-22219
-44C:\Users\user\Desktop\Backend\2-nautour\.env133591991028722572 0
+22268
+44C:\Users\user\Desktop\Backend\2-nautour\.env133593047312724452 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\DayWithinYear.js133578002618607206 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_array_with_holes.js133586695068730108 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Climate\Suppliers.d.ts133591990541300877 0
 65C:\Users\user\Desktop\Backend\2-nautour\node_modules\npm-run-path133567193321253989 1
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\normalizeEmail.js133566043726802950 0
-84C:\Users\user\Desktop\Backend\2-nautour\node_modules\puppeteer-core\lib\TaskQueue.js133567193323652446 0
-80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_update.js133586695069960500 0
-85C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\src\operations\update.ts133578002618707372 0
-91C:\Users\user\Desktop\Backend\2-nautour\node_modules\uri-js\dist\esnext\schemes\http.js.map133559776565950947 0
-76C:\Users\user\Desktop\Backend\2-nautour\node_modules\express\node_modules\ms133578002614630734 1
-90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\core\input\TextDecoder.d.ts133567193324749451 0
 58C:\Users\user\Desktop\Backend\2-nautour\public\img\pin.png133548688242254476 0
 60C:\Users\user\Desktop\Backend\2-nautour\public\img\icons.svg133548688242234467 0
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-svg\node_modules\semver\functions\compare.js133586695064169914 0
@@ -20,7 +14,7 @@
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\example\sync.js133559777313196877 0
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\@mongodb-js\saslprep\dist\code-points-data-browser.d.ts.map133560869453812201 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\regenerator-runtime\README.md133559776564437238 0
-52C:\Users\user\Desktop\Backend\2-nautour\package.json133591990551360194 0
+52C:\Users\user\Desktop\Backend\2-nautour\package.json133593048110069110 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-utils\index.js133559777311786429 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\helpers\assign.js133578002616457536 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\common\data133567193324446476 1
@@ -28,7 +22,7 @@
 131C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\resolver\empty_main\package.json133559777313276893 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-svg\node_modules\semver\functions133586695067049767 1
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\fast-diff133559777311956649 1
-50C:\Users\user\Desktop\Backend\2-nautour\.gitignore133562015467158223 0
+50C:\Users\user\Desktop\Backend\2-nautour\.gitignore133592315641630424 0
 105C:\Users\user\Desktop\Backend\2-nautour\public\img\users\user-5c8a21f22f8fb814b56fa18a-1714595182614.jpeg133590687826170000 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\utils\create-custom-error.cjs133586695065603905 0
 54C:\Users\user\Desktop\Backend\2-nautour\.eslintrc.json133560886991349802 0
@@ -46,7 +40,7 @@
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\browserify-sign\browser\verify.js133589690818866287 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\isMagnetURI.js133566043726487676 0
 57C:\Users\user\Desktop\Backend\2-nautour\node_modules\gopd133549043178464158 1
-66C:\Users\user\Desktop\Backend\2-nautour\public\js\updateSetting.js133590688734167983 0
+66C:\Users\user\Desktop\Backend\2-nautour\public\js\updateSetting.js133593049619410494 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\cjs\replace\index.cjs133586695066104578 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemon\node_modules\semver\functions\eq.js133578002614959234 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\.bin\resolve.cmd133559777313687043 0
@@ -66,7 +60,7 @@
 58C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm133567193326168734 1
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\esm\resources\Products.js133591990534940255 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\lib\syntax\node133586695093404615 1
-46C:\Users\user\Desktop\Backend\2-nautour\app.js133591978776060589 0
+46C:\Users\user\Desktop\Backend\2-nautour\app.js133593050055239901 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\js-yaml\lib\schema\core.js133559776564617276 0
 65C:\Users\user\Desktop\Backend\2-nautour\node_modules\assert-never133584862051931878 1
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-runtime\lib\internals.js133584862052177411 0
@@ -105,7 +99,6 @@
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-import\docs\rules\no-deprecated.md133559777313336888 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\minimatch\README.md133549048878453356 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\ProductFeatures.d.ts133591990540340383 0
-87C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hevc.js133586695073517436 0
 50C:\Users\user\Desktop\Backend\2-nautour\config.env133570656308636782 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\util-deprecate\node.js133567193321339105 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\global-require.js133559776567068405 0
@@ -125,7 +118,7 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\profiler\lib\Tracer.js133586695072372013 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\test\nonstring.js133559777313096895 0
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\doctrine\package.json133559777311686433 0
-53C:\Users\user\Desktop\Backend\2-nautour\connection.js133588153713015782 0
+53C:\Users\user\Desktop\Backend\2-nautour\connection.js133592720161483645 0
 125C:\Users\user\Desktop\Backend\2-nautour\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\lib\process.js133586695091851865 0
 48C:\Users\user\Desktop\Backend\2-nautour\dev-data133559686764920261 1
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\merge-descriptors\LICENSE133549043178183750 0
@@ -140,7 +133,6 @@
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isIMEI.js133566043726216366 0
 114C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\TestHelpers\Treasury\OutboundPayments.js133591990534571549 0
 130C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\resolver\null_main\package.json133559777313346886 0
-100C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fieldset-disabled.js133586695072907181 0
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\sort.d.ts133586695066649768 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\omitBy.js133576362018155681 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\css-module-scripts.js133586695070230545 0
@@ -157,7 +149,7 @@
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\xterm.js.map133567193325510463 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_defaults.js133586695069360482 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\json5\lib\index.js133559777311856645 0
-59C:\Users\user\Desktop\Backend\2-nautour\routes\viewRoute.js133592245255627363 0
+59C:\Users\user\Desktop\Backend\2-nautour\routes\viewRoute.js133592903893397523 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Treasury\OutboundPayments.js133591990534586608 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2017\CreateDataProperty.js133578002617862217 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\typed-array-buffer\test133559776564356694 1
@@ -213,7 +205,7 @@
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\css-placeholder-shown.js133586695070431269 0
 61C:\Users\user\Desktop\Backend\2-nautour\node_modules\nopt\lib133549048878767186 1
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\dist\addons\webLinks\webLinks.js133567193323557280 0
-52C:\Users\user\Desktop\Backend\2-nautour\node_modules133592036081776396 1
+52C:\Users\user\Desktop\Backend\2-nautour\node_modules133593048110019115 1
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\merge-descriptors133549043178323924 1
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\_\_decorate\package.json133586695071846865 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\aria-query\lib\etc\roles\literal\genericRole.js133559776566748365 0
@@ -254,7 +246,7 @@
 66C:\Users\user\Desktop\Backend\2-nautour\node_modules\form-data\lib133586707120502223 1
 56C:\Users\user\Desktop\Backend\2-nautour\node_modules\jwa133570409133748317 1
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\lib\esm\package.json133586695066024586 0
-57C:\Users\user\Desktop\Backend\2-nautour\package-lock.json133592036082822937 0
+57C:\Users\user\Desktop\Backend\2-nautour\package-lock.json133593048111028500 0
 68C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\LICENSE133559777311936644 0
 46C:\Users\user\Desktop\Backend\2-nautour\public133585740295288250 1
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\json5\lib\require.js133586695064129925 0
@@ -286,7 +278,7 @@
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\win64-624492\chrome-win\locales\ko.pak133567194728329653 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\abortcontroller-polyfill133586695066034566 1
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\html-to-text\node_modules\entities\package.json133591382517328155 0
-49C:\Users\user\Desktop\Backend\2-nautour\server.js133588153713005803 0
+49C:\Users\user\Desktop\Backend\2-nautour\server.js133593050326582893 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_using_ctx.js133586695069970485 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\object.entries\test\shimmed.js133559776565517836 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lz4\LICENSE133586695065563902 0
@@ -371,8 +363,6 @@
 58C:\Users\user\Desktop\Backend\2-nautour\public\js\alert.js133586733831884186 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-boolean-object\package.json133559776564887619 0
 92C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\IsValidIntegerIndex.js133578002620995137 0
-106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\.bin\json5.ps1133586695100044284 0
-90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flexbox.js133586695073002281 0
 58C:\Users\user\Desktop\Backend\2-nautour\views\overview.pug133588154331090918 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-import\lib\core\importType.js133559777312501724 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\index.d.cts133586695068850127 0
@@ -399,7 +389,7 @@
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2022\BigInt\lessThan.js133578002621347607 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash.isboolean133570409134034266 1
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-svg\node_modules\semver\classes\range.js133586695066589769 0
-57C:\Users\user\Desktop\Backend\2-nautour\node_modules\@img133592036081610466 1
+57C:\Users\user\Desktop\Backend\2-nautour\node_modules\@img133593048109792955 1
 116C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\Url.js133586695067139776 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\possible-typed-array-names\.eslintrc133559776563414363 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2020\IntegerIndexedElementSet.js133578002620049400 0
@@ -413,7 +403,7 @@
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\lib\definitions\placeholders.js.map133584862053389016 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\parse-asn1133589690818244007 1
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters\src\xss-filters.js133576338604458279 0
-70C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js.map133592175069353750 0
+70C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js.map133593049862011650 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\semver\functions\compare-loose.js133578002614836760 0
 68C:\Users\user\Desktop\Backend\2-nautour\node_modules\readable-stream133567193322790392 1
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-callable133559776565182703 1
@@ -459,14 +449,14 @@
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\_getTag.js133576362015255308 0
 62C:\Users\user\Desktop\Backend\2-nautour\public\img\favicon.png133548688242224470 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\css-image-orientation.js133586695069950502 0
-66C:\Users\user\Desktop\Backend\2-nautour\node_modules\tr46\index.js133560869453526590 0
-62C:\Users\user\Desktop\Backend\2-nautour\routes\bookingRoute.js133591990123996710 0
-113C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\semver\ranges\outside.js133578002615260310 0
-95C:\Users\user\Desktop\Backend\2-nautour\node_modules\html-to-text\node_modules\entities\LICENSE133591382516942948 0
-84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\GE.js133586695073302343 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\@types\webidl-conversions\LICENSE133560869453526590 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\object.fromentries\polyfill.js133559776565182703 0
 60C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-json133586695063759929 1
+62C:\Users\user\Desktop\Backend\2-nautour\routes\bookingRoute.js133592300917174049 0
+113C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\semver\ranges\outside.js133578002615260310 0
+95C:\Users\user\Desktop\Backend\2-nautour\node_modules\html-to-text\node_modules\entities\LICENSE133591382516942948 0
+84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\GE.js133586695073302343 0
+66C:\Users\user\Desktop\Backend\2-nautour\node_modules\tr46\index.js133560869453526590 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\parseley\README.md133591382517042947 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\IsLooselyEqual.js133578002620679073 0
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\package-manager\node_modules\yallist\LICENSE133586695062622718 0
@@ -518,7 +508,7 @@
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-es\lib\rules\no-object-setprototypeof.js133559777313056883 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\Default\Network Action Predictor133589695981084089 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\@nodelib\fs.walk\out\readers\async.js133559776564242118 0
-57C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled133592175069373823 1
+57C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled133593049862021646 1
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\.bin\semver.cmd133578002626299453 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\update-notifier\node_modules\has-flag\index.js133578002614519142 0
 92C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\ApplicationFees.js133591990533428112 0
@@ -543,7 +533,7 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\5\DayWithinYear.js133578002618607206 0
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\ipaddr.js133549043178313922 1
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2015\ToInt16.js133578002624538722 0
-66C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js133592175069323735 0
+66C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js133593049861981643 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@nodelib\fs.scandir\LICENSE133559776563455859 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\bn.js\package.json133589690817704110 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\tough-cookie\LICENSE133585932844225357 0
@@ -565,7 +555,7 @@
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\types\buffer.js133578002615677309 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Tax\Registrations.d.ts133591990540531302 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\nth-check\LICENSE133586695062532724 0
-59C:\Users\user\Desktop\Backend\2-nautour\public\js\stripe.js133592175068987296 0
+59C:\Users\user\Desktop\Backend\2-nautour\public\js\stripe.js133593049530021541 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash.isplainobject\package.json133570409133939108 0
 73C:\Users\user\Desktop\Backend\2-nautour\public\img\tours\tour-7-cover.jpg133548688242954452 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\lib\rules\react-in-jsx-scope.js133559777313476879 0
@@ -831,6 +821,8 @@
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemailer\lib\mime-node\index.js133573631797876361 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\curryRight.js133576362016452187 0
 111C:\Users\user\Desktop\Backend\2-nautour\public\img\tours\tour-663329af0c53e829836431f1-1714637884385-cover.jpeg133591114843880000 0
+119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\functions\clean.js133586695062998326 0
+75C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\HISTORY.md133593048094104488 0
 61C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose133578002626219456 1
 67C:\Users\user\Desktop\Backend\2-nautour\public\img\users\user-6.jpg133548688243239843 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\prettier\plugins\yaml.js133559777313026895 0
@@ -1159,6 +1151,7 @@
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\data-view-byte-length133559776565232700 1
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isWhitelisted.js133566043726762955 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\node-addon-api\napi.h133586695065100077 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src\index.js133593048098374797 0
 73C:\Users\user\Desktop\Backend\2-nautour\public\img\tours\tour-9-cover.jpg133548688243189832 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\addons\terminado133567193325655636 1
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\readable-stream\README.md133567193322749804 0
@@ -1215,7 +1208,7 @@
 68C:\Users\user\Desktop\Backend\2-nautour\note\refrence vs embeded.png133576487267260821 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\bin\download-prebuilds.js133586695069360482 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\test\fixtures\invalid-targets133586695098705449 1
-71C:\Users\user\Desktop\Backend\2-nautour\node_modules\.package-lock.json133592036083413887 0
+71C:\Users\user\Desktop\Backend\2-nautour\node_modules\.package-lock.json133593048111590855 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\safe-buffer\README.md133549043178288843 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\key-spacing.js133559776567373009 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\isOctal.js133566043726572771 0
@@ -1257,7 +1250,7 @@
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Issuing133591990536449497 1
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\readable-stream\node_modules\safe-buffer\index.js133567193321033725 0
 57C:\Users\user\Desktop\Backend\2-nautour\node_modules\pify133567193321078830 1
-60C:\Users\user\Desktop\Backend\2-nautour\node_modules\@emnapi133592036081675550 1
+60C:\Users\user\Desktop\Backend\2-nautour\node_modules\@emnapi133593048109873021 1
 60C:\Users\user\Desktop\Backend\2-nautour\node_modules\@eslint133559776561452150 1
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\detect-libc\README.md133590591509193022 0
 108C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-es\lib\rules\no-rest-spread-properties.js133559777313226886 0
@@ -1288,7 +1281,7 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\PlansResource.d.ts133591990540307930 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\which-collection\.github133559776565302740 1
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\find.js133576362016787547 0
-58C:\Users\user\Desktop\Backend\2-nautour\node_modules\@lmdb133592036081600467 1
+58C:\Users\user\Desktop\Backend\2-nautour\node_modules\@lmdb133593048109787887 1
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\test\fixtures\config\subfolder133586695097350652 1
 123C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\Percentage.js133586695066849795 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\isJSON.js133566043726372540 0
@@ -1309,7 +1302,7 @@
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemon\node_modules\semver\internal\parse-options.js133578002615295346 0
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\@mongodb-js133560869453195931 1
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2024\InternalizeJSONProperty.js133578002620119610 0
-70C:\Users\user\Desktop\Backend\2-nautour\node_modules\@msgpackr-extract133592036081600467 1
+70C:\Users\user\Desktop\Backend\2-nautour\node_modules\@msgpackr-extract133593048109777895 1
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Apps133591990535291704 1
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-node\lib\rules\prefer-global\process.js133559777312936885 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\ShippingRates.d.ts133591990540970208 0
@@ -1333,11 +1326,12 @@
 108C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Identity\VerificationSessionsResource.d.ts133591990541647921 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\YearFromTime.js133578002626144359 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\addons\search\search.js.map133567193324100992 0
-60C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel133592036081600467 1
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hashchange.js133586695073497430 0
-81C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\lib\syntax\function133586695072076856 1
+60C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel133593048109777895 1
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-errors133549043178675168 1
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-glob\README.md133549048878407439 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\LICENSE133593048098304791 0
+81C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\lib\syntax\function133586695072076856 1
 58C:\Users\user\Desktop\Backend\2-nautour\node_modules\@pkgr133559777310544557 1
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\test\module_dir\zmodules\bbb133559777313246883 1
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-jsx-a11y\__tests__\src\rules\html-has-lang-test.js133559776566718369 0
@@ -1346,7 +1340,7 @@
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\@selderee133591382516412053 1
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\object-keys\README.md133559776565212702 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\addons133567193325670701 1
-57C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc133592036081600467 1
+57C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc133593048109777895 1
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\lib\core.js133559777312501724 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\tough-cookie\lib133585932844337299 1
 65C:\Users\user\Desktop\Backend\2-nautour\node_modules\content-type133549043178333928 1
@@ -1523,6 +1517,7 @@
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react133559777313576890 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\weak-lru-cache\dist\index.cjs133586695062663104 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\handlers\AltClickHandler.ts133567193325868234 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\package.json133593048098269733 0
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\ordered-binary133586695064989683 1
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\whatwg-url\lib\percent-encoding.js133560869453611680 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isMongoId.js133566043726552774 0
@@ -1806,6 +1801,7 @@
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\fd-slicer\test\test.js133567193321810101 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\CharMeasure.js133567193324311379 0
 58C:\Users\user\Desktop\Backend\2-nautour\node_modules\bytes133549043178313922 1
+99C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer\README.md133593048094595905 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\typed-array-byte-length\.nycrc133559776563701920 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\helpers\caseFolding.json133578002626184362 0
 66C:\Users\user\Desktop\Backend\2-nautour\node_modules\internal-slot133559776565152708 1
@@ -1894,6 +1890,18 @@
 61C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-regex133559776565212702 1
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\string.prototype.trimend133559776565627832 1
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\has-flag\index.js133578002614569124 0
+89C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\reporter-tracer\package.json133586695095155223 0
+82C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\MouseZoneManager.js133567193324928233 0
+65C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible133593048094490825 1
+68C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-to-primitive133559776565707881 1
+77C:\Users\user\Desktop\Backend\2-nautour\node_modules\ajv\lib\dotjs\comment.js133559776566162747 0
+82C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\lib\es6-extensions.js133584862052432074 0
+76C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\rust\index.d.ts133586695088578520 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\removeUnknownsAndDefaults.js133586695068380127 0
+64C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression133593048094124517 1
+89C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\IsDataDescriptor.js133578002620465339 0
+81C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\minifyStyles.js133586695067634965 0
+62C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-clean133576338603817100 1
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-stream133567193321078830 1
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-boolean-object\.github\FUNDING.yml133559776565312741 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\utils\src\index.js133586695094264688 0
@@ -1975,8 +1983,6 @@
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\content-disposition133549043178363937 1
 59C:\Users\user\Desktop\Backend\2-nautour\node_modules\cookie133578002614755819 1
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\InputHandler.api.js.map133567193324856150 0
-66C:\Users\user\Desktop\Backend\2-nautour\node_modules\cookie-parser133585935463083857 1
-65C:\Users\user\Desktop\Backend\2-nautour\node_modules\miller-rabin133589690818020744 1
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\es6-promise133567193323031464 1
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest.c133586695068124959 0
 121C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\semver\functions\satisfies.js133586695066779771 0
@@ -1986,6 +1992,8 @@
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\es6-promise\lib\es6-promise\promise\reject.js133567193323412146 0
 119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\reusePaths.js133586695067854957 0
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\path-type133586695063298353 1
+65C:\Users\user\Desktop\Backend\2-nautour\node_modules\miller-rabin133589690818020744 1
+66C:\Users\user\Desktop\Backend\2-nautour\node_modules\cookie-parser133585935463083857 1
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\array-includes\.eslintrc133559776563722642 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\public-encrypt\test\test_key.pem133589690819308305 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\readable-stream\readable-browser.js133567193322187305 0
@@ -2170,8 +2178,8 @@
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb.c133586695067604964 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\tslib\CopyrightNotice.txt133559777312341724 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2024\ArrayBufferByteLength.js133578002616152159 0
-84C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\node_modules\which\which.js133567193321339105 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\es6-string-includes.js133586695072807196 0
+84C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\node_modules\which\which.js133567193321339105 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\peberminta133591382517073007 1
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\write-file-atomic\CHANGELOG.md133567193320928495 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\buffer\index.d.ts133586719526313788 0
@@ -2227,9 +2235,6 @@
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\ObjectCreate.js133578002621977072 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-shim-unscopables133559776565152708 1
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-parser133584862052239749 1
-68C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-to-primitive133559776565707881 1
-77C:\Users\user\Desktop\Backend\2-nautour\node_modules\ajv\lib\dotjs\comment.js133559776566162747 0
-82C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\lib\es6-extensions.js133584862052432074 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash.merge\index.js133559776563866935 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\css-cross-fade.js133586695069570516 0
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\package-manager\node_modules\yallist\README.md133586695063489921 0
@@ -2304,11 +2309,11 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\src\assetUtils.js133586695097502095 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react-hooks133559777312106657 1
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\send\node_modules\debug\.npmignore133578002614519142 0
-76C:\Users\user\Desktop\Backend\2-nautour\node_modules\peberminta\CHANGELOG.md133591382517062964 0
-105C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getelementsbyclassname.js133586695073332312 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\prop-types\factory.js133559777311806653 0
 65C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-scope133559776565597835 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\fast-levenshtein\package.json133559776563394366 0
+105C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getelementsbyclassname.js133586695073332312 0
+76C:\Users\user\Desktop\Backend\2-nautour\node_modules\peberminta\CHANGELOG.md133591382517062964 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\isexe\test133559776564847584 1
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\for-each\test\test.js133559776565082710 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\common\EventEmitter.ts133567193325740748 0
@@ -2732,6 +2737,7 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\regexp.prototype.flags\LICENSE133559776564158708 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-import-resolver-node\package.json133559777311806653 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\DetachArrayBuffer.js133578002618787410 0
+73C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\index.js133593048094114519 0
 65C:\Users\user\Desktop\Backend\2-nautour\node_modules\registry-url133567193321739814 1
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\cjs\utils.cjs133586695066919757 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\plugins\index.js133578002616628315 0
@@ -2750,7 +2756,6 @@
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-weakset\.eslintrc133559776563660025 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\syntax\node\DeclarationList.cjs133586695066649768 0
 115C:\Users\user\Desktop\Backend\2-nautour\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.js133586695091790329 0
-88C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fetch.js133586695072897187 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\src\PostCSSTransformer.js133586695079839897 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\tsconfig-paths\lib\try-path.js.map133559777312621730 0
 59C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash133576362019643815 1
@@ -2900,9 +2905,9 @@
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\setprototypeof\LICENSE133549043178258860 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\json-schema-traverse\.travis.yml133559776563949965 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\helpers\isMongooseObject.js133578002616798505 0
-92C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\ranges\gtr.js133590591509320465 0
-93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\filesystem.js133586695072952290 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\AZ.js133586695067299846 0
+93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\filesystem.js133586695072952290 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\ranges\gtr.js133590591509320465 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\uri-js\dist\esnext\schemes\mailto.d.ts133559776566358103 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\esm\StripeEmitter.js133591990535899329 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\border-radius.js133586695068104960 0
@@ -3038,8 +3043,8 @@
 108C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Entitlements\ActiveEntitlements.js133591990533362992 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\src\binding.gyp133590591509642165 0
 123C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\pseudo\lang.js133586695068094948 0
-61C:\Users\user\Desktop\Backend\2-nautour\node_modules\parseley133591382517032948 1
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flac.js133586695072972289 0
+61C:\Users\user\Desktop\Backend\2-nautour\node_modules\parseley133591382517032948 1
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\rimraf\README.md133559776564587234 0
 61C:\Users\user\Desktop\Backend\2-nautour\node_modules\parseurl133549043178313922 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\uri-js\dist\esnext\index.d.ts133559776566338102 0
@@ -3141,8 +3146,8 @@
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\with\lib\reference.d.ts133584862052391133 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-control-regex.js133559776567768090 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\@types\node\events.d.ts133591990533813442 0
-72C:\Users\user\Desktop\Backend\2-nautour\node_modules\constantinople\test133584862052411136 1
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\history.js133586695073537422 0
+72C:\Users\user\Desktop\Backend\2-nautour\node_modules\constantinople\test133584862052411136 1
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\trimCharsStart.js133576362019204709 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\addons\zmodem\zmodem.js.map133567193324236136 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\truncate.js133578002625320089 0
@@ -3539,11 +3544,6 @@
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\language-subtag-registry\data\json\variant.json133559776566202749 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\undici-types\header.d.ts133591990533450705 0
 56C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss133576339354221874 1
-76C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\rust\index.d.ts133586695088578520 0
-94C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\removeUnknownsAndDefaults.js133586695068380127 0
-62C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-clean133576338603817100 1
-89C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\IsDataDescriptor.js133578002620465339 0
-81C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\minifyStyles.js133586695067634965 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\raw-body\README.md133549043178363937 0
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters133576338604468281 1
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\public\Terminal.api.ts133567193325923318 0
@@ -3710,8 +3710,8 @@
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c133586695067289831 0
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\helpers\populate\assignRawDocsToIdStructure.js133578002615345404 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\xterm.css133567193326168734 0
-71C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\xterm.ts133567193326168734 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\es6-number.js133586695072797202 0
+71C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\xterm.ts133567193326168734 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\lmdb.h133586695069060122 0
 111C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\client-side-encryption\crypto_callbacks.js.map133578002617006673 0
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\lib\utils\ident.js133586695092949440 0
@@ -3754,13 +3754,6 @@
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\esm\resources\Radar\ValueListItems.js133591990536798402 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\sortedLastIndex.js133576362018771448 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\renderer\dom\DomRenderer.ts133567193326008386 0
-116C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\win64-624492\chrome-win\locales\pt-PT.pak133567194728542141 0
-96C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lz4\lib\lz4frame_static.h133586695069120123 0
-72C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\takeRight.js133576362018989378 0
-94C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\renderer\atlas\BaseCharAtlas.ts133567193325943423 0
-85C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\syntax\node\Raw.cjs133586695068820129 0
-120C:\Users\user\Desktop\Backend\2-nautour\node_modules\stream-browserify\node_modules\readable-stream\lib\internal\streams133589690907909114 1
-109C:\Users\user\Desktop\Backend\2-nautour\node_modules\tsconfig-paths\lib\__tests__\data\match-path-data.js.map133559777313116890 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\node-releases\data\processed133586695062813164 1
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\classes\comparator.js133590591509193022 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\html-to-text\node_modules\domutils\lib\feeds.js133591382517012946 0
@@ -3768,6 +3761,13 @@
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isFullWidth.js133566043726146312 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\mdn-data\LICENSE133586695062663104 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\lib\done.js133584862052422072 0
+116C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\win64-624492\chrome-win\locales\pt-PT.pak133567194728542141 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lz4\lib\lz4frame_static.h133586695069120123 0
+72C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\takeRight.js133576362018989378 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\renderer\atlas\BaseCharAtlas.ts133567193325943423 0
+85C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\syntax\node\Raw.cjs133586695068820129 0
+120C:\Users\user\Desktop\Backend\2-nautour\node_modules\stream-browserify\node_modules\readable-stream\lib\internal\streams133589690907909114 1
+109C:\Users\user\Desktop\Backend\2-nautour\node_modules\tsconfig-paths\lib\__tests__\data\match-path-data.js.map133559777313116890 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\src\renderer\atlas\CharAtlasCache.ts133567193325943423 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Radar\ValueLists.d.ts133591990541617896 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\core.min.js133576362016422182 0
@@ -3993,8 +3993,6 @@
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\isArrayBuffer.js133576362017356513 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\GG.js133586695073357434 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\renderer\atlas\NoneCharAtlas.js133567193325078656 0
-89C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\reporter-tracer\package.json133586695095155223 0
-82C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\MouseZoneManager.js133567193324928233 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\posthtml\node_modules\posthtml-parser\package.json133586695091800353 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-trailing-spaces.js133559776568479763 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\tslib\modules\index.d.ts133559777312281731 0
@@ -4223,6 +4221,12 @@
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\helpers\model133578002617245214 1
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-object-atoms\README.md133559776565182703 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\core\input\Keyboard.js.map133567193324739443 0
+84C:\Users\user\Desktop\Backend\2-nautour\node_modules\puppeteer-core\lib\TaskQueue.js133567193323652446 0
+80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_update.js133586695069960500 0
+85C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\src\operations\update.ts133578002618707372 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\uri-js\dist\esnext\schemes\http.js.map133559776565950947 0
+76C:\Users\user\Desktop\Backend\2-nautour\node_modules\express\node_modules\ms133578002614630734 1
+90C:\Users\user\Desktop\Backend\2-nautour\node_modules\xterm\lib\core\input\TextDecoder.d.ts133567193324749451 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsonwebtoken\node_modules\.bin\semver.ps1133578002626289447 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-shared-array-buffer\README.md133559776565092713 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\src\cmap\auth\providers.ts133578002618495929 0
@@ -4540,9 +4544,9 @@
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters\bower.json133576338604332370 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\puppeteer-core\node6\lib\JSHandle.js133567193323990281 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\lib\syntax\node\UnicodeRange.js133586695071966863 0
-90C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\FundingInstructions.d.ts133591990539279705 0
-106C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\focusin-focusout-events.js133586695073032282 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2016\floor.js133578002619105076 0
+106C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\focusin-focusout-events.js133586695073032282 0
+90C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\FundingInstructions.d.ts133591990539279705 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemon\node_modules\semver\internal133578002615385403 1
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\isIn.js133566043726226357 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters\CONTRIBUTORS.md133576338604468281 0
@@ -5065,9 +5069,9 @@
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2019\IsAccessorDescriptor.js133578002620179616 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\index.js133578002616618315 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isBtcAddress.js133566043725981055 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\geolocation.js133586695073302343 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemailer\lib\mailer\mail-message.js133573631798096863 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\quotes.js133559776568869773 0
-94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\geolocation.js133586695073302343 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\workers\src\threads\ThreadsWorker.js133586695072116851 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\puppeteer-core\README.md133567193322825508 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\lib\isCreditCard.js133566043726001048 0
@@ -6361,11 +6365,6 @@
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_load.1133586695066479764 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\sortAttrs.js133586695068610138 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\sortDefsChildren.js133586695068620125 0
-97C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\lib133559777313176889 1
-81C:\Users\user\Desktop\Backend\2-nautour\node_modules\constantinople\.editorconfig133584862052047134 0
-72C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-load\HISTORY.md133584862052147356 0
-89C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-magic-numbers.js133559776568148096 0
-103C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\node_modules\entities\lib\decode.js133586695062998326 0
 68C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemon\doc\cli133549048879135099 1
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\svgo\plugins\_path.js133586695066759775 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\lib\rules\jsx-boolean-value.js133559777312631741 0
@@ -6899,6 +6898,8 @@
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\BinaryAnd.js133578002616638316 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Identity\VerificationSessions.d.ts133591990541647921 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\htmlnano\lib\modules\removeEmptyAttributes.cjs133586695066399767 0
+108C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_class_static_private_field_update.mjs133586695073322316 0
+97C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer\LICENSE133593048094580863 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\FinancialConnections\Accounts.d.ts133591990537059325 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-swizzle\node_modules\is-arrayish\index.js133590591509089051 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\FinancialConnections\Sessions.d.ts133591990540673114 0
@@ -7269,8 +7270,8 @@
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Plans.js133591990534865825 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2017\GetOwnPropertyKeys.js133578002619416450 0
 116C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\plugins.js133586695066819777 0
-91C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\PromotionCodes.js133591990534940255 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-size-adjust.js133586695073082283 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\PromotionCodes.js133591990534940255 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\client-side-encryption\providers\azure.js.map133578002616743461 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\dotenv-expand\lib\main.js133586695063689927 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\prettier\LICENSE133559777311916655 0
@@ -7878,9 +7879,6 @@
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\lib\sort.js.map133586695067644968 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\create-hash\browser.js133589690818254081 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\sift\src\core.js.map133560869453751900 0
-119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-js\node_modules\semver\functions\prerelease.js133586695066539819 0
-80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@pkgr\core\lib\helpers.d.ts133559777312201738 0
-103C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\high-resolution-time.js133586695073527424 0
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\sha.js\hash.js133589690817618993 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2022\TimeZoneString.js133578002624343437 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\available-typed-arrays\tsconfig.json133559776564767577 0
@@ -7999,6 +7997,7 @@
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\once.js133576362018170712 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\prop-types\lib\has.js133559777312036722 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\index.js133590591509380442 0
+73C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible\LICENSE133593048094465770 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\LICENSE133590591509049042 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\regexpp\index.js133559777311806653 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-shim-unscopables\test133559776564547239 1
@@ -8017,6 +8016,7 @@
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\ranges\outside.js133590591509511474 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\lib\builders\productions.js.map133584862052839971 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\ranges\subset.js133590591509742415 0
+98C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer\index.js133593048094570873 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lz4\lib\lz4.h133586695069090110 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2024\BigIntBitwiseOp.js133578002616608325 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\sharp\node_modules\semver\internal\constants.js133590591509255344 0
@@ -8428,6 +8428,7 @@
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\deepmerge\.editorconfig133591382516942948 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\unionWith.js133576362019274931 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2020\ToInteger.js133578002624668928 0
+83C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes133593048096099543 1
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\resolve\test\resolver\other_path\root.js133559777313166889 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\reporter-tracer\lib133586695095125226 1
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\lib\syntax\node\CDO.js133586695092654314 0
@@ -8755,6 +8756,11 @@
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-parser\README.md133584862052249749 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-parser\lib\inline-tags.js133584862052147356 0
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-import\docs\rules\no-nodejs-modules.md133559777313426895 0
+97C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\lib133559777313176889 1
+81C:\Users\user\Desktop\Backend\2-nautour\node_modules\constantinople\.editorconfig133584862052047134 0
+72C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-load\HISTORY.md133584862052147356 0
+89C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-magic-numbers.js133559776568148096 0
+103C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\node_modules\entities\lib\decode.js133586695062998326 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-load\index.js133584862052057201 0
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\pug-load\LICENSE133584862051976955 0
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-jsx-a11y\lib\util\isHiddenFromScreenReader.js133559776566998407 0
@@ -8912,8 +8918,8 @@
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-callable\.editorconfig133559776563425869 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\proxy-from-env\index.js133567193321023732 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\proxy-from-env\LICENSE133567193320928495 0
-74C:\Users\user\Desktop\Backend\2-nautour\node_modules\proxy-addr\HISTORY.md133549043178268843 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\es6.js133586695072817183 0
+74C:\Users\user\Desktop\Backend\2-nautour\node_modules\proxy-addr\HISTORY.md133549043178268843 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\node_modules\debug\src\common.js133567193321053717 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\proxy-addr\index.js133549043178083277 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\nth-check\lib\parse.js133586695063889917 0
@@ -8969,8 +8975,8 @@
 108C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\lib\rules\jsx-props-no-spreading.js133559777312986891 0
 92C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\SameValueNonNumeric.js133578002622965937 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\src\done.js133584862052829990 0
-82C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\src\es6-extensions.js133584862052839971 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\extended-system-fonts.js133586695072847186 0
+82C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\src\es6-extensions.js133584862052839971 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\lib\validators\isBinding.js133584862053918060 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\assignInAllWith.js133576362015989968 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\promise\src\finally.js133584862052849989 0
@@ -9497,7 +9503,6 @@
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\p-finally\package.json133567193320883402 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\prefer-promise-reject-errors.js133559776568829767 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\ordered-binary\.nyc_output133586695064139919 1
-92C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\gyroscope.js133586695073477425 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\ordered-binary\assets133586695064747187 1
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\ordered-binary\dist133586695062813164 1
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-utils\node_modules\eslint-visitor-keys\LICENSE133559777311686433 0
@@ -10189,7 +10194,7 @@
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\LICENSE133567193322981470 0
 115C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\_\_class_check_private_static_access\package.json133586695070431269 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\UnicodeEscape.js133578002625669892 0
-69C:\Users\user\Desktop\Backend\2-nautour\controller\errorController.js133591831211275115 0
+69C:\Users\user\Desktop\Backend\2-nautour\controller\errorController.js133593049124488741 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\ndb.js133567193323031464 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\utils.js.map133578002617659716 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\toPairsIn.js133576362019134581 0
@@ -10330,10 +10335,10 @@
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\IntegerIndexedElementSet.js133578002620039397 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\cmap\metrics.js.map133578002617285217 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\.local-frontend\Images\chromeLeft.png133567193323969816 0
-92C:\Users\user\Desktop\Backend\2-nautour\node_modules\morgan\node_modules\debug\karma.conf.js133578002614735817 0
-102C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hardwareconcurrency.js133586695073487438 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\.local-frontend\Images\chromeMiddle.png133567193323969816 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\mdn-data\css\at-rules.json133586695091439702 0
+102C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hardwareconcurrency.js133586695073487438 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\morgan\node_modules\debug\karma.conf.js133578002614735817 0
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\.local-frontend\Images\ic_warning_black_18dp.svg133567193324030277 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\.local-frontend\Images\largeIcons.svg133567193324040286 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\ndb\.local-frontend\Images\mediumIcons.svg133567193324050299 0
@@ -10571,8 +10576,8 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\types\collection.d.ts133578002617807169 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\types\connection.d.ts133578002617817177 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\yallist\yallist.js133586695062958309 0
-84C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\types\expressions.d.ts133578002617862217 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\form-attribute.js133586695073162289 0
+84C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\types\expressions.d.ts133578002617862217 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\leaflet\src\layer\vector\SVG.Util.js133585795959527046 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeViewBox.js133586695067764955 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\leaflet\src\dom\DomEvent.DoubleTap.js133585795958976058 0
@@ -10652,6 +10657,7 @@
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\schema\buffer.js133578002615667307 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\schema\documentArray.js133578002616287257 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\schema\index.js133578002616638316 0
+93C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes\Readme.md133593048096078857 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\lib\generator133586695071866855 1
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\schema\map.js133578002616889311 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\schema\number.js133578002617086656 0
@@ -10849,8 +10855,8 @@
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\error\parallelSave.js133578002617160101 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\fast-json-stable-stringify\example133559776565312741 1
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\@nodelib\fs.scandir\out\settings.js133559776565332744 0
-91C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\error\parallelValidate.js133578002617170126 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fullscreen.js133586695073242333 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\error\parallelValidate.js133578002617170126 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\error\serverSelection.js133578002617456588 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsx-ast-utils\lib\getPropValue.js133559776566348108 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\error\validator.js133578002617711078 0
@@ -11196,6 +11202,7 @@
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\runtime\helpers\objectDestructuringEmpty.js133578002616961557 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\gridfs\index.js133578002615849113 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\gridfs\upload.js133578002616588098 0
+98C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src\browser.js133593048098364809 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2024\DetachArrayBuffer.js133578002618828025 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\gridfs\upload.js.map133578002617639724 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongodb\lib\cursor\abstract_cursor.js133578002614539126 0
@@ -12417,8 +12424,8 @@
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_copy.1133586695066154569 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\node_modules\dotenv\LICENSE133586695092011858 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\browserify-sign\LICENSE133589690818438028 0
-100C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-node\lib\rules\callback-return.js133559777312106657 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fileapi.js133586695072917176 0
+100C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-node\lib\rules\callback-return.js133559777312106657 0
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_copy.c133586695067119767 0
 132C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\OriginTrials\1.0.0.15\manifest.fingerprint133567199880744022 0
 112C:\Users\user\Desktop\Backend\2-nautour\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_load.c133586695067319840 0
@@ -12733,9 +12740,9 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2020\DayFromYear.js133578002618485921 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsonwebtoken\node_modules\semver\functions\sort.js133578002615465991 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\_\_class_static_private_method_get133586695071731732 1
+103C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-variant-numeric.js133586695073132309 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsonwebtoken\node_modules\semver\classes\index.js133578002615096062 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-symbol\CHANGELOG.md133559776565082710 0
-103C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-variant-numeric.js133586695073132309 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\fs133586695090023921 1
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsonwebtoken\node_modules\lru-cache\LICENSE133578002614438585 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\jsonwebtoken\lib\JsonWebTokenError.js133570409134149368 0
@@ -12940,7 +12947,6 @@
 128C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\definition-syntax\index.js133586695067744966 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-to-primitive\es2015.js133559776564169336 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-shared-array-buffer\.eslintrc133559776563425869 0
-104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getboundingclientrect.js133586695073312323 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-shared-array-buffer\.github133559776565302740 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-shared-array-buffer\.nycrc133559776563701920 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-shared-array-buffer\index.d.ts133559776565202698 0
@@ -13085,6 +13091,8 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\ME.js133586695074817624 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-generator-function\.nvmrc133559776563877367 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-generator-function\.nycrc133559776564106068 0
+93C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\ms\package.json133593048096038805 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes\LICENSE133593048096048813 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-generator-function\index.js133559776564727290 0
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-generator-function\LICENSE133559776564326702 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-generator-function\package.json133559776565162698 0
@@ -13135,9 +13143,9 @@
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\axios\lib\helpers\fromDataURI.js133586707121504405 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-expression\node_modules\acorn\dist\acorn.mjs.map133584862052432074 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\hash.js\package.json133589690817508188 0
-90C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-expression\node_modules\.bin\acorn133584862054521436 0
-91C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fontface.js133586695073142278 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\syntax\node\AtrulePrelude.cjs133586695063789926 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fontface.js133586695073142278 0
+90C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-expression\node_modules\.bin\acorn133584862054521436 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-expression\node_modules\.bin\acorn.cmd133584862054521436 0
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-date-object\.eslintignore133559776563691554 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\events\tests\special-event-names.js133589690938208251 0
@@ -13340,8 +13348,8 @@
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\iconv-lite\encodings\tables\eucjp.json133549043178675168 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\.editorconfig133567193322417696 0
 130C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\test\fixtures\plugins\node_modules\parcel-transformer-no-engines133586695098754644 1
-81C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\History.md133567193322509299 0
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\form-validation.js133586695073182298 0
+81C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\History.md133567193322509299 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\package.json133567193322352583 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\README.md133567193322629464 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\https-proxy-agent\node_modules\debug\CHANGELOG.md133567193321739814 0
@@ -13732,6 +13740,7 @@
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2017\SameValueNonNumber.js133578002622945932 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\hmac-drbg\test\fixtures\hmac-drbg-nist.json133589690818358045 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\finalhandler\README.md133549043178373926 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\Makefile133593048098334806 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\hmac-drbg\lib\hmac-drbg.js133589690817674103 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\cosmiconfig\dist\index.d.ts.map133586695065126074 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\helmet\CHANGELOG.md133576324826114231 0
@@ -13941,7 +13950,6 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\get-symbol-description\index.js133559776564366696 0
 92C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-config-airbnb-base\rules\node.js133559777312221726 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-import\lib\index.js133559777312511734 0
-92C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flow-root.js133586695073002281 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\anymatch\index.js133549048878317358 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\get-symbol-description\package.json133559776564757272 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\get-symbol-description\test133559776564547239 1
@@ -14134,6 +14142,7 @@
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\Crashpad\metadata133567200731314217 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\fd-slicer\LICENSE133567193321394453 0
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\fd-slicer\README.md133567193321213976 0
+98C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\.coveralls.yml133593048098334806 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\esm\_await_async_generator.js133586695068850127 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\entities\lib\esm\index.js.map133586695091314605 0
 66C:\Users\user\Desktop\Backend\2-nautour\node_modules\fastq\.github133559776565607832 1
@@ -14435,6 +14444,7 @@
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\cjs\syntax\scope\selector.cjs133586695068890125 0
 111C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\mock_sync.js133559777312966901 0
 111C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\node_path.js133559777313006894 0
+102C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer\package.json133593048094560866 0
 109C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\pathfilter133559777312916894 1
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\test\fixtures\module-a.js133586695097940879 0
 109C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\resolve\test\precedence133559777312936885 1
@@ -15418,6 +15428,7 @@
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-div-regex.js133559776567788104 0
 114C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-iterator-helpers\Iterator.prototype.take\implementation.js133559776566308097 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2017\SameValueZero.js133578002622985940 0
+98C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\component.json133593048098334806 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-dupe-args.js133559776567788104 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-dupe-else-if.js133559776567798092 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\ajv\lib\keyword.js133559776566428371 0
@@ -15504,8 +15515,8 @@
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-sync.js133559776568449766 0
 111C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\definition-syntax\index.cjs133586695092101880 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-undef-init.js133559776568489764 0
-81C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-undef.js133559776568489764 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-variant-alternates.js133586695073112288 0
+81C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-undef.js133559776568489764 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-undefined.js133559776568499760 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-underscore-dangle.js133559776568509766 0
 121C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\Default\Extension State\CURRENT133567194745041439 0
@@ -15578,6 +15589,7 @@
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\imagecapture.js133586695073707431 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\valid-jsdoc.js133559776569149763 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-iterator-helpers\.github133559776567162968 1
+95C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src\node.js133593048098389849 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\valid-typeof.js133559776569149763 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\yield-star-spacing.js133559776569189762 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\yoda.js133559776569189762 0
@@ -15594,6 +15606,7 @@
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rule-tester\rule-tester.js133559776568939772 0
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\linter\apply-disable-directives.js133559776564977617 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\linter\index.js133559776567232971 0
+87C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src133593048098374797 1
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\IsArray.js133578002620240057 0
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\entities\lib\esm\encode.d.ts133586695091419696 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\linter\interpolate.js133559776567293013 0
@@ -15652,7 +15665,6 @@
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\escalade\sync\index.d.ts133586695064159938 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\escalade\sync\index.js133586695063008310 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\escalade\dist\index.mjs133586695063709940 0
-95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-loading.js133586695073072314 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\aria-query\lib\etc\roles\literal\separatorRole.js133559776567283020 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\es6-promisify\dist133567193322312570 1
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\es6-promisify\package.json133567193322132193 0
@@ -15780,6 +15792,7 @@
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\entities\lib\generated\decode-data-html.d.ts.map133586695065241655 0
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-iterator-helpers\Iterator.prototype.flatMap\implementation.js133559776566214139 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-iterator-helpers\Iterator.prototype.filter\auto.js133559776565182703 0
+74C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\README.md133593048094134518 0
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\Default\Code Cache\js\index133567194733133107 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\BS.js133586695068315026 0
 116C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-iterator-helpers\Iterator.prototype.filter\implementation.js133559776566172747 0
@@ -15864,6 +15877,7 @@
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\LICENSE133578002614725814 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\GetOwnPropertyKeys.js133578002619446446 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2018\ToPropertyDescriptor.js133578002624895542 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes\package.json133593048096038805 0
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\operations133578002626209461 1
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2021\InLeapYear.js133578002619898666 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\package.json133578002626184362 0
@@ -15943,7 +15957,6 @@
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_ts_decorate.mjs133586695073697453 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2020\Number\sameValue.js133578002622895894 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\5\ToPropertyDescriptor.js133578002624935607 0
-94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-smooth.js133586695073092278 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\package.json133584862054167190 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\5\ToString.js133578002625060674 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\lib\index-legacy.d.ts133584862053489627 0
@@ -16221,6 +16234,7 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\RO.js133586695076169721 0
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\HourFromTime.js133578002619817880 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\IntegerIndexedElementGet.js133578002620019402 0
+93C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\README.md133593048098294747 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\IsCompatiblePropertyDescriptor.js133578002620335143 0
 91C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\IsConcatSpreadable.js133578002620395263 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-tree\lib\utils\url.js133586695072006851 0
@@ -16267,6 +16281,7 @@
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\RequireObjectCoercible.js133578002622870859 0
 139C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\pseudo-selectors\index.d.ts.map133586695065663907 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\SetFunctionLength.js133578002623150140 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src\debug.js133593048098364809 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\SetIntegrityLevel.js133578002623235216 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2023\SetValueInBuffer.js133578002623460980 0
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\core\index.d.ts133586695098794528 0
@@ -17372,6 +17387,7 @@
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\events\test133586695096566576 1
 69C:\Users\user\Desktop\Backend\2-nautour\node_modules\ee-first\LICENSE133549043178163746 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\ee-first\package.json133549043177973004 0
+76C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible\HISTORY.md133593048094490825 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\ecdsa-sig-formatter\LICENSE133570409133768310 0
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\rpc133567193323442134 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\ecdsa-sig-formatter\README.md133570409133778309 0
@@ -17428,7 +17444,7 @@
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\lib\compile.js.map133586695066719775 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\domelementtype\lib\esm\index.d.ts.map133586695063789926 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\README.md133586695064688106 0
-71C:\Users\user\Desktop\Backend\2-nautour\controller\bookingController.js133592272958766560 0
+71C:\Users\user\Desktop\Backend\2-nautour\controller\bookingController.js133592306167948904 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\node_modules\entities133586695065053290 1
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\node_modules\entities\lib133586695065443899 1
 109C:\Users\user\Desktop\Backend\2-nautour\node_modules\dom-serializer\node_modules\entities\lib\decode.d.ts.map133586695064661828 0
@@ -17682,7 +17698,6 @@
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\lexer133586695092513315 1
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\parser133586695092493253 1
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\tokenizer133586695092543315 1
-94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flexbox-gap.js133586695072982278 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\version.cjs133586695092573296 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\walker133586695092221961 1
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\walker\create.cjs133586695091800353 0
@@ -17704,12 +17719,12 @@
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node133586695092593302 1
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\pseudo133586695092141868 1
 109C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\scope\selector.cjs133586695092443273 0
+89C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer133593048094580863 1
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\axe-core\locales\_template.json133559776566042710 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\scope\value.cjs133586695092563297 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Atrule.cjs133586695091579702 0
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\AtrulePrelude.cjs133586695091589743 0
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\AttributeSelector.cjs133586695091629750 0
-105C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\form-submit-attributes.js133586695073172285 0
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Block.cjs133586695091639747 0
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\ClassSelector.cjs133586695091679750 0
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Comment.cjs133586695091709741 0
@@ -17744,6 +17759,7 @@
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\syntax\atrule\supports.cjs133586695092483254 0
 109C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\parser\parse-selector.cjs133586695092361884 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\parser\sequence.cjs133586695092453261 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\node.js133593048098314947 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\RootWebAreaRole.js133559776566878372 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\lexer\error.cjs133586695091921870 0
 103C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\node_modules\css-tree\cjs\lexer\structure.cjs133586695092473255 0
@@ -18019,7 +18035,6 @@
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\lib133586695068470122 1
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules133586695060127374 1
 76C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\package.json133586695066094572 0
-95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-feature.js133586695073052274 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\README.md133586695067904978 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\domhandler133586695091649752 1
 85C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\domutils133586695091709741 1
@@ -18107,8 +18122,8 @@
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\dom-serializer\lib133586695091344612 1
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\VG.js133586695077427679 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\dom-serializer\LICENSE133586695091204558 0
-104C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\dom-serializer\package.json133586695091274602 0
 95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-kerning.js133586695073062279 0
+104C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\dom-serializer\package.json133586695091274602 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\css-select\node_modules\dom-serializer\lib\esm133586695091344612 1
 82C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\namer-default\LICENSE133586695090469261 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\index.js133586695063268376 0
@@ -18263,6 +18278,30 @@
 68C:\Users\user\Desktop\Backend\2-nautour\node_modules\concat-map\test133549048878599344 1
 75C:\Users\user\Desktop\Backend\2-nautour\node_modules\concat-map\test\map.js133549048878615055 0
 78C:\Users\user\Desktop\Backend\2-nautour\node_modules\concat-map\example\map.js133549048878524998 0
+72C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\LICENSE133593048094124517 0
+84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\FJ.js133586695072962298 0
+109C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DisclosureTriangleRole.js133559776566202749 0
+77C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules133593048093288857 1
+77C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\package.json133593048094094458 0
+83C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug133593048098354823 1
+102C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\background-img-opts.js133586695067424946 0
+80C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\ms133593048096078857 1
+100C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\safe-buffer\index.d.ts133593048094570873 0
+89C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\ms\index.js133593048096048813 0
+91C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\ms\license.md133593048096068854 0
+90C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\ms\readme.md133593048096099543 0
+93C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\.eslintrc133593048098324812 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\.npmignore133593048098279690 0
+95C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\.travis.yml133593048098344784 0
+96C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\CHANGELOG.md133593048098354823 0
+97C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\karma.conf.js133593048098314947 0
+104C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\debug\src\inspector-log.js133593048098374797 0
+106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@ungap\structured-clone\.github\workflows\node.js.yml133559776565717885 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes\History.md133593048096109546 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\compression\node_modules\bytes\index.js133593048096068854 0
+74C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible\index.js133593048094475788 0
+78C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible\package.json133593048094475788 0
+75C:\Users\user\Desktop\Backend\2-nautour\node_modules\compressible\README.md133593048094500871 0
 127C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeStyleElement.js133586695067564956 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\commander\index.js133576339353118656 0
 121C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\node-resolver-core\node_modules\semver\ranges\min-version.js133586695066054587 0
@@ -18498,7 +18537,6 @@
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\CY.js133586695072216905 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\DM.js133586695072462011 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\EC.js133586695072657166 0
-84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\FJ.js133586695072962298 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\FK.js133586695072972289 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\FM.js133586695073012281 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\FO.js133586695073022278 0
@@ -18599,7 +18637,6 @@
 105C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\highlight\node_modules\color-convert\route.js133586695063869917 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\av1.js133586695067129771 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\background-attachment.js133586695067354959 0
-102C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\background-img-opts.js133586695067424946 0
 106C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\background-position-x-y.js133586695067464959 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\css-nth-child-of.js133586695070300541 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\beforeafterprint.js133586695067714995 0
@@ -18692,18 +18729,34 @@
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\es6-module.js133586695072787192 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\eventsource.js133586695072837189 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\feature-policy.js133586695072857191 0
+88C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fetch.js133586695072897187 0
+100C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\fieldset-disabled.js133586695072907181 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\filereader.js133586695072917176 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\filereadersync.js133586695072932225 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flexbox-gap.js133586695072982278 0
+106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\.bin\json5.ps1133586695100044284 0
+90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flexbox.js133586695073002281 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\flow-root.js133586695073002281 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-family-system-ui.js133586695073042292 0
+95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-feature.js133586695073052274 0
+95C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-loading.js133586695073072314 0
+94C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-smooth.js133586695073092278 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\font-unicode-range.js133586695073102297 0
+105C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\form-submit-attributes.js133586695073172285 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\forms.js133586695073192275 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\gamepad.js133586695073262313 0
+104C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getboundingclientrect.js133586695073312323 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getcomputedstyle.js133586695073322316 0
 119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\package-manager\node_modules\semver\functions\satisfies.js133586695066779771 0
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\getrandomvalues.js133586695073342325 0
+92C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\gyroscope.js133586695073477425 0
 87C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\heif.js133586695073507430 0
+87C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hevc.js133586695073517436 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\sharedworkers.js133586695076464813 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\hidden.js133586695073517436 0
+119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-js\node_modules\semver\functions\prerelease.js133586695066539819 0
+80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@pkgr\core\lib\helpers.d.ts133559777312201738 0
+103C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\high-resolution-time.js133586695073527424 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\html-media-capture.js133586695073587428 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\html5semantic.js133586695073597424 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\http2.js133586695073607438 0
@@ -19218,7 +19271,6 @@
 98C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DetailsRole.js133559776566152753 0
 97C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DialogRole.js133559776566172747 0
 100C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DirectoryRole.js133559776566182747 0
-109C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DisclosureTriangleRole.js133559776566202749 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DivRole.js133559776566224124 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\DocumentRole.js133559776566234125 0
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\axobject-query\lib\etc\objects\FigcaptionRole.js133559776566308097 0
@@ -19816,7 +19868,6 @@
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\@ungap\structured-clone\cjs\serialize.js133559776565007618 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\@ungap\structured-clone\cjs\types.js133559776565342745 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\@ungap\structured-clone\.github\workflows133559776565707881 1
-106C:\Users\user\Desktop\Backend\2-nautour\node_modules\@ungap\structured-clone\.github\workflows\node.js.yml133559776565717885 0
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\@types\node133591990535291704 1
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\@types\whatwg-url\index.d.ts133560869453566596 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\@types\whatwg-url\lib133560869453661687 1
@@ -20045,7 +20096,6 @@
 113C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_class_static_private_field_destructure.mjs133586695073302343 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_class_static_private_field_spec_get.mjs133586695073312323 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_class_static_private_field_spec_set.mjs133586695073312323 0
-108C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_class_static_private_field_update.mjs133586695073322316 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_construct.mjs133586695073332312 0
 110C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_create_for_of_iterator_helper_loose.mjs133586695073357434 0
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\@swc\helpers\src\_decorate.mjs133586695073367429 0
@@ -20280,7 +20330,7 @@
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\packager-html133586695089248565 1
 72C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\packager-js133586695088267948 1
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\packager-svg133586695088738518 1
-68C:\Users\user\Desktop\Backend\2-nautour\controller\viewController.js133589440052460463 0
+68C:\Users\user\Desktop\Backend\2-nautour\controller\viewController.js133592289692788337 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\api\inheritance.json133586695064747187 0
 74C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\packager-wasm133586695087247079 1
 67C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\plugin133586695072286908 1
@@ -20521,7 +20571,6 @@
 124C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\internal\identifiers.js133586695065246826 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-babel\node_modules\json5\dist133586695065210213 1
 126C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\internal\parse-options.js133586695066349768 0
-119C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\functions\clean.js133586695062998326 0
 117C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\functions\cmp.js133586695063218351 0
 120C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\functions\coerce.js133586695063469925 0
 121C:\Users\user\Desktop\Backend\2-nautour\node_modules\@parcel\transformer-postcss\node_modules\semver\functions\compare.js133586695064179921 0
@@ -22212,7 +22261,7 @@
 67C:\Users\user\Desktop\Backend\2-nautour\dev-data\img\new-tour-1.jpg133548688241979344 0
 67C:\Users\user\Desktop\Backend\2-nautour\dev-data\img\new-tour-4.jpg133548688242194471 0
 71C:\Users\user\Desktop\Backend\2-nautour\dev-data\data\tours-simple.json133562003588079390 0
-68C:\Users\user\Desktop\Backend\2-nautour\controller\authController.js133591799968902835 0
+68C:\Users\user\Desktop\Backend\2-nautour\controller\authController.js133593049328888427 0
 68C:\Users\user\Desktop\Backend\2-nautour\controller\handlerFactory.js133591081628918015 0
 68C:\Users\user\Desktop\Backend\2-nautour\controller\tourController.js133591141464898749 0
 72C:\Users\user\Desktop\Backend\2-nautour\controller\tourController_old.js133588153713045765 0
