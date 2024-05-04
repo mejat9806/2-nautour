@@ -121,10 +121,10 @@ app.use('/api', limiter);
 //!
 //!Body Parser ,reading data from body into req.body
 app.use(express.json({ limit: '10kb' })); //use middleware here //app.use is use to use middleware //this will make the req.body available //limit is to make sure it only give meaning ful data
+app.use(express.urlencoded({ extended: true, limit: '10kb' })); //It parses incoming requests with URL-encoded payloads and is based on a body parser.this is for form
 //?cookie-parser
-//this let express to read the cookies data
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
-app.use(cookieParser());
+app.use(cookieParser()); //this let express to read the cookies data
+
 //?
 //!data sanatization against NoSQL query injection
 app.use(ExpressMongoSanitize());
