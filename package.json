@@ -16,9 +16,9 @@
     "test2": "test.js",
     "debug": "ndb server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
-    "build": "parcel build ./public/js/index.js --dist-dir ./public/js/bundled",
-    "watch:js": "parcel watch  ./public/js/index.js --dist-dir ./public/js/bundled",
-    "build:js": "parcel build  ./public/js/index.js --dist-dir ./public/js/bundled"
+    "build": "parcel build ./public/js/app.js --dist-dir ./public/js/bundled",
+    "watch:js": "parcel watch  ./public/js/app.js --dist-dir ./public/js/bundled",
+    "build:js": "parcel build  ./public/js/app.js --dist-dir ./public/js/bundled"
   },
   "type": "module",
   "author": "",
