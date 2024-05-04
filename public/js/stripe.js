@@ -5,14 +5,11 @@ import { showAlert } from './alert';
 export const bookTour = async (tourId) => {
   // 1) get checkout session from API
   try {
-    const session = await axios(
-      `http://127.0.0.1:3000/api/v1/booking/checkout-session/${tourId}`,
-      {
-        params: {
-          tourId: tourId,
-        },
+    const session = await axios(`/api/v1/booking/checkout-session/${tourId}`, {
+      params: {
+        tourId: tourId,
       },
-    );
+    });
     // 2) create checkout form + change credit card
     window.location.assign(session.data.session.url);
 

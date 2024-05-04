@@ -125,8 +125,8 @@ export async function getAllTours(req, res) {
     // if (req.query.sort) {
     //   const sortBy = req.query.sort.split(',').join(' '); //this is if we want to add more arguments for sorting if the the first one is the same //!it must in shape like this { sort: '-price,ratingsAverage' }//this because moongose require string with spaces
     //   (sortBy);
-    //   query = query.sort(sortBy); //if we want to sort in descending order we use - on the query like this http://127.0.0.1:3000/api/v1/tours?sort=-price
-    //   // query = query.sort(req.query.sort); //if we want to sort in descending order we use - on the query like this http://127.0.0.1:3000/api/v1/tours?sort=-price
+    //   query = query.sort(sortBy); //if we want to sort in descending order we use - on the query like this /api/v1/tours?sort=-price
+    //   // query = query.sort(req.query.sort); //if we want to sort in descending order we use - on the query like this /api/v1/tours?sort=-price
     // } else {
     //   query = query.sort('-createAt'); // this will run if there is no sort basically the default
     // }

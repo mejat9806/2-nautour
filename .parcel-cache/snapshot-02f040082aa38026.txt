@@ -40,7 +40,7 @@
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\browserify-sign\browser\verify.js133589690818866287 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\validator\es\lib\isMagnetURI.js133566043726487676 0
 57C:\Users\user\Desktop\Backend\2-nautour\node_modules\gopd133549043178464158 1
-66C:\Users\user\Desktop\Backend\2-nautour\public\js\updateSetting.js133593049619410494 0
+66C:\Users\user\Desktop\Backend\2-nautour\public\js\updateSetting.js133593051705091991 0
 79C:\Users\user\Desktop\Backend\2-nautour\node_modules\csso\cjs\replace\index.cjs133586695066104578 0
 96C:\Users\user\Desktop\Backend\2-nautour\node_modules\nodemon\node_modules\semver\functions\eq.js133578002614959234 0
 102C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\node_modules\.bin\resolve.cmd133559777313687043 0
@@ -403,7 +403,6 @@
 101C:\Users\user\Desktop\Backend\2-nautour\node_modules\@babel\types\lib\definitions\placeholders.js.map133584862053389016 0
 63C:\Users\user\Desktop\Backend\2-nautour\node_modules\parse-asn1133589690818244007 1
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters\src\xss-filters.js133576338604458279 0
-70C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js.map133593049862011650 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\semver\functions\compare-loose.js133578002614836760 0
 68C:\Users\user\Desktop\Backend\2-nautour\node_modules\readable-stream133567193322790392 1
 64C:\Users\user\Desktop\Backend\2-nautour\node_modules\is-callable133559776565182703 1
@@ -423,7 +422,7 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\Events.js133591990534124160 0
 89C:\Users\user\Desktop\Backend\2-nautour\node_modules\xss-filters\tests\fuzz\bin\fuzzer.js133576338604513370 0
 94C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\helpers\isSimpleValidator.js133578002616848593 0
-58C:\Users\user\Desktop\Backend\2-nautour\public\js\login.js133589362152519094 0
+58C:\Users\user\Desktop\Backend\2-nautour\public\js\login.js133593051708062377 0
 77C:\Users\user\Desktop\Backend\2-nautour\node_modules\argparse\lib\textwrap.js133559776564647282 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\features\rellist.js133586695076109706 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash\fp\toLower.js133576362019105353 0
@@ -508,7 +507,7 @@
 107C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-es\lib\rules\no-object-setprototypeof.js133559777313056883 0
 122C:\Users\user\Desktop\Backend\2-nautour\node_modules\carlo\lib\.local-data\profile-624492\Default\Network Action Predictor133589695981084089 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\@nodelib\fs.walk\out\readers\async.js133559776564242118 0
-57C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled133593049862021646 1
+57C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled133593051710600395 1
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\simple-update-notifier\node_modules\.bin\semver.cmd133578002626299453 0
 99C:\Users\user\Desktop\Backend\2-nautour\node_modules\update-notifier\node_modules\has-flag\index.js133578002614519142 0
 92C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\cjs\resources\ApplicationFees.js133591990533428112 0
@@ -533,7 +532,6 @@
 83C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\5\DayWithinYear.js133578002618607206 0
 62C:\Users\user\Desktop\Backend\2-nautour\node_modules\ipaddr.js133549043178313922 1
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2015\ToInt16.js133578002624538722 0
-66C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js133593049861981643 0
 80C:\Users\user\Desktop\Backend\2-nautour\node_modules\@nodelib\fs.scandir\LICENSE133559776563455859 0
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\bn.js\package.json133589690817704110 0
 73C:\Users\user\Desktop\Backend\2-nautour\node_modules\tough-cookie\LICENSE133585932844225357 0
@@ -555,7 +553,7 @@
 81C:\Users\user\Desktop\Backend\2-nautour\node_modules\mongoose\lib\types\buffer.js133578002615677309 0
 88C:\Users\user\Desktop\Backend\2-nautour\node_modules\stripe\types\Tax\Registrations.d.ts133591990540531302 0
 70C:\Users\user\Desktop\Backend\2-nautour\node_modules\nth-check\LICENSE133586695062532724 0
-59C:\Users\user\Desktop\Backend\2-nautour\public\js\stripe.js133593049530021541 0
+59C:\Users\user\Desktop\Backend\2-nautour\public\js\stripe.js133593051705011983 0
 86C:\Users\user\Desktop\Backend\2-nautour\node_modules\lodash.isplainobject\package.json133570409133939108 0
 73C:\Users\user\Desktop\Backend\2-nautour\public\img\tours\tour-7-cover.jpg133548688242954452 0
 104C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint-plugin-react\lib\rules\react-in-jsx-scope.js133559777313476879 0
@@ -15434,7 +15432,7 @@
 71C:\Users\user\Desktop\Backend\2-nautour\node_modules\ajv\lib\keyword.js133559776566428371 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-duplicate-case.js133559776567808097 0
 84C:\Users\user\Desktop\Backend\2-nautour\node_modules\caniuse-lite\data\regions\ZW.js133586695078197701 0
-70C:\Users\user\Desktop\Backend\2-nautour\controller\old\tour_old_old.js133588153713075778 0
+70C:\Users\user\Desktop\Backend\2-nautour\controller\old\tour_old_old.js133593051708774173 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-duplicate-imports.js133559776567818092 0
 90C:\Users\user\Desktop\Backend\2-nautour\node_modules\eslint\lib\rules\no-empty-function.js133559776567838090 0
 93C:\Users\user\Desktop\Backend\2-nautour\node_modules\es-abstract\2019\StringGetOwnProperty.js133578002623706872 0
@@ -22264,6 +22262,8 @@
 68C:\Users\user\Desktop\Backend\2-nautour\controller\authController.js133593049328888427 0
 68C:\Users\user\Desktop\Backend\2-nautour\controller\handlerFactory.js133591081628918015 0
 68C:\Users\user\Desktop\Backend\2-nautour\controller\tourController.js133591141464898749 0
-72C:\Users\user\Desktop\Backend\2-nautour\controller\tourController_old.js133588153713045765 0
+72C:\Users\user\Desktop\Backend\2-nautour\controller\tourController_old.js133593051708322200 0
 67C:\Users\user\Desktop\Backend\2-nautour\controller\old\error_old.js133588153713065763 0
 88C:\Users\user\Desktop\Backend\2-nautour\controller\old\tour_old_copy_with_tryandcatch.js133588153713065763 0
+66C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js133593051710565262 0
+70C:\Users\user\Desktop\Backend\2-nautour\public\js\bundled\index.js.map133593051710600395 0
